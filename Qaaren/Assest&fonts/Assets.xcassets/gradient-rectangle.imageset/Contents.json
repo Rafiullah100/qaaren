@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "gradient-rectangle.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

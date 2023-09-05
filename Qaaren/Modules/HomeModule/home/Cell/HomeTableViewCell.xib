@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="manrope-bold.otf">
+            <string>Manrope-Bold</string>
+        </array>
+        <array key="manrope-regular.otf">
+            <string>Manrope-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="151" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="Qaaren" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45E-4F-eOj">
+                        <rect key="frame" x="20" y="0.0" width="346" height="250"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sed-on-ZhH">
+                                <rect key="frame" x="0.0" y="0.0" width="346" height="230"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-JQ-KhX">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msu-0Y-khz">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="30"/>
+                                                <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="msu-0Y-khz" firstAttribute="top" secondItem="ZIh-JQ-KhX" secondAttribute="top" id="4lx-Bo-tpZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="6Fz-fb-0xw"/>
+                                            <constraint firstAttribute="trailing" secondItem="msu-0Y-khz" secondAttribute="trailing" id="Zds-LG-MN9"/>
+                                            <constraint firstItem="msu-0Y-khz" firstAttribute="leading" secondItem="ZIh-JQ-KhX" secondAttribute="leading" id="hdv-xh-Kef"/>
+                                            <constraint firstAttribute="bottom" secondItem="msu-0Y-khz" secondAttribute="bottom" id="sQo-Ty-8pt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-hR-PCm">
+                                        <rect key="frame" x="0.0" y="35" width="346" height="20"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-E9-KHd">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="20"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-mZ-kNW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super summer sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-vN-QEf">
+                                                                <rect key="frame" x="0.0" y="3.6666666666666643" width="95.333333333333329" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="11"/>
+                                                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="M9n-vN-QEf" firstAttribute="centerY" secondItem="xU5-mZ-kNW" secondAttribute="centerY" id="0O5-i9-15v"/>
+                                                            <constraint firstItem="M9n-vN-QEf" firstAttribute="leading" secondItem="xU5-mZ-kNW" secondAttribute="leading" id="MIr-re-Qep"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSr-nH-pYa">
+                                                        <rect key="frame" x="296" y="0.0" width="50" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4p-V2-Qsm">
+                                                                <rect key="frame" x="12.666666666666686" y="3.6666666666666643" width="37.333333333333336" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="11"/>
+                                                                <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="iUQ-Tr-UNa"/>
+                                                            <constraint firstItem="r4p-V2-Qsm" firstAttribute="centerY" secondItem="nSr-nH-pYa" secondAttribute="centerY" id="qq0-Rq-4Ib"/>
+                                                            <constraint firstAttribute="trailing" secondItem="r4p-V2-Qsm" secondAttribute="trailing" id="z4O-qA-qzP"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="wwg-E9-KHd" secondAttribute="bottom" id="0yO-cP-63J"/>
+                                            <constraint firstItem="wwg-E9-KHd" firstAttribute="top" secondItem="Hme-hR-PCm" secondAttribute="top" id="1nS-vI-a3f"/>
+                                            <constraint firstItem="wwg-E9-KHd" firstAttribute="leading" secondItem="Hme-hR-PCm" secondAttribute="leading" id="b50-7V-BIc"/>
+                                            <constraint firstAttribute="trailing" secondItem="wwg-E9-KHd" secondAttribute="trailing" id="c8p-tk-8uW"/>
+                                            <constraint firstAttribute="height" constant="20" id="peL-JP-RqN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWG-8R-dSb">
+                                        <rect key="frame" x="0.0" y="60" width="346" height="170"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="V5o-5U-Ukw">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="170"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xgf-WL-8lS">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="V5o-5U-Ukw" firstAttribute="top" secondItem="gWG-8R-dSb" secondAttribute="top" id="ELm-Fr-77F"/>
+                                            <constraint firstAttribute="bottom" secondItem="V5o-5U-Ukw" secondAttribute="bottom" id="IrE-pB-L3n"/>
+                                            <constraint firstItem="V5o-5U-Ukw" firstAttribute="leading" secondItem="gWG-8R-dSb" secondAttribute="leading" id="Lji-hf-NLX"/>
+                                            <constraint firstAttribute="trailing" secondItem="V5o-5U-Ukw" secondAttribute="trailing" id="QRt-mD-EbI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sed-on-ZhH" secondAttribute="bottom" constant="20" id="3BU-na-bdO"/>
+                            <constraint firstItem="sed-on-ZhH" firstAttribute="leading" secondItem="45E-4F-eOj" secondAttribute="leading" id="LUz-wj-eib"/>
+                            <constraint firstItem="sed-on-ZhH" firstAttribute="top" secondItem="45E-4F-eOj" secondAttribute="top" id="XWD-fg-iVY"/>
+                            <constraint firstAttribute="trailing" secondItem="sed-on-ZhH" secondAttribute="trailing" id="YoV-aG-mhn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="45E-4F-eOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4Bi-zS-hwg"/>
+                    <constraint firstAttribute="bottom" secondItem="45E-4F-eOj" secondAttribute="bottom" id="C0j-nw-C0Q"/>
+                    <constraint firstAttribute="trailing" secondItem="45E-4F-eOj" secondAttribute="trailing" constant="20" id="Tcb-Ct-yit"/>
+                    <constraint firstItem="45E-4F-eOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="raU-yi-kT4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="V5o-5U-Ukw" id="IMb-hS-tik"/>
+            </connections>
+            <point key="canvasLocation" x="189.31297709923663" y="-17.95774647887324"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
