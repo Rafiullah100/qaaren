@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,10 +48,10 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="7"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvS-js-OrY">
-                                                                        <rect key="frame" x="121.66666666666666" y="0.0" width="90" height="7"/>
+                                                                        <rect key="frame" x="131.66666666666666" y="0.0" width="70" height="7"/>
                                                                         <color key="backgroundColor" red="0.85098040103912354" green="0.85098040103912354" blue="0.85098040103912354" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="90" id="Frs-eu-mMN"/>
+                                                                            <constraint firstAttribute="width" constant="70" id="Frs-eu-mMN"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
@@ -71,8 +72,8 @@
                                                                 <rect key="frame" x="0.0" y="22" width="333" height="28"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mio-ca-njP">
-                                                                        <rect key="frame" x="73" y="0.33333333333337123" width="187" height="27.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
+                                                                        <rect key="frame" x="87" y="2.3333333333333712" width="159" height="23.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -233,7 +234,7 @@
                                                             <constraint firstAttribute="width" constant="160" id="4Su-sO-Qzg"/>
                                                             <constraint firstAttribute="height" constant="60" id="Psv-6t-iNZ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="17"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Apply Filter">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

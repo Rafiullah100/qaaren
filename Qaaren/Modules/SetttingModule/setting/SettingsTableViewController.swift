@@ -9,6 +9,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var switchView: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,16 @@ class SettingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func changeAppAppearance(_ sender: Any) {
+        if switchView.isOn {
+            UIWindow.key?.overrideUserInterfaceStyle = .dark
+//            UserDefaults.standard.theme = ThemeMode.dark.rawValue
+        }
+        else{
+            UIWindow.key?.overrideUserInterfaceStyle = .light
+//            UserDefaults.standard.theme = ThemeMode.light.rawValue
+        }
+    }
     // MARK: - Table view data source
 
    /* override func numberOfSections(in tableView: UITableView) -> Int {

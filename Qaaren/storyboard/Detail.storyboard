@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -32,7 +33,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOW-ZR-WAa">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agX-jo-zB1">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="agX-jo-zB1">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-7u-ULj">
@@ -41,7 +42,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-br-jFf">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo2" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-1B-ENL">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo2" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-1B-ENL">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                                             </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73h-YF-X13">
@@ -294,7 +295,7 @@
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                         </subviews>
-                                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstItem="Mpb-qR-obn" firstAttribute="leading" secondItem="wxk-VM-zSj" secondAttribute="leading" id="2gu-d8-8u5"/>
                                                                                                             <constraint firstItem="Mpb-qR-obn" firstAttribute="centerY" secondItem="wxk-VM-zSj" secondAttribute="centerY" id="KY4-HJ-992"/>
@@ -311,7 +312,7 @@
                                                                                                                 <nil key="highlightedColor"/>
                                                                                                             </label>
                                                                                                         </subviews>
-                                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstItem="0h2-Qh-okL" firstAttribute="centerY" secondItem="JEk-3g-cAi" secondAttribute="centerY" id="44k-cd-S21"/>
                                                                                                             <constraint firstItem="0h2-Qh-okL" firstAttribute="centerX" secondItem="JEk-3g-cAi" secondAttribute="centerX" id="Z9k-fH-84l"/>
@@ -326,7 +327,7 @@
                                                                                                 </constraints>
                                                                                             </stackView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="60" id="8wQ-ea-hv8"/>
                                                                                             <constraint firstItem="4Tp-yL-pDA" firstAttribute="top" secondItem="DiN-a6-abu" secondAttribute="top" id="EqW-gJ-nRY"/>
@@ -343,6 +344,7 @@
                                                                                                 <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             </view>
                                                                                         </subviews>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="zZe-Ob-1fC" firstAttribute="leading" secondItem="0PG-cu-BQg" secondAttribute="leading" id="0Wb-33-ba5"/>
                                                                                             <constraint firstAttribute="width" constant="1.5" id="PCc-Uq-sc2"/>
@@ -382,7 +384,7 @@
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="zF9-uW-5Q1" firstAttribute="leading" secondItem="zY7-7o-0AN" secondAttribute="leading" id="Fuf-Ac-vef"/>
                                                                                             <constraint firstItem="zF9-uW-5Q1" firstAttribute="centerY" secondItem="zY7-7o-0AN" secondAttribute="centerY" id="Lwo-ce-rSu"/>
@@ -405,7 +407,7 @@
                                                                         <subviews>
                                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-Nr-ZRH">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
-                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="W3L-LG-d8h">
                                                                                     <size key="itemSize" width="126" height="94"/>
                                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -425,7 +427,7 @@
                                                                                 </cells>
                                                                             </collectionView>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="bottom" secondItem="Kwi-Nr-ZRH" secondAttribute="bottom" id="20U-vf-nN7"/>
                                                                             <constraint firstItem="Kwi-Nr-ZRH" firstAttribute="top" secondItem="U16-UR-b9N" secondAttribute="top" id="6Wb-bK-gIg"/>
@@ -436,7 +438,7 @@
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5V-tS-WWY">
                                                                         <rect key="frame" x="0.0" y="160" width="353" height="701"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" priority="250" id="yjB-j5-FAg"/>
                                                                         </constraints>
@@ -447,7 +449,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" name="backgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="WrE-zc-kbK" secondAttribute="trailing" constant="20" id="9OJ-bb-roO"/>
                                                             <constraint firstAttribute="bottom" secondItem="WrE-zc-kbK" secondAttribute="bottom" id="Ely-jp-sek"/>
@@ -504,6 +506,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Kwi-Nr-ZRH" id="E1W-Wt-fbl"/>
                         <outlet property="containerView" destination="e5V-tS-WWY" id="dvH-Dw-G0m"/>
+                        <outlet property="scrollView" destination="agX-jo-zB1" id="s7j-af-qn3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -518,7 +521,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-ur-PjM">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-ur-PjM">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -578,7 +581,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-WL-AFL">
                                                 <rect key="frame" x="0.0" y="20" width="393" height="739"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-ys-QDy">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-ys-QDy">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="739"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -1486,7 +1489,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-Ld-9pP">
                                                 <rect key="frame" x="0.0" y="150" width="393" height="609"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="609"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </tableView>
@@ -1876,6 +1879,9 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
         <image name="detail-favorite" width="22" height="20"/>
         <image name="photo" width="162" height="182"/>
         <image name="star" width="15" height="15"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="shadowColor">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

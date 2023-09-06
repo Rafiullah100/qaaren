@@ -952,6 +952,9 @@
                                                                                                 <state key="normal" title="Login">
                                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 </state>
+                                                                                                <connections>
+                                                                                                    <action selector="signinBtn:" destination="wjQ-8H-2o5" eventType="touchUpInside" id="Qdw-vV-0qG"/>
+                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                         <constraints>

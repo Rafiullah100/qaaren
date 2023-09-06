@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: BaseViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
@@ -51,7 +52,6 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.iconView.isHidden = false
         cell.nameLabel.textColor = .white
         cell.cardView.layer.cornerRadius = 0
-        cell.iconView.image = UIImage(named: viewModel.itemsArray[indexPath.row].image)
         cell.nameLabel.font = UIFont(name: Constants.fontNameMedium, size: 19.0)
         cell.cardView.backgroundColor = CustomColor.tabBGColor.color
         if indexPath == selectedIndexPath {
@@ -60,6 +60,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.cardView.removeShadow()
             cell.cardView.backgroundColor = CustomColor.appColor.color
         } else {
+            cell.iconView.image = UIImage(named: viewModel.itemsArray[indexPath.row].image)
             cell.nameLabel.isHidden = true
             cell.cardView.addBottomShadow()
             cell.nameLabel.textColor = CustomColor.tabBGColor.color
@@ -75,7 +76,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             let cellsAcross: CGFloat = 4
             let spaceBetweenCells: CGFloat = 5
             var width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells)
-            width = (width - 150) / cellsAcross
+            width = (width - 155) / cellsAcross
             print(width)
             return CGSize(width: width, height: 45)
         }
@@ -97,6 +98,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         else if indexPath.row == 4{
             add(alertVC, in: containerView)
         }
+//        scrollView.layoutIfNeeded()
         selectedIndexPath = indexPath
         collectionView.reloadData()
     }

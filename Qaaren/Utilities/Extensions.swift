@@ -176,10 +176,10 @@ extension UIViewController {
     
     func add(_ child: UIViewController, in container: UIView) {
         addChild(child)
-        container.addSubview(child.view)
         child.view.frame = container.bounds
+        container.addSubview(child.view)
         child.didMove(toParent: self)
-        child.viewWillAppear(false)
+//        child.viewWillAppear(false)
     }
     
     func add(_ child: UIViewController) {
@@ -198,5 +198,16 @@ extension UIViewController {
     
     func remove() {
         remove(from: view)
+    }
+}
+
+
+extension UIWindow {
+    static var key: UIWindow! {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.first { $0.isKeyWindow }
+        } else {
+            return UIApplication.shared.keyWindow
+        }
     }
 }

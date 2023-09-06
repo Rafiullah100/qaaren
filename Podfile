@@ -7,5 +7,6 @@ target 'Qaaren' do
 
   # Pods for Qaaren
   pod 'GoogleMaps'
+  pod 'SwiftGifOrigin'
 
 end

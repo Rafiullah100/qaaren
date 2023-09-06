@@ -2,12 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cat-M1-rtu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
         <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
@@ -116,14 +120,21 @@ particular product.</string>
                                     <constraint firstAttribute="height" constant="380" id="tIb-gF-3w9"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.gif" translatesAutoresizingMaskIntoConstraints="NO" id="iCh-oG-WBA">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iCh-oG-WBA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BbY-cR-uqt"/>
                             <constraint firstItem="aye-C3-Myv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Cpd-4Q-b8n"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iCh-oG-WBA" secondAttribute="bottom" id="GZ0-GI-Wc2"/>
                             <constraint firstItem="PQ8-W2-k4y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="J12-4f-8wW"/>
                             <constraint firstItem="PQ8-W2-k4y" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="U2p-pu-yb6"/>
+                            <constraint firstItem="iCh-oG-WBA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c4B-0c-F4r"/>
                             <constraint firstItem="aye-C3-Myv" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ivt-3d-WR1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iCh-oG-WBA" secondAttribute="trailing" id="mJ1-Tq-w7U"/>
                             <constraint firstAttribute="trailing" secondItem="PQ8-W2-k4y" secondAttribute="trailing" id="mgI-xI-37Q"/>
                             <constraint firstItem="PQ8-W2-k4y" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wi5-Qq-ZYB"/>
                         </constraints>
@@ -155,6 +166,7 @@ particular product.</string>
     </scenes>
     <resources>
         <image name="gradient-rectangle" width="117" height="115"/>
+        <image name="launch.gif" width="492" height="874"/>
         <image name="splash" width="413" height="390"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

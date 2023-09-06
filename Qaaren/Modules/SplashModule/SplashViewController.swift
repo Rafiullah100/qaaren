@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftGifOrigin
 class SplashViewController: UIViewController {
     var centerView: UIView?
     var centerIcon: UIView?
@@ -17,21 +17,36 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+     
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             Switcher.gotoLoginVC(delegate: self)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        centerView = view.viewWithTag(1)
-        centerIcon = view.viewWithTag(2)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self.centerView?.isHidden = true
-            self.moveIcon()
-        }
+        let imageView: UIImageView = view.viewWithTag(101) as! UIImageView
+        imageView.image = UIImage.gif(name: "launch")
     }
+
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+//            Switcher.gotoLoginVC(delegate: self)
+//        }
+//    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        centerView = view.viewWithTag(1)
+//        centerIcon = view.viewWithTag(2)
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+//            self.centerView?.isHidden = true
+//            self.moveIcon()
+//        }
+//    }
     
     func moveIcon() {
         UIView.animate(withDuration: 0.8, delay: 0.0, options: .curveEaseOut, animations: {

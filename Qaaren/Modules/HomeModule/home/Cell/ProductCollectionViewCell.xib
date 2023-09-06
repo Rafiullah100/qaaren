@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,7 +50,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="favoriteBGColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="4l2-bl-MiG"/>
                                                     <constraint firstItem="zch-H1-ZJb" firstAttribute="centerX" secondItem="ygt-MZ-8hl" secondAttribute="centerX" id="CMP-ZH-DHJ"/>
@@ -124,7 +126,7 @@
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="EsE-Ai-nME" firstAttribute="top" secondItem="a1w-G2-Gqh" secondAttribute="top" id="SEy-8i-ira"/>
                                                                                             <constraint firstItem="EsE-Ai-nME" firstAttribute="leading" secondItem="a1w-G2-Gqh" secondAttribute="leading" id="iyg-FL-HQW"/>
@@ -139,7 +141,7 @@
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="fUK-ha-rwB" firstAttribute="top" secondItem="PHp-DY-12g" secondAttribute="top" id="0kI-bO-XyA"/>
                                                                                             <constraint firstAttribute="trailing" secondItem="fUK-ha-rwB" secondAttribute="trailing" id="a2l-xg-hxh"/>
@@ -154,7 +156,7 @@
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="3tY-3j-C3s" firstAttribute="top" secondItem="WiR-f4-MyO" secondAttribute="top" id="CUg-Eo-6kK"/>
                                                                                             <constraint firstItem="3tY-3j-C3s" firstAttribute="leading" secondItem="WiR-f4-MyO" secondAttribute="leading" id="dYl-Xb-Wbx"/>
@@ -169,7 +171,7 @@
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstItem="dWJ-J9-5fY" firstAttribute="top" secondItem="1CR-C9-0r9" secondAttribute="top" id="8gd-2a-eGb"/>
                                                                                             <constraint firstAttribute="bottom" secondItem="dWJ-J9-5fY" secondAttribute="bottom" id="Drs-zU-KiK"/>
@@ -184,7 +186,7 @@
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="bottom" secondItem="5EM-OV-TGl" secondAttribute="bottom" id="PCK-je-goY"/>
                                                                                             <constraint firstAttribute="trailing" secondItem="5EM-OV-TGl" secondAttribute="trailing" id="ZLN-N9-kga"/>
@@ -195,7 +197,7 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="1io-FE-bOi" secondAttribute="trailing" id="3CF-k3-0je"/>
                                                                             <constraint firstAttribute="bottom" secondItem="1io-FE-bOi" secondAttribute="bottom" id="PhT-4w-5sq"/>
@@ -209,12 +211,13 @@
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIn-hL-ZHM">
                                                                                 <rect key="frame" x="0.0" y="4" width="19.333333333333332" height="14"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
-                                                                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" name="grayWhiteColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstItem="gIn-hL-ZHM" firstAttribute="centerY" secondItem="gn4-Zo-0bd" secondAttribute="centerY" constant="1" id="5yJ-Cx-PCs"/>
                                                                             <constraint firstAttribute="width" constant="30" id="BPP-9x-cLr"/>
@@ -250,7 +253,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-bf-7Ks">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="17.666666666666668"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="14"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -278,7 +281,7 @@
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="trailing" secondItem="2am-re-x5r" secondAttribute="trailing" id="80o-Va-wDa"/>
                                                                                             <constraint firstAttribute="width" constant="38" id="9VC-Mf-c8f"/>
@@ -293,11 +296,11 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="590-882 SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8e-Rh-tzs">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="17.333333333333332"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
-                                                                                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <color key="textColor" name="grayWhiteColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
-                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="bottom" secondItem="K8e-Rh-tzs" secondAttribute="bottom" id="3P9-Ww-leK"/>
                                                                                             <constraint firstItem="K8e-Rh-tzs" firstAttribute="top" secondItem="vg1-hc-YyF" secondAttribute="top" id="4MW-lC-DBg"/>
@@ -319,7 +322,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="cdb-G3-cfz" firstAttribute="leading" secondItem="d9f-8m-71O" secondAttribute="leading" id="HhL-ox-FyW"/>
                                                             <constraint firstAttribute="trailing" secondItem="cdb-G3-cfz" secondAttribute="trailing" id="WY7-NC-Gwj"/>
@@ -346,7 +349,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="cellBGColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="2Tk-zc-ljn" secondAttribute="bottom" id="8xF-d4-LVj"/>
                             <constraint firstItem="2Tk-zc-ljn" firstAttribute="top" secondItem="Deo-7E-fPH" secondAttribute="top" id="T27-F1-ayo"/>
@@ -379,6 +382,15 @@
         <image name="demo1" width="162" height="180"/>
         <image name="favorite_gray" width="14" height="13"/>
         <image name="star" width="15" height="15"/>
+        <namedColor name="cellBGColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="favoriteBGColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayWhiteColor">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

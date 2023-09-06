@@ -59,6 +59,7 @@
 		528EA8DB2AA1E275009264C2 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EA8D92AA1E275009264C2 /* ReviewTableViewCell.swift */; };
 		528EA8DC2AA1E275009264C2 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528EA8DA2AA1E275009264C2 /* ReviewTableViewCell.xib */; };
 		528EA8DE2AA1E78A009264C2 /* RevieweViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EA8DD2AA1E78A009264C2 /* RevieweViewController.swift */; };
+		52956D202AA86BE50020384C /* launch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52956D1F2AA86BE50020384C /* launch.gif */; };
 		52A7EA802AA1BA46008FE6E0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7EA7F2AA1BA46008FE6E0 /* InfoViewController.swift */; };
 		52BD2FF62AA5D7EE0075F39D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2FF52AA5D7EE0075F39D /* AlertViewController.swift */; };
 		52BD2FFA2AA5DDA40075F39D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2FF92AA5DDA40075F39D /* MapViewController.swift */; };
@@ -123,6 +124,7 @@
 		528EA8D92AA1E275009264C2 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		528EA8DA2AA1E275009264C2 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		528EA8DD2AA1E78A009264C2 /* RevieweViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevieweViewController.swift; sourceTree = "<group>"; };
+		52956D1F2AA86BE50020384C /* launch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launch.gif; sourceTree = "<group>"; };
 		52A7EA7F2AA1BA46008FE6E0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		52BD2FF52AA5D7EE0075F39D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		52BD2FF92AA5DDA40075F39D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			children = (
 				527754D62A9C908E0072222E /* fonts */,
 				527754AB2A9C80F10072222E /* Assets.xcassets */,
+				52956D1F2AA86BE50020384C /* launch.gif */,
 			);
 			path = "Assest&fonts";
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				5277549C2A9C80EF0072222E /* Frameworks */,
 				5277549D2A9C80EF0072222E /* Resources */,
 				EC46BA5F0DC6E58CCB59AD42 /* [CP] Copy Pods Resources */,
+				CEA0C2025D07E2EC94258A11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -649,6 +653,7 @@
 				5276CCA72A9DF63C004558F5 /* HomeTableViewCell.xib in Resources */,
 				527754E22A9C90990072222E /* manrope-medium.otf in Resources */,
 				5276CCAB2A9DFA7D004558F5 /* ProductCollectionViewCell.xib in Resources */,
+				52956D202AA86BE50020384C /* launch.gif in Resources */,
 				527754AF2A9C80F10072222E /* LaunchScreen.storyboard in Resources */,
 				522B46702AA70DB6005F2909 /* CategoriesTableViewCell.xib in Resources */,
 				527754E02A9C90990072222E /* manrope-bold.otf in Resources */,
@@ -679,6 +684,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA0C2025D07E2EC94258A11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Qaaren/Pods-Qaaren-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Qaaren/Pods-Qaaren-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Qaaren/Pods-Qaaren-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC46BA5F0DC6E58CCB59AD42 /* [CP] Copy Pods Resources */ = {
@@ -887,6 +909,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -915,6 +938,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -25,6 +25,9 @@ class CategoriesViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
         
+    @IBAction func filterBtnAction(_ sender: Any) {
+        Switcher.gotoFilterVC(delegate: self)
+    }
 }
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{

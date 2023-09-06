@@ -24,6 +24,10 @@ class SignupViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+     */
+
+     @IBAction func signinBtn(_ sender: Any) {
+         navigationController?.popViewController(animated: true)
+     }
 
 }

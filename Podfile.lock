@@ -4,17 +4,21 @@ PODS:
   - GoogleMaps/Base (7.4.0)
   - GoogleMaps/Maps (7.4.0):
     - GoogleMaps/Base
+  - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
   - GoogleMaps
+  - SwiftGifOrigin
 
 SPEC REPOS:
   trunk:
     - GoogleMaps
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: d907fd1f604b2e84917184c0109ce2589807f45e
+PODFILE CHECKSUM: e20c82cefcdcd1901b52332d1ec700add530bcfc
 
 COCOAPODS: 1.11.3

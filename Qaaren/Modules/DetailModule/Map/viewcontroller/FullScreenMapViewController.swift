@@ -15,7 +15,12 @@ class FullScreenMapViewController: BaseViewController {
 //        self.navigationController?.navigationBar.isHidden = true
         let camera = GMSCameraPosition.camera(withLatitude: 34.0151, longitude: 71.5249, zoom: 6.0)
         mapView.camera = camera
+        
+        let position = CLLocationCoordinate2DMake(34.0151,71.5249)
+        let marker = GMSMarker(position: position)
+        marker.map = mapView
     }
+    
     @IBAction func backBtnActio(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -41,7 +42,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="msu-0Y-khz" firstAttribute="top" secondItem="ZIh-JQ-KhX" secondAttribute="top" id="4lx-Bo-tpZ"/>
                                             <constraint firstAttribute="height" constant="30" id="6Fz-fb-0xw"/>
@@ -60,13 +61,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="296" height="20"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super summer sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-vN-QEf">
-                                                                <rect key="frame" x="0.0" y="3.6666666666666643" width="95.333333333333329" height="13"/>
+                                                                <rect key="frame" x="0.0" y="2.3333333333333366" width="102.33333333333333" height="15.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="11"/>
                                                                 <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="M9n-vN-QEf" firstAttribute="centerY" secondItem="xU5-mZ-kNW" secondAttribute="centerY" id="0O5-i9-15v"/>
                                                             <constraint firstItem="M9n-vN-QEf" firstAttribute="leading" secondItem="xU5-mZ-kNW" secondAttribute="leading" id="MIr-re-Qep"/>
@@ -76,13 +77,12 @@
                                                         <rect key="frame" x="296" y="0.0" width="50" height="20"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4p-V2-Qsm">
-                                                                <rect key="frame" x="12.666666666666686" y="3.6666666666666643" width="37.333333333333336" height="13"/>
+                                                                <rect key="frame" x="11.666666666666686" y="2.3333333333333366" width="38.333333333333336" height="15.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="11"/>
-                                                                <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="iUQ-Tr-UNa"/>
                                                             <constraint firstItem="r4p-V2-Qsm" firstAttribute="centerY" secondItem="nSr-nH-pYa" secondAttribute="centerY" id="qq0-Rq-4Ib"/>
@@ -92,7 +92,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="wwg-E9-KHd" secondAttribute="bottom" id="0yO-cP-63J"/>
                                             <constraint firstItem="wwg-E9-KHd" firstAttribute="top" secondItem="Hme-hR-PCm" secondAttribute="top" id="1nS-vI-a3f"/>
@@ -106,7 +106,7 @@
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="V5o-5U-Ukw">
                                                 <rect key="frame" x="0.0" y="0.0" width="346" height="170"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xgf-WL-8lS">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -115,7 +115,7 @@
                                                 </collectionViewFlowLayout>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="V5o-5U-Ukw" firstAttribute="top" secondItem="gWG-8R-dSb" secondAttribute="top" id="ELm-Fr-77F"/>
                                             <constraint firstAttribute="bottom" secondItem="V5o-5U-Ukw" secondAttribute="bottom" id="IrE-pB-L3n"/>
@@ -126,7 +126,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="sed-on-ZhH" secondAttribute="bottom" constant="20" id="3BU-na-bdO"/>
                             <constraint firstItem="sed-on-ZhH" firstAttribute="leading" secondItem="45E-4F-eOj" secondAttribute="leading" id="LUz-wj-eib"/>
@@ -135,6 +135,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
                     <constraint firstItem="45E-4F-eOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4Bi-zS-hwg"/>
                     <constraint firstAttribute="bottom" secondItem="45E-4F-eOj" secondAttribute="bottom" id="C0j-nw-C0Q"/>
@@ -150,8 +151,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -23,10 +23,10 @@ class CompareeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.tableView.reloadData()
-        tableViewHeight.constant = CGFloat.greatestFiniteMagnitude
-        tableView.reloadData()
-        tableView.layoutIfNeeded()
+//        self.tableView.reloadData()
+//        tableViewHeight.constant = CGFloat.greatestFiniteMagnitude
+//        tableView.reloadData()
+//        tableView.layoutIfNeeded()
         tableViewHeight.constant = tableView.contentSize.height
     }
     
@@ -42,7 +42,6 @@ class CompareeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
