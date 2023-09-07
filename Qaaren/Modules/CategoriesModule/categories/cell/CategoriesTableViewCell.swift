@@ -17,7 +17,7 @@ class CategoriesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        radioButtonView.layer.borderColor = selected ? CustomColor.appSecondryColor.color.cgColor : CustomColor.borderColor.color.cgColor
+        radioButtonView.layer.borderColor = selected ? CustomColor.uiColor(.blueishColor).cgColor : CustomColor.borderColor.color.cgColor
         radioButtonView.layer.borderWidth = selected ? 5 : 1
     }
     

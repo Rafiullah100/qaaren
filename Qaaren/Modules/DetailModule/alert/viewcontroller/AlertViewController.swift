@@ -17,7 +17,7 @@ class AlertViewController: UIViewController {
     
     @IBAction func radioButtonAction(_ sender: Any) {
         if radioButtonView.layer.borderWidth == 1{
-            radioButtonView.layer.borderColor = CustomColor.appSecondryColor.color.cgColor
+            radioButtonView.layer.borderColor = CustomColor.uiColor(.blueishColor).cgColor
             radioButtonView.layer.borderWidth = 8
         }
         else{

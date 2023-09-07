@@ -64,6 +64,13 @@
 		52BD2FF62AA5D7EE0075F39D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2FF52AA5D7EE0075F39D /* AlertViewController.swift */; };
 		52BD2FFA2AA5DDA40075F39D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2FF92AA5DDA40075F39D /* MapViewController.swift */; };
 		52BD2FFC2AA5E4710075F39D /* FullScreenMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2FFB2AA5E4710075F39D /* FullScreenMapViewController.swift */; };
+		52C660642AA9DCEF0012126A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C660632AA9DCEF0012126A /* ProfileViewController.swift */; };
+		52C660682AA9DF610012126A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C660672AA9DF610012126A /* HeaderView.xib */; };
+		52C6606A2AA9DF760012126A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C660692AA9DF760012126A /* HeaderView.swift */; };
+		52C6606E2AA9E3660012126A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6606C2AA9E3660012126A /* ProfileTableViewCell.swift */; };
+		52C6606F2AA9E3660012126A /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C6606D2AA9E3660012126A /* ProfileTableViewCell.xib */; };
+		52C660732AA9EAEC0012126A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C660722AA9EAEC0012126A /* Profile.storyboard */; };
+		52C660752AA9EBF90012126A /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C660742AA9EBF90012126A /* InformationViewController.swift */; };
 		52E439522AA0AA1500E14C5C /* CompareeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E439512AA0AA1500E14C5C /* CompareeViewController.swift */; };
 		F7E232C1E3FF716C2720671F /* Pods_Qaaren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C332AA031B3987B51448D5FC /* Pods_Qaaren.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +136,13 @@
 		52BD2FF52AA5D7EE0075F39D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		52BD2FF92AA5DDA40075F39D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52BD2FFB2AA5E4710075F39D /* FullScreenMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapViewController.swift; sourceTree = "<group>"; };
+		52C660632AA9DCEF0012126A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52C660672AA9DF610012126A /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		52C660692AA9DF760012126A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		52C6606C2AA9E3660012126A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		52C6606D2AA9E3660012126A /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		52C660722AA9EAEC0012126A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		52C660742AA9EBF90012126A /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		52E439512AA0AA1500E14C5C /* CompareeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareeViewController.swift; sourceTree = "<group>"; };
 		C332AA031B3987B51448D5FC /* Pods_Qaaren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qaaren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6573A95106F98B9A34BBFD /* Pods-Qaaren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qaaren.release.xcconfig"; path = "Target Support Files/Pods-Qaaren/Pods-Qaaren.release.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +335,7 @@
 				526C2E9A2A9F56A80032EF94 /* Base */,
 				527754EB2A9CB8FB0072222E /* TabbarController */,
 				527754BB2A9C82FA0072222E /* Utilities */,
+				52C660652AA9DF440012126A /* Views */,
 				527754B82A9C826B0072222E /* Modules */,
 				527754B62A9C822F0072222E /* AppDelegate */,
 				527754B72A9C82520072222E /* storyboard */,
@@ -349,6 +364,7 @@
 				521A180D2A9F10B8001E290E /* Filter.storyboard */,
 				526C2E982A9F56220032EF94 /* Detail.storyboard */,
 				5246487D2AA7224E004360DC /* Settings.storyboard */,
+				52C660722AA9EAEC0012126A /* Profile.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -356,6 +372,7 @@
 		527754B82A9C826B0072222E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				52C660602AA9DCAD0012126A /* ProfileModule */,
 				522B46672AA70B97005F2909 /* CategoriesModule */,
 				522B46632AA6FF67005F2909 /* SetttingModule */,
 				526C2E9D2A9F579A0032EF94 /* DetailModule */,
@@ -559,6 +576,74 @@
 			path = viewcontroller;
 			sourceTree = "<group>";
 		};
+		52C660602AA9DCAD0012126A /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				52C660702AA9EA0F0012126A /* PersonalInformation */,
+				52C660612AA9DCC80012126A /* ProfileHome */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		52C660612AA9DCC80012126A /* ProfileHome */ = {
+			isa = PBXGroup;
+			children = (
+				52C6606B2AA9E3460012126A /* Cell */,
+				52C660622AA9DCD60012126A /* viewcontroller */,
+			);
+			path = ProfileHome;
+			sourceTree = "<group>";
+		};
+		52C660622AA9DCD60012126A /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				52C660632AA9DCEF0012126A /* ProfileViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		52C660652AA9DF440012126A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52C660662AA9DF500012126A /* HeaderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52C660662AA9DF500012126A /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				52C660672AA9DF610012126A /* HeaderView.xib */,
+				52C660692AA9DF760012126A /* HeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		52C6606B2AA9E3460012126A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52C6606C2AA9E3660012126A /* ProfileTableViewCell.swift */,
+				52C6606D2AA9E3660012126A /* ProfileTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52C660702AA9EA0F0012126A /* PersonalInformation */ = {
+			isa = PBXGroup;
+			children = (
+				52C660712AA9EA280012126A /* Viewcontroller */,
+			);
+			path = PersonalInformation;
+			sourceTree = "<group>";
+		};
+		52C660712AA9EA280012126A /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				52C660742AA9EBF90012126A /* InformationViewController.swift */,
+			);
+			path = Viewcontroller;
+			sourceTree = "<group>";
+		};
 		52D3081C2AA0636E008166D9 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,16 +726,19 @@
 				528EA8DC2AA1E275009264C2 /* ReviewTableViewCell.xib in Resources */,
 				521A180E2A9F10B8001E290E /* Filter.storyboard in Resources */,
 				528C8F722AA0A15D0056F056 /* CompareTableViewCell.xib in Resources */,
+				52C6606F2AA9E3660012126A /* ProfileTableViewCell.xib in Resources */,
 				526C2E992A9F56220032EF94 /* Detail.storyboard in Resources */,
 				5246487E2AA7224E004360DC /* Settings.storyboard in Resources */,
 				521A18132A9F23C4001E290E /* Splash.storyboard in Resources */,
 				527754E92A9CB7E40072222E /* Home.storyboard in Resources */,
+				52C660682AA9DF610012126A /* HeaderView.xib in Resources */,
 				527754E42A9C91C90072222E /* manrope-semibold.otf in Resources */,
 				527754E12A9C90990072222E /* manrope-thin.otf in Resources */,
 				527754DF2A9C90990072222E /* manrope-regular.otf in Resources */,
 				527754CF2A9C83660072222E /* Auth.storyboard in Resources */,
 				527754DE2A9C90990072222E /* manrope-light.otf in Resources */,
 				5276CCA72A9DF63C004558F5 /* HomeTableViewCell.xib in Resources */,
+				52C660732AA9EAEC0012126A /* Profile.storyboard in Resources */,
 				527754E22A9C90990072222E /* manrope-medium.otf in Resources */,
 				5276CCAB2A9DFA7D004558F5 /* ProductCollectionViewCell.xib in Resources */,
 				52956D202AA86BE50020384C /* launch.gif in Resources */,
@@ -736,6 +824,7 @@
 				5246487C2AA71E43004360DC /* SettingsTableViewController.swift in Sources */,
 				527754CD2A9C82FB0072222E /* Color.swift in Sources */,
 				528EA8DB2AA1E275009264C2 /* ReviewTableViewCell.swift in Sources */,
+				52C6606E2AA9E3660012126A /* ProfileTableViewCell.swift in Sources */,
 				528EA8DE2AA1E78A009264C2 /* RevieweViewController.swift in Sources */,
 				526C2E9C2A9F56BD0032EF94 /* BaseViewController.swift in Sources */,
 				52E439522AA0AA1500E14C5C /* CompareeViewController.swift in Sources */,
@@ -752,6 +841,7 @@
 				526C2EA02A9F57BB0032EF94 /* DetailViewController.swift in Sources */,
 				527754C62A9C82FB0072222E /* Switcher.swift in Sources */,
 				522B466B2AA70BC1005F2909 /* CategoriesViewController.swift in Sources */,
+				52C6606A2AA9DF760012126A /* HeaderView.swift in Sources */,
 				527754C52A9C82FB0072222E /* Constants.swift in Sources */,
 				527754E72A9CAF1A0072222E /* SigninViewController.swift in Sources */,
 				521A18112A9F111B001E290E /* FilterViewController.swift in Sources */,
@@ -761,8 +851,10 @@
 				52A7EA802AA1BA46008FE6E0 /* InfoViewController.swift in Sources */,
 				5276CCAA2A9DFA7D004558F5 /* ProductCollectionViewCell.swift in Sources */,
 				527754D32A9C864C0072222E /* LoginViewController.swift in Sources */,
+				52C660642AA9DCEF0012126A /* ProfileViewController.swift in Sources */,
 				521A18152A9F23D7001E290E /* SplashViewController.swift in Sources */,
 				528EA8D62AA1CCB5009264C2 /* ReviewViewController.swift in Sources */,
+				52C660752AA9EBF90012126A /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

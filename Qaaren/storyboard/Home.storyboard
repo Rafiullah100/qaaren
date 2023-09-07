@@ -507,14 +507,41 @@
         <!--Profile-->
         <scene sceneID="AWK-pF-isC">
             <objects>
-                <viewController id="0GQ-E7-7iF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="0GQ-E7-7iF" customClass="ProfileViewController" customModule="Qaaren" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNt-0e-7mU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP3-HF-wDv">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="100" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-b0-SkN">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kZ3-b0-SkN" secondAttribute="trailing" id="8f8-UG-acd"/>
+                                    <constraint firstAttribute="bottom" secondItem="kZ3-b0-SkN" secondAttribute="bottom" id="IEu-6o-cwf"/>
+                                    <constraint firstItem="kZ3-b0-SkN" firstAttribute="leading" secondItem="oP3-HF-wDv" secondAttribute="leading" id="hLD-TR-7g7"/>
+                                    <constraint firstItem="kZ3-b0-SkN" firstAttribute="top" secondItem="oP3-HF-wDv" secondAttribute="top" id="y9U-vx-XLe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PT1-0Y-YhO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PT1-0Y-YhO" firstAttribute="bottom" secondItem="oP3-HF-wDv" secondAttribute="bottom" id="GTb-pW-bEv"/>
+                            <constraint firstItem="oP3-HF-wDv" firstAttribute="leading" secondItem="PT1-0Y-YhO" secondAttribute="leading" id="Qlq-jA-ITs"/>
+                            <constraint firstItem="oP3-HF-wDv" firstAttribute="trailing" secondItem="PT1-0Y-YhO" secondAttribute="trailing" id="ZON-38-0Fa"/>
+                            <constraint firstItem="oP3-HF-wDv" firstAttribute="top" secondItem="PT1-0Y-YhO" secondAttribute="top" id="yJZ-CJ-yDw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile-selected" id="RIG-dc-1gK"/>
+                    <connections>
+                        <outlet property="tableView" destination="kZ3-b0-SkN" id="bJa-1Y-e2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuy-pl-E3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
