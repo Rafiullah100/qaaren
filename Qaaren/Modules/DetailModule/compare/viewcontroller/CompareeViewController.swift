@@ -27,6 +27,7 @@ class CompareeViewController: UIViewController {
 //        tableViewHeight.constant = CGFloat.greatestFiniteMagnitude
 //        tableView.reloadData()
 //        tableView.layoutIfNeeded()
+        self.view.backgroundColor = .clear
         tableViewHeight.constant = tableView.contentSize.height
     }
     

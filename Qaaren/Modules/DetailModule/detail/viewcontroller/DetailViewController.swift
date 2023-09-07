@@ -63,7 +63,8 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.iconView.image = UIImage(named: viewModel.itemsArray[indexPath.row].image)
             cell.nameLabel.isHidden = true
             cell.cardView.addBottomShadow()
-            cell.nameLabel.textColor = CustomColor.tabBGColor.color
+            cell.nameLabel.textColor = CustomColor.uiColor(.tabTextColor)
+            cell.cardView.backgroundColor = CustomColor.uiColor(.tabBGColor)
         }
         return cell
     }

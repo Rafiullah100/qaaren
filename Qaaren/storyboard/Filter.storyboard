@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -107,9 +108,9 @@
                                                                 <subviews>
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xJ1-nn-GBp">
                                                                         <rect key="frame" x="-2" y="0.0" width="317" height="33.666666666666664"/>
-                                                                        <color key="minimumTrackTintColor" red="0.023529412224888802" green="0.2078431248664856" blue="0.67843139171600342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="minimumTrackTintColor" name="blueishColor"/>
                                                                         <color key="maximumTrackTintColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <color key="thumbTintColor" red="0.023529412224888802" green="0.2078431248664856" blue="0.67843139171600342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" name="blueishColor"/>
                                                                     </slider>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -229,7 +230,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGD-Sl-e7z">
                                                         <rect key="frame" x="86.666666666666686" y="7.6666666666666288" width="160" height="60"/>
-                                                        <color key="backgroundColor" red="0.023529412224888802" green="0.2078431248664856" blue="0.67843139171600342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="blueishColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="160" id="4Su-sO-Qzg"/>
                                                             <constraint firstAttribute="height" constant="60" id="Psv-6t-iNZ"/>
@@ -290,6 +291,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="blueishColor">
+            <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

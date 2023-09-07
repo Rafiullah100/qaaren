@@ -60,8 +60,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.nameLabel.textColor = .white
         } else {
             cell.cardView.addShadow()
-            cell.nameLabel.textColor = CustomColor.tabTextColor.color
-            cell.cardView.backgroundColor = .white
+            cell.nameLabel.textColor = CustomColor.uiColor(.tabTextColor)
+            cell.cardView.backgroundColor = CustomColor.uiColor(.tabBGColor)
         }
         return cell
     }

@@ -3,6 +3,16 @@
     {
       "filename" : "arrow.svg",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Group 14.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

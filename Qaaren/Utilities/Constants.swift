@@ -22,6 +22,8 @@ struct Constants {
     static let fontNameMedium = "manrope-Medium"
     static let fontNameSemoBold = "manrope-Semibold"
 
+    static let appMediumFont = UIFont(name: "manrope-Medium", size: 10.0)
+
     static let appBoldFont = UIFont(name: "manrope-bold", size: 12.0)
     static let appRegularFont = UIFont(name: "manrope", size: 12.0)
     

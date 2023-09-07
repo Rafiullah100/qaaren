@@ -56,7 +56,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             print(viewControllerTitle ?? "")
             titleLabel.text = viewControllerTitle ?? ""
             titleLabel.font = UIFont(name: Constants.fontNameBold, size: 17)
-            titleLabel.textColor = .black
+            titleLabel.textColor = .label
             self.navigationItem.titleView = titleLabel
         }
         
@@ -160,7 +160,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         imageView.image = UIImage(named: "arrow-black")
         let labelbgView = UIView(frame: CGRect(x: 35, y: 0, width: UIScreen.main.bounds.width, height: 30))
         let label = UILabel(frame: CGRect(x: 5, y: 0, width: UIScreen.main.bounds.width, height: 30))
-        label.textColor = .black
+        label.textColor = .label
         labelbgView.addSubview(label)
         let stringArray = viewControllerTitle?.split(separator: "|")
         let firstAttributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "\(Constants.fontNameBold)", size: 18) ?? UIFont()]

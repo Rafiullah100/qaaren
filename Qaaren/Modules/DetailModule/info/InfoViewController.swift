@@ -12,6 +12,6 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .clear
     }
 }

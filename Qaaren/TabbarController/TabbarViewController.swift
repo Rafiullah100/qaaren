@@ -13,6 +13,18 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
         tabBarController?.tabBar.items?[2].title = ""
+        
+        if let tabBar = self.tabBarController?.tabBar {
+            let normalTextAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.white,
+                .font: Constants.fontNameMedium
+            ]
+            
+            tabBar.items?.forEach { item in
+                item.setTitleTextAttributes(normalTextAttributes, for: .normal)
+            }
+        }
+        
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

@@ -7,14 +7,15 @@
 
 import Foundation
 import UIKit
-enum CustomColor {
-    case appColor
-    case tabTextColor
-    case shadowColor
-    case tabBGColor
-    case appSecondryColor
-    case borderColor
-    case navigationColor
+enum CustomColor: String {
+    case appColor = "appColor"
+    case tabTextColor = "tabTextColor"
+    case shadowColor = "shadowColor"
+    case tabBGColor = "tabBGColor"
+    case appSecondryColor = "appSecondryColor"
+    case borderColor = "borderColor"
+    case navigationColor = "navigationColor"
+    case tabbarTextColor = "tabbarTextColor"
 }
 
 extension CustomColor {
@@ -34,6 +35,15 @@ extension CustomColor {
             return UIColor(hex: 0xCCCCCC, alpha: 1.0)
         case .navigationColor:
             return UIColor(hex: 0xCCCCCC, alpha: 0.1)
+        case .tabbarTextColor:
+            return UIColor(hex: 0xBBBBBB, alpha: 0.1)
         }
     }
+    
+    
+    static func uiColor(_ color: CustomColor) -> UIColor {
+        return UIColor(named: color.rawValue) ?? .clear
+    }
 }
+
+
