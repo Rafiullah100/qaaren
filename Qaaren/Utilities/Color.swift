@@ -17,6 +17,7 @@ enum CustomColor: String {
     case navigationColor = "navigationColor"
     case tabbarTextColor = "tabbarTextColor"
     case blueishColor = "blueishColor"
+    case buttonColor = "buttonColor"
 }
 
 extension CustomColor {
@@ -25,7 +26,7 @@ extension CustomColor {
         case .appColor:
             return UIColor(hex: 0xF39C6A, alpha: 1.0)
         case .tabTextColor:
-            return UIColor(hex: 0xBCBCBC, alpha: 0.6)
+            return UIColor(hex: 0xBCBCBC, alpha: 0.6) 
         case .shadowColor: 
             return UIColor(hex: 0xE33333, alpha: 0.4)
         case .tabBGColor:
@@ -40,6 +41,8 @@ extension CustomColor {
             return UIColor(hex: 0xBBBBBB, alpha: 0.1)
         case .blueishColor:
             return UIColor(hex: 0x002ED1, alpha: 0.1)
+        case .buttonColor:
+            return UIColor(hex: 0xF3F3F3, alpha: 0.1)
         }
     }
     

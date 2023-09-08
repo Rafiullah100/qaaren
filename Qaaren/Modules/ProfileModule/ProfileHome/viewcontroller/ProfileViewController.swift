@@ -56,6 +56,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Switcher.gotoInformation(delegate: self)
+        if indexPath.row == 0{
+            Switcher.gotoInformation(delegate: self)
+        }
+        else if indexPath.row == 1{
+            Switcher.gotoMySources(delegate: self)
+        }
+        else if indexPath.row == 2{
+            Switcher.gotoMyCategory(delegate: self)
+        }
+        else if indexPath.row == 3{
+            Switcher.gotoWishlist(delegate: self)
+        }
     }
 }

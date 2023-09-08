@@ -23,6 +23,11 @@ class WishlisViewController: BaseViewController {
         type = .backWithTitle
         viewControllerTitle = "My Wishlist"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
 
 extension WishlisViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{

@@ -1,13 +1,13 @@
 //
-//  CategoriesViewController.swift
+//  SourcesViewController.swift
 //  Qaaren
 //
-//  Created by MacBook Pro on 9/5/23.
+//  Created by MacBook Pro on 9/8/23.
 //
 
 import UIKit
 
-class CategoriesViewController: BaseViewController {
+class SourcesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -30,14 +30,14 @@ class CategoriesViewController: BaseViewController {
     }
 }
 
-extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
+extension SourcesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.cellReuseIdentifier()) as! CategoriesTableViewCell
-        cell.titleLabel.text = "Wearables"
+        cell.titleLabel.text = "Amazon SA"
         return cell
     }
     

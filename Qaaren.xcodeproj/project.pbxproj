@@ -11,6 +11,15 @@
 		521A18112A9F111B001E290E /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A18102A9F111B001E290E /* FilterViewController.swift */; };
 		521A18132A9F23C4001E290E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A18122A9F23C4001E290E /* Splash.storyboard */; };
 		521A18152A9F23D7001E290E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A18142A9F23D7001E290E /* SplashViewController.swift */; };
+		521C8CDF2AAAEEB9009B673A /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CDD2AAAEEB8009B673A /* ButtonsView.swift */; };
+		521C8CE02AAAEEB9009B673A /* ButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521C8CDE2AAAEEB9009B673A /* ButtonsView.xib */; };
+		521C8CE22AAAF2F1009B673A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521C8CE12AAAF2F1009B673A /* Categories.storyboard */; };
+		521C8CE52AAAF488009B673A /* CategorySourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CE42AAAF488009B673A /* CategorySourcesViewController.swift */; };
+		521C8CE72AAAF65C009B673A /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CE62AAAF65C009B673A /* SourcesViewController.swift */; };
+		521C8CED2AAB028D009B673A /* SelectedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CEB2AAB028D009B673A /* SelectedCategoryTableViewCell.swift */; };
+		521C8CEE2AAB028D009B673A /* SelectedCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521C8CEC2AAB028D009B673A /* SelectedCategoryTableViewCell.xib */; };
+		521C8CF02AAB03D2009B673A /* MyCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CEF2AAB03D2009B673A /* MyCategoryViewController.swift */; };
+		521C8CF42AAB08B8009B673A /* MySourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C8CF32AAB08B8009B673A /* MySourcesViewController.swift */; };
 		522B466B2AA70BC1005F2909 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B466A2AA70BC1005F2909 /* CategoriesViewController.swift */; };
 		522B466F2AA70DB6005F2909 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B466D2AA70DB6005F2909 /* CategoriesTableViewCell.swift */; };
 		522B46702AA70DB6005F2909 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522B466E2AA70DB6005F2909 /* CategoriesTableViewCell.xib */; };
@@ -81,6 +90,15 @@
 		521A18102A9F111B001E290E /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		521A18122A9F23C4001E290E /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		521A18142A9F23D7001E290E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		521C8CDD2AAAEEB8009B673A /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		521C8CDE2AAAEEB9009B673A /* ButtonsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsView.xib; sourceTree = "<group>"; };
+		521C8CE12AAAF2F1009B673A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		521C8CE42AAAF488009B673A /* CategorySourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySourcesViewController.swift; sourceTree = "<group>"; };
+		521C8CE62AAAF65C009B673A /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
+		521C8CEB2AAB028D009B673A /* SelectedCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		521C8CEC2AAB028D009B673A /* SelectedCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		521C8CEF2AAB03D2009B673A /* MyCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCategoryViewController.swift; sourceTree = "<group>"; };
+		521C8CF32AAB08B8009B673A /* MySourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySourcesViewController.swift; sourceTree = "<group>"; };
 		522B466A2AA70BC1005F2909 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		522B466D2AA70DB6005F2909 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		522B466E2AA70DB6005F2909 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -185,6 +203,65 @@
 			path = SplashModule;
 			sourceTree = "<group>";
 		};
+		521C8CDC2AAAEEAC009B673A /* ButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CDD2AAAEEB8009B673A /* ButtonsView.swift */,
+				521C8CDE2AAAEEB9009B673A /* ButtonsView.xib */,
+			);
+			path = ButtonsView;
+			sourceTree = "<group>";
+		};
+		521C8CE32AAAF3AD009B673A /* categorySources */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CE42AAAF488009B673A /* CategorySourcesViewController.swift */,
+			);
+			path = categorySources;
+			sourceTree = "<group>";
+		};
+		521C8CE82AAB0254009B673A /* MyCategoryModule */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CEA2AAB0272009B673A /* cell */,
+				521C8CE92AAB0265009B673A /* viewcontroller */,
+			);
+			path = MyCategoryModule;
+			sourceTree = "<group>";
+		};
+		521C8CE92AAB0265009B673A /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CEF2AAB03D2009B673A /* MyCategoryViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		521C8CEA2AAB0272009B673A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CEB2AAB028D009B673A /* SelectedCategoryTableViewCell.swift */,
+				521C8CEC2AAB028D009B673A /* SelectedCategoryTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		521C8CF12AAB0899009B673A /* MySourceModule */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CF22AAB08A5009B673A /* viewcontroller */,
+			);
+			path = MySourceModule;
+			sourceTree = "<group>";
+		};
+		521C8CF22AAB08A5009B673A /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				521C8CF32AAB08B8009B673A /* MySourcesViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
 		522B46632AA6FF67005F2909 /* SetttingModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +282,7 @@
 		522B46672AA70B97005F2909 /* CategoriesModule */ = {
 			isa = PBXGroup;
 			children = (
+				521C8CE32AAAF3AD009B673A /* categorySources */,
 				522B46682AA70BA1005F2909 /* categories */,
 			);
 			path = CategoriesModule;
@@ -223,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				522B466A2AA70BC1005F2909 /* CategoriesViewController.swift */,
+				521C8CE62AAAF65C009B673A /* SourcesViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -365,6 +444,7 @@
 				526C2E982A9F56220032EF94 /* Detail.storyboard */,
 				5246487D2AA7224E004360DC /* Settings.storyboard */,
 				52C660722AA9EAEC0012126A /* Profile.storyboard */,
+				521C8CE12AAAF2F1009B673A /* Categories.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -579,6 +659,8 @@
 		52C660602AA9DCAD0012126A /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
+				521C8CF12AAB0899009B673A /* MySourceModule */,
+				521C8CE82AAB0254009B673A /* MyCategoryModule */,
 				52C660702AA9EA0F0012126A /* PersonalInformation */,
 				52C660612AA9DCC80012126A /* ProfileHome */,
 			);
@@ -605,6 +687,7 @@
 		52C660652AA9DF440012126A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				521C8CDC2AAAEEAC009B673A /* ButtonsView */,
 				52C660662AA9DF500012126A /* HeaderView */,
 			);
 			path = Views;
@@ -721,6 +804,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521C8CEE2AAB028D009B673A /* SelectedCategoryTableViewCell.xib in Resources */,
 				5267CE092A9DC79400B52032 /* TabCollectionViewCell.xib in Resources */,
 				527754DD2A9C90990072222E /* manrope-extrabold.otf in Resources */,
 				528EA8DC2AA1E275009264C2 /* ReviewTableViewCell.xib in Resources */,
@@ -729,10 +813,12 @@
 				52C6606F2AA9E3660012126A /* ProfileTableViewCell.xib in Resources */,
 				526C2E992A9F56220032EF94 /* Detail.storyboard in Resources */,
 				5246487E2AA7224E004360DC /* Settings.storyboard in Resources */,
+				521C8CE02AAAEEB9009B673A /* ButtonsView.xib in Resources */,
 				521A18132A9F23C4001E290E /* Splash.storyboard in Resources */,
 				527754E92A9CB7E40072222E /* Home.storyboard in Resources */,
 				52C660682AA9DF610012126A /* HeaderView.xib in Resources */,
 				527754E42A9C91C90072222E /* manrope-semibold.otf in Resources */,
+				521C8CE22AAAF2F1009B673A /* Categories.storyboard in Resources */,
 				527754E12A9C90990072222E /* manrope-thin.otf in Resources */,
 				527754DF2A9C90990072222E /* manrope-regular.otf in Resources */,
 				527754CF2A9C83660072222E /* Auth.storyboard in Resources */,
@@ -826,6 +912,7 @@
 				528EA8DB2AA1E275009264C2 /* ReviewTableViewCell.swift in Sources */,
 				52C6606E2AA9E3660012126A /* ProfileTableViewCell.swift in Sources */,
 				528EA8DE2AA1E78A009264C2 /* RevieweViewController.swift in Sources */,
+				521C8CF42AAB08B8009B673A /* MySourcesViewController.swift in Sources */,
 				526C2E9C2A9F56BD0032EF94 /* BaseViewController.swift in Sources */,
 				52E439522AA0AA1500E14C5C /* CompareeViewController.swift in Sources */,
 				527754ED2A9CB9240072222E /* TabbarViewController.swift in Sources */,
@@ -844,15 +931,20 @@
 				52C6606A2AA9DF760012126A /* HeaderView.swift in Sources */,
 				527754C52A9C82FB0072222E /* Constants.swift in Sources */,
 				527754E72A9CAF1A0072222E /* SigninViewController.swift in Sources */,
+				521C8CDF2AAAEEB9009B673A /* ButtonsView.swift in Sources */,
 				521A18112A9F111B001E290E /* FilterViewController.swift in Sources */,
 				527754CC2A9C82FB0072222E /* Helper.swift in Sources */,
+				521C8CE72AAAF65C009B673A /* SourcesViewController.swift in Sources */,
+				521C8CF02AAB03D2009B673A /* MyCategoryViewController.swift in Sources */,
 				527754CB2A9C82FB0072222E /* UserDefaults+Extension.swift in Sources */,
 				5276CCA62A9DF63C004558F5 /* HomeTableViewCell.swift in Sources */,
 				52A7EA802AA1BA46008FE6E0 /* InfoViewController.swift in Sources */,
+				521C8CED2AAB028D009B673A /* SelectedCategoryTableViewCell.swift in Sources */,
 				5276CCAA2A9DFA7D004558F5 /* ProductCollectionViewCell.swift in Sources */,
 				527754D32A9C864C0072222E /* LoginViewController.swift in Sources */,
 				52C660642AA9DCEF0012126A /* ProfileViewController.swift in Sources */,
 				521A18152A9F23D7001E290E /* SplashViewController.swift in Sources */,
+				521C8CE52AAAF488009B673A /* CategorySourcesViewController.swift in Sources */,
 				528EA8D62AA1CCB5009264C2 /* ReviewViewController.swift in Sources */,
 				52C660752AA9EBF90012126A /* InformationViewController.swift in Sources */,
 			);

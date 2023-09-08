@@ -3,6 +3,16 @@
     {
       "filename" : "Vector (6).svg",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Vector (7).svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="manrope-medium.otf">
+            <string>Manrope-Medium</string>
+        </array>
+        <array key="manrope-regular.otf">
+            <string>Manrope-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsView" customModule="Qaaren" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryButton" destination="6XQ-b2-dXk" id="Tjx-8K-ZpA"/>
+                <outlet property="categoryButtonView" destination="xNJ-kf-UlO" id="tdf-a7-Fvz"/>
+                <outlet property="sourcesButton" destination="z6g-8X-QYZ" id="d4O-sZ-bgm"/>
+                <outlet property="sourcesButtonView" destination="HHg-lq-7Ad" id="xB2-48-YcK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-pJ-KYW">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oep-GE-tJi">
+                            <rect key="frame" x="30" y="1" width="240" height="38"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNJ-kf-UlO">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XQ-b2-dXk">
+                                            <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="38"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Categories">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="categoryBtnAction:" destination="-1" eventType="touchUpInside" id="hGj-Tq-dCx"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" name="appColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6XQ-b2-dXk" secondAttribute="trailing" id="0Rn-FT-ol2"/>
+                                        <constraint firstItem="6XQ-b2-dXk" firstAttribute="top" secondItem="xNJ-kf-UlO" secondAttribute="top" id="ASr-Dg-LiW"/>
+                                        <constraint firstItem="6XQ-b2-dXk" firstAttribute="leading" secondItem="xNJ-kf-UlO" secondAttribute="leading" id="MZY-Jm-hUR"/>
+                                        <constraint firstAttribute="bottom" secondItem="6XQ-b2-dXk" secondAttribute="bottom" id="Omy-MN-RpP"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="appColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHg-lq-7Ad">
+                                    <rect key="frame" x="127.66666666666666" y="0.0" width="112.33333333333334" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-8X-QYZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="38"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Sources">
+                                                <color key="titleColor" name="appColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sourcesBtnAction:" destination="-1" eventType="touchUpInside" id="fIu-jR-aih"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" name="buttonColor"/>
+                                    <constraints>
+                                        <constraint firstItem="z6g-8X-QYZ" firstAttribute="top" secondItem="HHg-lq-7Ad" secondAttribute="top" id="OGV-x2-Lds"/>
+                                        <constraint firstItem="z6g-8X-QYZ" firstAttribute="leading" secondItem="HHg-lq-7Ad" secondAttribute="leading" id="gl9-TK-Idt"/>
+                                        <constraint firstAttribute="trailing" secondItem="z6g-8X-QYZ" secondAttribute="trailing" id="mxf-wW-pJv"/>
+                                        <constraint firstAttribute="bottom" secondItem="z6g-8X-QYZ" secondAttribute="bottom" id="rGd-gu-20E"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="appColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="oep-GE-tJi" firstAttribute="leading" secondItem="XB2-pJ-KYW" secondAttribute="leading" constant="30" id="0Xb-Ai-KRb"/>
+                        <constraint firstAttribute="trailing" secondItem="oep-GE-tJi" secondAttribute="trailing" constant="30" id="Exf-U4-A7D"/>
+                        <constraint firstAttribute="bottom" secondItem="oep-GE-tJi" secondAttribute="bottom" constant="1" id="jwe-ZS-WwE"/>
+                        <constraint firstItem="oep-GE-tJi" firstAttribute="top" secondItem="XB2-pJ-KYW" secondAttribute="top" constant="1" id="sdF-P2-Rwl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="XB2-pJ-KYW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OmN-bw-wIy"/>
+                <constraint firstItem="XB2-pJ-KYW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aX0-Be-GEu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XB2-pJ-KYW" secondAttribute="trailing" id="hxA-Xb-miS"/>
+                <constraint firstAttribute="bottom" secondItem="XB2-pJ-KYW" secondAttribute="bottom" id="pZI-gx-tC5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.93129770992365" y="19.366197183098592"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="appColor">
+            <color red="0.95294117647058818" green="0.61176470588235299" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
