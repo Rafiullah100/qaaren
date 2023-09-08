@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,7 +39,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="WfJ-5v-gD5" firstAttribute="centerY" secondItem="HS1-1P-IP0" secondAttribute="centerY" id="04B-Ka-j6V"/>
                                             <constraint firstItem="WfJ-5v-gD5" firstAttribute="leading" secondItem="HS1-1P-IP0" secondAttribute="leading" id="qUu-OA-rzY"/>
@@ -56,7 +56,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="OaH-XR-mcr" firstAttribute="centerX" secondItem="aSx-lo-tbD" secondAttribute="centerX" id="6Ey-BC-kfQ"/>
                                             <constraint firstItem="OaH-XR-mcr" firstAttribute="centerY" secondItem="aSx-lo-tbD" secondAttribute="centerY" id="Abz-9N-yc1"/>
@@ -66,7 +66,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="MKQ-Eg-iUT" secondAttribute="bottom" id="RYx-mu-MRm"/>
                             <constraint firstItem="MKQ-Eg-iUT" firstAttribute="top" secondItem="e3y-e9-HVz" secondAttribute="top" id="ed2-za-RW5"/>
@@ -75,6 +75,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
                     <constraint firstItem="e3y-e9-HVz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HVr-2f-by1"/>
                     <constraint firstItem="e3y-e9-HVz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YZZ-vc-jjA"/>
@@ -91,8 +92,8 @@
     </objects>
     <resources>
         <image name="arrow" width="23" height="22"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

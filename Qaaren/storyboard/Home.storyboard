@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-4j-1xt">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <rect key="frame" x="0.0" y="20" width="393" height="646"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reu-M0-xNN" customClass="ButtonsView" customModule="Qaaren" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
@@ -101,18 +101,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af1-iU-Kzc">
-                                                <rect key="frame" x="0.0" y="60" width="393" height="486"/>
+                                                <rect key="frame" x="0.0" y="60" width="393" height="466"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-Tp-dp3">
-                                                <rect key="frame" x="0.0" y="566" width="393" height="100"/>
+                                                <rect key="frame" x="0.0" y="546" width="393" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOs-Qp-1bE">
-                                                        <rect key="frame" x="46.666666666666657" y="27.666666666666629" width="300" height="45"/>
+                                                        <rect key="frame" x="61.666666666666657" y="27.666666666666629" width="270" height="45"/>
                                                         <color key="backgroundColor" name="blueishColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="FSI-O7-0iG"/>
-                                                            <constraint firstAttribute="width" constant="300" id="K9R-4j-bYd"/>
+                                                            <constraint firstAttribute="width" constant="270" id="K9R-4j-bYd"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -141,7 +141,7 @@
                                     <constraint firstAttribute="bottom" secondItem="5Ia-4j-1xt" secondAttribute="bottom" id="2qO-s8-tg5"/>
                                     <constraint firstItem="5Ia-4j-1xt" firstAttribute="leading" secondItem="xx6-vV-CRB" secondAttribute="leading" id="7sf-AI-PTn"/>
                                     <constraint firstAttribute="trailing" secondItem="5Ia-4j-1xt" secondAttribute="trailing" id="NKm-NF-GPn"/>
-                                    <constraint firstItem="5Ia-4j-1xt" firstAttribute="top" secondItem="xx6-vV-CRB" secondAttribute="top" id="NhF-nb-ZqX"/>
+                                    <constraint firstItem="5Ia-4j-1xt" firstAttribute="top" secondItem="xx6-vV-CRB" secondAttribute="top" constant="20" id="NhF-nb-ZqX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -508,10 +508,10 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="100" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-b0-SkN">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kZ3-b0-SkN" secondAttribute="trailing" id="8f8-UG-acd"/>
                                     <constraint firstAttribute="bottom" secondItem="kZ3-b0-SkN" secondAttribute="bottom" id="IEu-6o-cwf"/>
@@ -521,7 +521,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PT1-0Y-YhO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="PT1-0Y-YhO" firstAttribute="bottom" secondItem="oP3-HF-wDv" secondAttribute="bottom" id="GTb-pW-bEv"/>
                             <constraint firstItem="oP3-HF-wDv" firstAttribute="leading" secondItem="PT1-0Y-YhO" secondAttribute="leading" id="Qlq-jA-ITs"/>

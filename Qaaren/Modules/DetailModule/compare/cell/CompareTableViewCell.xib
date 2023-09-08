@@ -30,7 +30,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-Q2-aa3">
-                        <rect key="frame" x="2" y="2" width="316" height="158"/>
+                        <rect key="frame" x="2" y="5" width="316" height="158"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-Bo-IOU">
                                 <rect key="frame" x="15" y="10" width="286" height="138"/>
@@ -45,7 +45,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyo-hY-7rL">
-                                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="120" height="25"/>
+                                                                <rect key="frame" x="0.0" y="2.6666666666666679" width="120" height="25"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="18"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -468,8 +468,8 @@
                 <constraints>
                     <constraint firstItem="YM6-Q2-aa3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="2OI-cJ-68c"/>
                     <constraint firstAttribute="trailing" secondItem="YM6-Q2-aa3" secondAttribute="trailing" constant="2" id="4vK-hJ-Ib1"/>
-                    <constraint firstItem="YM6-Q2-aa3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="KEU-Mt-nNB"/>
-                    <constraint firstAttribute="bottom" secondItem="YM6-Q2-aa3" secondAttribute="bottom" constant="20" id="Nw6-oR-udX"/>
+                    <constraint firstItem="YM6-Q2-aa3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="KEU-Mt-nNB"/>
+                    <constraint firstAttribute="bottom" secondItem="YM6-Q2-aa3" secondAttribute="bottom" constant="17" id="Nw6-oR-udX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

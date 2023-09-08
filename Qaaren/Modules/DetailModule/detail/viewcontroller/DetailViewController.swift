@@ -29,9 +29,17 @@ class DetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         add(compareVC, in: containerView)
+//        containerView.layoutIfNeeded()
+//        containerView.setNeedsLayout()
         type = .detail
         collectionView.isScrollEnabled = false
         selectedIndexPath = IndexPath(row: 0, section: 0)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: 2000.0)
+//        scrollView.layoutIfNeeded()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -33,11 +33,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOW-ZR-WAa">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="agX-jo-zB1">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agX-jo-zB1">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-7u-ULj">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-br-jFf">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
@@ -194,10 +194,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDY-To-I3v">
-                                                        <rect key="frame" x="0.0" y="270" width="393" height="881"/>
+                                                        <rect key="frame" x="0.0" y="270" width="393" height="548"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WrE-zc-kbK">
-                                                                <rect key="frame" x="20" y="20" width="353" height="861"/>
+                                                                <rect key="frame" x="20" y="20" width="353" height="528"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-qy-Wnv">
                                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
@@ -437,15 +437,17 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5V-tS-WWY">
-                                                                        <rect key="frame" x="0.0" y="160" width="353" height="701"/>
+                                                                        <rect key="frame" x="0.0" y="160" width="353" height="368"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" priority="250" id="yjB-j5-FAg"/>
+                                                                            <constraint firstAttribute="height" priority="250" constant="368" id="Wbk-Wj-5aE"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" priority="250" constant="532" id="gOO-5C-wxG"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="e5V-tS-WWY" secondAttribute="trailing" id="Nn3-ES-19S"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="e5V-tS-WWY" secondAttribute="bottom" id="VCu-C1-zGc"/>
+                                                                    <constraint firstItem="e5V-tS-WWY" firstAttribute="leading" secondItem="WrE-zc-kbK" secondAttribute="leading" id="hpa-5m-pVG"/>
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
@@ -453,6 +455,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="WrE-zc-kbK" secondAttribute="trailing" constant="20" id="9OJ-bb-roO"/>
                                                             <constraint firstAttribute="bottom" secondItem="WrE-zc-kbK" secondAttribute="bottom" id="Ely-jp-sek"/>
+                                                            <constraint firstAttribute="height" priority="250" constant="881" id="khu-fD-Fy5"/>
                                                             <constraint firstItem="WrE-zc-kbK" firstAttribute="leading" secondItem="uDY-To-I3v" secondAttribute="leading" constant="20" id="lqE-tg-wvx"/>
                                                             <constraint firstItem="WrE-zc-kbK" firstAttribute="top" secondItem="uDY-To-I3v" secondAttribute="top" constant="20" id="mCh-mk-mOy"/>
                                                         </constraints>
@@ -581,7 +584,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-WL-AFL">
                                                 <rect key="frame" x="0.0" y="20" width="393" height="739"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-ys-QDy">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-ys-QDy">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="739"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1745,11 +1748,11 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                         <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ax5-eK-IYp">
-                                                                <rect key="frame" x="138.33333333333334" y="0.0" width="58" height="30"/>
-                                                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="15"/>
+                                                                <rect key="frame" x="135.33333333333334" y="0.0" width="61" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="View Full">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="mapButton:" destination="e8l-bS-bHM" eventType="touchUpInside" id="Rn8-7O-llv"/>

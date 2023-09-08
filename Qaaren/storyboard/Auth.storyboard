@@ -339,7 +339,7 @@
                                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ0-OK-EMT">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="40"/>
                                                                                                                         <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="13"/>
-                                                                                                                        <nil key="textColor"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <nil key="highlightedColor"/>
                                                                                                                     </label>
                                                                                                                 </subviews>
@@ -358,7 +358,7 @@
                                                                                                         </constraints>
                                                                                                     </stackView>
                                                                                                 </subviews>
-                                                                                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="backgroundColor" name="socialBtnBGColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstItem="9ZV-3Y-oNP" firstAttribute="top" secondItem="u9N-h8-xqO" secondAttribute="top" id="LrX-if-YuO"/>
                                                                                                     <constraint firstItem="9ZV-3Y-oNP" firstAttribute="centerX" secondItem="u9N-h8-xqO" secondAttribute="centerX" id="SVm-Yc-Jeo"/>
@@ -400,7 +400,7 @@
                                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSo-c6-AKH">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="40"/>
                                                                                                                         <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="13"/>
-                                                                                                                        <nil key="textColor"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <nil key="highlightedColor"/>
                                                                                                                     </label>
                                                                                                                 </subviews>
@@ -419,7 +419,7 @@
                                                                                                         </constraints>
                                                                                                     </stackView>
                                                                                                 </subviews>
-                                                                                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="backgroundColor" name="socialBtnBGColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="bottom" secondItem="4pX-cu-3Bm" secondAttribute="bottom" id="RC2-9M-aFb"/>
                                                                                                     <constraint firstItem="4pX-cu-3Bm" firstAttribute="top" secondItem="Tig-ri-x2b" secondAttribute="top" id="dRa-yD-wAy"/>
@@ -1067,6 +1067,9 @@
         </namedColor>
         <namedColor name="blueishColor">
             <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="socialBtnBGColor">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textFieldBGColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

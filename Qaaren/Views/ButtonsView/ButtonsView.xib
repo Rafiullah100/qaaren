@@ -31,16 +31,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-pJ-KYW">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                    <rect key="frame" x="10" y="0.0" width="280" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oep-GE-tJi">
-                            <rect key="frame" x="30" y="1" width="240" height="38"/>
+                            <rect key="frame" x="0.0" y="1" width="280" height="38"/>
                             <subviews>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNJ-kf-UlO">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="38"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="38"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XQ-b2-dXk">
-                                            <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="38"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -69,10 +69,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHg-lq-7Ad">
-                                    <rect key="frame" x="127.66666666666666" y="0.0" width="112.33333333333334" height="38"/>
+                                    <rect key="frame" x="147.66666666666663" y="0.0" width="132.33333333333337" height="38"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-8X-QYZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="38"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -110,9 +110,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="oep-GE-tJi" firstAttribute="leading" secondItem="XB2-pJ-KYW" secondAttribute="leading" constant="30" id="0Xb-Ai-KRb"/>
-                        <constraint firstAttribute="trailing" secondItem="oep-GE-tJi" secondAttribute="trailing" constant="30" id="Exf-U4-A7D"/>
+                        <constraint firstItem="oep-GE-tJi" firstAttribute="leading" secondItem="XB2-pJ-KYW" secondAttribute="leading" id="BDo-1L-51B"/>
+                        <constraint firstAttribute="trailing" secondItem="oep-GE-tJi" secondAttribute="trailing" id="Fhv-7J-02F"/>
                         <constraint firstAttribute="bottom" secondItem="oep-GE-tJi" secondAttribute="bottom" constant="1" id="jwe-ZS-WwE"/>
+                        <constraint firstAttribute="width" constant="280" id="nxd-bB-5Dt"/>
                         <constraint firstItem="oep-GE-tJi" firstAttribute="top" secondItem="XB2-pJ-KYW" secondAttribute="top" constant="1" id="sdF-P2-Rwl"/>
                     </constraints>
                 </view>
@@ -120,9 +121,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="XB2-pJ-KYW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OmN-bw-wIy"/>
                 <constraint firstItem="XB2-pJ-KYW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aX0-Be-GEu"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XB2-pJ-KYW" secondAttribute="trailing" id="hxA-Xb-miS"/>
+                <constraint firstItem="XB2-pJ-KYW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hJm-NK-LEk"/>
                 <constraint firstAttribute="bottom" secondItem="XB2-pJ-KYW" secondAttribute="bottom" id="pZI-gx-tC5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

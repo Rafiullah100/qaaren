@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,20 +32,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-6H-EJL">
                     <rect key="frame" x="0.0" y="0.0" width="321" height="166"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OFc-b5-Dhc">
-                            <rect key="frame" x="0.0" y="5" width="321" height="111"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OFc-b5-Dhc">
+                            <rect key="frame" x="0.0" y="5" width="321" height="131"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-B3-8ZF">
-                                    <rect key="frame" x="0.0" y="0.0" width="321" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="84"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJC-Yh-SRO">
-                                            <rect key="frame" x="0.0" y="0.0" width="321" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321" height="74"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 41" translatesAutoresizingMaskIntoConstraints="NO" id="MDp-nu-hD1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="321" height="64"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="321" height="74"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" name="backgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="MDp-nu-hD1" secondAttribute="trailing" id="AlK-kU-DUg"/>
                                                 <constraint firstAttribute="bottom" secondItem="MDp-nu-hD1" secondAttribute="bottom" id="NIq-eK-pfF"/>
@@ -53,7 +54,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-ca-mYJ">
-                                            <rect key="frame" x="150.66666666666666" y="52" width="20" height="20"/>
+                                            <rect key="frame" x="150.66666666666666" y="62" width="20" height="20"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="M4T-cK-HhS">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -67,7 +68,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="backgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="0UY-ca-mYJ" firstAttribute="top" secondItem="NJC-Yh-SRO" secondAttribute="bottom" constant="-12" id="4BN-CN-ESk"/>
                                         <constraint firstAttribute="trailing" secondItem="NJC-Yh-SRO" secondAttribute="trailing" id="ENm-ob-221"/>
@@ -78,16 +79,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaX-cC-JB6">
-                                    <rect key="frame" x="0.0" y="74" width="321" height="22"/>
+                                    <rect key="frame" x="0.0" y="89" width="321" height="22"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigar Gulalay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-ah-DHL">
-                                            <rect key="frame" x="104.66666666666669" y="-0.6666666666666714" width="112" height="23.666666666666671"/>
+                                            <rect key="frame" x="104.66666666666669" y="-0.6666666666666714" width="112" height="23.666666666666668"/>
                                             <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="backgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="Au3-ah-DHL" firstAttribute="centerY" secondItem="YaX-cC-JB6" secondAttribute="centerY" id="Rif-hw-oSO"/>
                                         <constraint firstAttribute="height" constant="22" id="ktl-V7-cWA"/>
@@ -95,7 +96,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wC-ty-tEv">
-                                    <rect key="frame" x="0.0" y="96" width="321" height="15"/>
+                                    <rect key="frame" x="0.0" y="116" width="321" height="15"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigargulalay43@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-ec-Cer">
                                             <rect key="frame" x="69.666666666666686" y="-2" width="182" height="19.333333333333332"/>
@@ -104,7 +105,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="backgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="W8f-0X-u19"/>
                                         <constraint firstItem="Cjx-ec-Cer" firstAttribute="centerY" secondItem="6wC-ty-tEv" secondAttribute="centerY" id="aPz-hW-nkG"/>
@@ -114,11 +115,11 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="backgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="OFc-b5-Dhc" secondAttribute="trailing" id="0cn-g3-ThQ"/>
                         <constraint firstItem="OFc-b5-Dhc" firstAttribute="top" secondItem="fTf-6H-EJL" secondAttribute="top" constant="5" id="AFY-3D-1Ap"/>
-                        <constraint firstAttribute="bottom" secondItem="OFc-b5-Dhc" secondAttribute="bottom" constant="50" id="Wxa-rb-fo7"/>
+                        <constraint firstAttribute="bottom" secondItem="OFc-b5-Dhc" secondAttribute="bottom" constant="30" id="Wxa-rb-fo7"/>
                         <constraint firstItem="OFc-b5-Dhc" firstAttribute="leading" secondItem="fTf-6H-EJL" secondAttribute="leading" id="fXN-T3-WeN"/>
                     </constraints>
                 </view>
@@ -138,6 +139,9 @@
     <resources>
         <image name="Ellipse 41" width="80" height="80"/>
         <image name="camera" width="23" height="21"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
