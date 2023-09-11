@@ -11,9 +11,7 @@ class CompareeViewController: UIViewController {
 
     
 
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    
-    @IBOutlet weak var tableView: UITableView!{
+    @IBOutlet weak var tableView: AutoSizingUiTableView!{
         didSet{
             tableView.delegate = self
             tableView.dataSource = self
@@ -21,34 +19,25 @@ class CompareeViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        self.tableView.reloadData()
-//        tableViewHeight.constant = CGFloat.greatestFiniteMagnitude
-//        tableView.reloadData()
-//        tableView.layoutIfNeeded()
+        
+        
         self.view.backgroundColor = .clear
-        tableViewHeight.constant = tableView.contentSize.height
     }
-    
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//        self.tableViewHeight.constant = self.tableView.contentSize.height
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.tableViewHeight.constant = self.tableView.contentSize.height
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.numberOfRows = 10
+        tableView.cellHeight = 190.0
     }
 }
 
 extension CompareeViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

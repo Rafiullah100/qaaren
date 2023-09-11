@@ -179,6 +179,9 @@ extension UIViewController {
         child.view.frame = container.bounds
         container.addSubview(child.view)
         child.didMove(toParent: self)
+//        container.setNeedsLayout()
+//        container.layoutIfNeeded()
+
 //        child.viewWillAppear(false)
     }
     

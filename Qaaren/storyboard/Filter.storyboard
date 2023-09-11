@@ -361,6 +361,9 @@
                             <constraint firstItem="D9I-kK-bOL" firstAttribute="leading" secondItem="EdD-OP-WhC" secondAttribute="leading" id="sRT-qh-xT1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="XRf-e9-iYd" id="SR6-jU-Qre"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3C-MJ-Ecv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

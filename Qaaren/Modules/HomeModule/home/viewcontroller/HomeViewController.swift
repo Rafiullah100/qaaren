@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.itemsArray = ["All", "Home", "Electronics", "Clothings", "Grocery", "Photography", "Gaming & Entertainment", "Beauty and Health"]
         selectedIndexPath = IndexPath(row: 0, section: 0)
     }
@@ -94,3 +95,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return 360.0
     }
 }
+

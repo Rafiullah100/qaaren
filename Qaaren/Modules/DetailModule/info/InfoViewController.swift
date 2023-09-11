@@ -14,4 +14,6 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
     }
+    
+   
 }

@@ -8,9 +8,11 @@
 import UIKit
 
 class DetailViewController: BaseViewController {
-
+    
+    @IBOutlet var imageViews: [UIImageView]!
+    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet var containerViews: [UIView]!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -20,31 +22,53 @@ class DetailViewController: BaseViewController {
     }
     var selectedIndexPath: IndexPath?
     let viewModel = DetailViewModel()
-    let compareVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "CompareeViewController") as! CompareeViewController
-    let infoVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
-    let reivewVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "RevieweViewController") as! RevieweViewController
-    let alertVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
-    let mapVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        add(compareVC, in: containerView)
-//        containerView.layoutIfNeeded()
-//        containerView.setNeedsLayout()
+        containerViews.first?.isHidden = false
         type = .detail
         collectionView.isScrollEnabled = false
         selectedIndexPath = IndexPath(row: 0, section: 0)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: 2000.0)
-//        scrollView.layoutIfNeeded()
+        switchTab(selectedTab: selectedIndexPath?.row ?? 0)
+        print(imageViews.count)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        viewModel.viewControllers.forEach { vc in
+            if let childViewController = segue.destination as? UIViewController {
+                childViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            }
+        }
+    }
+    
+    @IBAction func image1Button(_ sender: Any) {
+        headerImageView.image = imageViews[0].image
+    }
+    
+    @IBAction func image2Button(_ sender: Any) {
+        headerImageView.image = imageViews[1].image
+    }
+    
+    @IBAction func image3Button(_ sender: Any) {
+        headerImageView.image = imageViews[2].image
+    }
+    
+    @IBAction func image4Button(_ sender: Any) {
+        headerImageView.image = imageViews[3].image
+    }
+    
+    func switchTab(selectedTab: Int){
+        for (index, view) in containerViews.enumerated(){
+            view.isHidden = selectedTab == index ? false : true
+        }
     }
 }
 
@@ -92,22 +116,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0{
-            add(compareVC, in: containerView)
-        }
-        else if indexPath.row == 1{
-            add(infoVC, in: containerView)
-        }
-        else if indexPath.row == 2{
-            add(reivewVC, in: containerView)
-        }
-        else if indexPath.row == 3{
-            add(mapVC, in: containerView)
-        }
-        else if indexPath.row == 4{
-            add(alertVC, in: containerView)
-        }
-//        scrollView.layoutIfNeeded()
+        switchTab(selectedTab: indexPath.row)
         selectedIndexPath = indexPath
         collectionView.reloadData()
     }

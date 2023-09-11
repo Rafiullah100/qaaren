@@ -80,6 +80,7 @@
 		52C6606F2AA9E3660012126A /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C6606D2AA9E3660012126A /* ProfileTableViewCell.xib */; };
 		52C660732AA9EAEC0012126A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C660722AA9EAEC0012126A /* Profile.storyboard */; };
 		52C660752AA9EBF90012126A /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C660742AA9EBF90012126A /* InformationViewController.swift */; };
+		52E3A7EC2AAF0DAF00514F3D /* AutoSizingUiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A7EB2AAF0DAF00514F3D /* AutoSizingUiTableView.swift */; };
 		52E439522AA0AA1500E14C5C /* CompareeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E439512AA0AA1500E14C5C /* CompareeViewController.swift */; };
 		F7E232C1E3FF716C2720671F /* Pods_Qaaren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C332AA031B3987B51448D5FC /* Pods_Qaaren.framework */; };
 /* End PBXBuildFile section */
@@ -161,6 +162,7 @@
 		52C6606D2AA9E3660012126A /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		52C660722AA9EAEC0012126A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		52C660742AA9EBF90012126A /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		52E3A7EB2AAF0DAF00514F3D /* AutoSizingUiTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingUiTableView.swift; sourceTree = "<group>"; };
 		52E439512AA0AA1500E14C5C /* CompareeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareeViewController.swift; sourceTree = "<group>"; };
 		C332AA031B3987B51448D5FC /* Pods_Qaaren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qaaren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6573A95106F98B9A34BBFD /* Pods-Qaaren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qaaren.release.xcconfig"; path = "Target Support Files/Pods-Qaaren/Pods-Qaaren.release.xcconfig"; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				527754C22A9C82FA0072222E /* UserDefaults+Extension.swift */,
 				527754C32A9C82FA0072222E /* Helper.swift */,
 				527754C42A9C82FA0072222E /* Color.swift */,
+				52E3A7EB2AAF0DAF00514F3D /* AutoSizingUiTableView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -943,6 +946,7 @@
 				5276CCAA2A9DFA7D004558F5 /* ProductCollectionViewCell.swift in Sources */,
 				527754D32A9C864C0072222E /* LoginViewController.swift in Sources */,
 				52C660642AA9DCEF0012126A /* ProfileViewController.swift in Sources */,
+				52E3A7EC2AAF0DAF00514F3D /* AutoSizingUiTableView.swift in Sources */,
 				521A18152A9F23D7001E290E /* SplashViewController.swift in Sources */,
 				521C8CE52AAAF488009B673A /* CategorySourcesViewController.swift in Sources */,
 				528EA8D62AA1CCB5009264C2 /* ReviewViewController.swift in Sources */,

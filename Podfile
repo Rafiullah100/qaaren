@@ -8,5 +8,6 @@ target 'Qaaren' do
   # Pods for Qaaren
   pod 'GoogleMaps'
   pod 'SwiftGifOrigin'
+  pod 'IQKeyboardManager' #iOS8 and later
 
 end

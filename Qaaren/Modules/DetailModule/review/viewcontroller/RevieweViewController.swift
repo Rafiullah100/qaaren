@@ -9,18 +9,20 @@ import UIKit
 
 class RevieweViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!{
+    @IBOutlet weak var tableView: AutoSizingUiTableView!{
         didSet{
             tableView.delegate = self
             tableView.dataSource = self
             tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.cellReuseIdentifier())
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.numberOfRows = 5
+        tableView.cellHeight = 200.0
         tableView.estimatedRowHeight = 44.0
     }
-
 }
 
 
@@ -35,6 +37,6 @@ extension RevieweViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return 200.0
     }
 }

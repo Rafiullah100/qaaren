@@ -4,21 +4,25 @@ PODS:
   - GoogleMaps/Base (7.4.0)
   - GoogleMaps/Maps (7.4.0):
     - GoogleMaps/Base
+  - IQKeyboardManager (6.5.11)
   - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
   - GoogleMaps
+  - IQKeyboardManager
   - SwiftGifOrigin
 
 SPEC REPOS:
   trunk:
     - GoogleMaps
+    - IQKeyboardManager
     - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: e20c82cefcdcd1901b52332d1ec700add530bcfc
+PODFILE CHECKSUM: b07f7e9de1d72e632061223d8981ae0d0adc5db2
 
 COCOAPODS: 1.11.3
