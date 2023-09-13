@@ -32,6 +32,8 @@ class CompareeViewController: UIViewController {
         tableView.numberOfRows = 10
         tableView.cellHeight = 190.0
     }
+    
+    
 }
 
 extension CompareeViewController: UITableViewDelegate, UITableViewDataSource{

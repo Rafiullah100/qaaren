@@ -11,7 +11,7 @@ import UIKit
 enum Storyboard: String {
     case auth = "Auth"
     case home = "Home"
-    case filter = "Filter"
+    case popUp = "Popup"
     case detail = "Detail"
     case settings = "Settings"
     case profile = "Profile"

@@ -9,6 +9,7 @@ import UIKit
 
 class SourcesViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: CategoriesTableViewCell.cellReuseIdentifier())
@@ -18,6 +19,7 @@ class SourcesViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = LocalizationKeys.allSources.rawValue.localizeString()
     }
     
     override func viewWillAppear(_ animated: Bool) {

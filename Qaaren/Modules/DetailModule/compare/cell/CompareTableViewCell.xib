@@ -474,6 +474,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="amountLabel" destination="87C-zZ-Hcc" id="f3W-Hb-Sao"/>
+                <outlet property="locationLabel" destination="IEj-xi-2DA" id="2f1-oY-H78"/>
+                <outlet property="nearLabel" destination="frL-5p-UWR" id="rXj-cx-OXM"/>
+                <outlet property="priceLabel" destination="gXs-78-uPO" id="7j5-WX-3d6"/>
+                <outlet property="reviewLabel" destination="j5c-Z6-0ZD" id="qOV-rS-i8h"/>
+            </connections>
             <point key="canvasLocation" x="-41.221374045801525" y="19.718309859154932"/>
         </tableViewCell>
     </objects>

@@ -9,6 +9,9 @@ import UIKit
 
 class DetailViewController: BaseViewController {
     
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var priceRangeLabel: UILabel!
+    @IBOutlet var sliderImagesContainer: [UIView]!
     @IBOutlet var imageViews: [UIImageView]!
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet var containerViews: [UIView]!
@@ -26,18 +29,23 @@ class DetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerViews.first?.isHidden = false
-        type = .detail
-        collectionView.isScrollEnabled = false
-        selectedIndexPath = IndexPath(row: 0, section: 0)
-        switchTab(selectedTab: selectedIndexPath?.row ?? 0)
-        print(imageViews.count)
-        
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        containerViews.first?.isHidden = false
+        type = .detail
+        selectedIndexPath = IndexPath(row: 0, section: 0)
+        sliderImages(index: 0)
+        switchTab(selectedTab: selectedIndexPath?.row ?? 0)
+    }
+    
+    private func updateUI(){
+        priceRangeLabel.text = LocalizationKeys.priceRange.rawValue.localizeString()
+        amountLabel.text = "590 - 882 \(LocalizationKeys.sar.rawValue.localizeString())"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,24 +58,31 @@ class DetailViewController: BaseViewController {
     }
     
     @IBAction func image1Button(_ sender: Any) {
-        headerImageView.image = imageViews[0].image
+        sliderImages(index: 0)
     }
     
     @IBAction func image2Button(_ sender: Any) {
-        headerImageView.image = imageViews[1].image
+        sliderImages(index: 1)
     }
     
     @IBAction func image3Button(_ sender: Any) {
-        headerImageView.image = imageViews[2].image
+        sliderImages(index: 2)
     }
     
     @IBAction func image4Button(_ sender: Any) {
-        headerImageView.image = imageViews[3].image
+        sliderImages(index: 3)
     }
     
     func switchTab(selectedTab: Int){
         for (index, view) in containerViews.enumerated(){
             view.isHidden = selectedTab == index ? false : true
+        }
+    }
+    
+    func sliderImages(index: Int) {
+        headerImageView.image = imageViews[index].image
+        for (i, view) in sliderImagesContainer.enumerated(){
+            view.layer.borderColor = i == index ? UIColor.green.cgColor : UIColor.clear.cgColor
         }
     }
 }
@@ -106,12 +121,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return CGSize(width: 150, height: 60)
         }
         else{
-            let cellsAcross: CGFloat = 4
-            let spaceBetweenCells: CGFloat = 5
-            var width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells)
-            width = (width - 155) / cellsAcross
-            print(width)
-            return CGSize(width: width, height: 45)
+            return Helper.cellSize(noOfCells: 4, space: 5, collectionView: collectionView)
         }
     }
     

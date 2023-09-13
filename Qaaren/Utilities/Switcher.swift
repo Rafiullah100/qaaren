@@ -20,12 +20,19 @@ class Switcher {
     static func gotoHomeVC(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TabbarViewController") as! TabbarViewController
         vc.selectedIndex = 2
-        vc.modalPresentationStyle = .fullScreen
-        delegate.navigationController?.pushViewController(vc, animated: true)
+        UIWindow.key.rootViewController = vc
+        UIWindow.key.makeKeyAndVisible()
     }
     
     static func gotoFilterVC(delegate: UIViewController){
-        let vc = UIStoryboard(name: Storyboard.filter.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        delegate.present(vc, animated: true, completion: nil)
+    }
+    
+    static func gotoAddReviewVC(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "AddReviewViewController") as! AddReviewViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         delegate.present(vc, animated: true, completion: nil)
@@ -47,6 +54,12 @@ class Switcher {
     
     static func gotoWishlist(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.settings.rawValue, bundle: nil).instantiateViewController(withIdentifier: "WishlistViewController") as! WishlisViewController
+        vc.modalPresentationStyle = .fullScreen
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoLanguage(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.settings.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         vc.modalPresentationStyle = .fullScreen
         delegate.navigationController?.pushViewController(vc, animated: true)
     }

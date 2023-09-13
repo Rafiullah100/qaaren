@@ -157,7 +157,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         imageView.contentMode = .scaleAspectFit
         print(viewControllerTitle)
 //        imageView.image = viewControllerTitle == "" ? #imageLiteral(resourceName: "back-arrow") : UIImage(named: "arrow-black")
-        imageView.image = UIImage(named: "arrow-black")
+        
+        imageView.image = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? UIImage(named: "arrow-black-rtl") : UIImage(named: "arrow-black-ltr")
         let labelbgView = UIView(frame: CGRect(x: 35, y: 0, width: UIScreen.main.bounds.width, height: 30))
         let label = UILabel(frame: CGRect(x: 5, y: 0, width: UIScreen.main.bounds.width, height: 30))
         label.textColor = .label

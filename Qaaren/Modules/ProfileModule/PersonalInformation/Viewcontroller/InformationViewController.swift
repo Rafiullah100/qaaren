@@ -8,13 +8,20 @@
 import UIKit
 
 class InformationViewController: BaseViewController {
-
+    @IBOutlet var editButtons: [UIButton]!
+    
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var headerView: HeaderView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         type = .backWithTitle
-        viewControllerTitle = "Personal Information"
+        viewControllerTitle = LocalizationKeys.personalInformation.rawValue.localizeString()
+        editButtons.forEach { button in
+            button.setTitle(LocalizationKeys.edit.rawValue.localizeString(), for: .normal)
+        }
+        saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

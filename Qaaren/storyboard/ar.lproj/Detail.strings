@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "4.5"; ObjectID = "0h2-Qh-okL"; */
+"0h2-Qh-okL.text" = "4.5";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "2ZH-nb-Kfu"; */
+"2ZH-nb-Kfu.text" = "Description";
+
+/* Class = "UIButton"; normalTitle = "+ Add a review"; ObjectID = "87N-Fu-GWY"; */
+"87N-Fu-GWY.normalTitle" = "+ Add a review";
+
+/* Class = "UILabel"; text = "Create Alert"; ObjectID = "8Y3-qx-bVB"; */
+"8Y3-qx-bVB.text" = "Create Alert";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "AXO-rX-hOk"; */
+"AXO-rX-hOk.text" = "4";
+
+/* Class = "UILabel"; text = "Nearest Location"; ObjectID = "AwY-cJ-WBF"; */
+"AwY-cJ-WBF.text" = "Nearest Location";
+
+/* Class = "UILabel"; text = "Notify me when the price has dropped"; ObjectID = "EMz-Av-gAT"; */
+"EMz-Av-gAT.text" = "Notify me when the price has dropped";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Eel-oN-HS7"; */
+"Eel-oN-HS7.text" = "2";
+
+/* Class = "UILabel"; text = "4.3"; ObjectID = "J61-16-BET"; */
+"J61-16-BET.text" = "4.3";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "KfH-UJ-u5T"; */
+"KfH-UJ-u5T.text" = "0";
+
+/* Class = "UILabel"; text = "Ratings & Reviews"; ObjectID = "SUu-B0-35g"; */
+"SUu-B0-35g.text" = "Ratings & Reviews";
+
+/* Class = "UITextField"; placeholder = "Enter email to receive alerts "; ObjectID = "Ubf-on-nck"; */
+"Ubf-on-nck.placeholder" = "Enter email to receive alerts ";
+
+/* Class = "UILabel"; text = "iPhone 14 Pro"; ObjectID = "ZhL-nF-SAF"; */
+"ZhL-nF-SAF.text" = "iPhone 14 Pro";
+
+/* Class = "UIButton"; normalTitle = "View Full"; ObjectID = "ax5-eK-IYp"; */
+"ax5-eK-IYp.normalTitle" = "View Full";
+
+/* Class = "UITextView"; text = "Lowest price for Apple iPhone 14 Pro Max 128GB is £957.50.\nThis is currently the cheapest offer among 43 stores. Who \nwould have  thought 20 years ago that mobile phone could be photographer's dream? Well, that might be just a  bit of an exaggeration, but there's no denying that we've come a long \nway.\niPhone 14 Pro Max improves on its predecessors and \ndelivers a better photography experience \nthan ever before. And that's just one of its selling points!\n6.7-inch display\n120Hz refresh rate\n128GB internal storage\nA15 Bionic chip\nFingerprint unlock\nIP68 rated\n\niPhone 14 Pro Max features a so-called Super Retina XDR display measuring 6.7 inches. Combined with a 120Hz refresh rate, the incredibly vivid colour will give a viewing experience that is hard to match for any mobile phone. To make sure everything runs smoothly, the phone has been fitted with an A15 Bionic chip, the latest in a long line of highly capable processors for mobile devices.\nAs for the camera setup, you get a triple-camera system with a 12MP ultra-wide lens, a 12MP wide lens, and a 12MP telephoto lens. With a setup like that, it's almost impossible to take bad photos. To keep all this impressive hardware going all through the day, the phone has been fitted with a 4,300mAh battery. If by some chance you still end up running low on battery before day's end, you can quick-charge it for a few moments and get back at it.\nAs you can see, iPhone 14 Pro Max has a ton of things going for it. The current lowest price is £957.50, but make sure you compare a few different merchants and delivery options to get the very best deal for you."; ObjectID = "b2H-ys-QDy"; */
+"b2H-ys-QDy.text" = "Lowest price for Apple iPhone 14 Pro Max 128GB is £957.50.\nThis is currently the cheapest offer among 43 stores. Who \nwould have  thought 20 years ago that mobile phone could be photographer's dream? Well, that might be just a  bit of an exaggeration, but there's no denying that we've come a long \nway.\niPhone 14 Pro Max improves on its predecessors and \ndelivers a better photography experience \nthan ever before. And that's just one of its selling points!\n6.7-inch display\n120Hz refresh rate\n128GB internal storage\nA15 Bionic chip\nFingerprint unlock\nIP68 rated\n\niPhone 14 Pro Max features a so-called Super Retina XDR display measuring 6.7 inches. Combined with a 120Hz refresh rate, the incredibly vivid colour will give a viewing experience that is hard to match for any mobile phone. To make sure everything runs smoothly, the phone has been fitted with an A15 Bionic chip, the latest in a long line of highly capable processors for mobile devices.\nAs for the camera setup, you get a triple-camera system with a 12MP ultra-wide lens, a 12MP wide lens, and a 12MP telephoto lens. With a setup like that, it's almost impossible to take bad photos. To keep all this impressive hardware going all through the day, the phone has been fitted with a 4,300mAh battery. If by some chance you still end up running low on battery before day's end, you can quick-charge it for a few moments and get back at it.\nAs you can see, iPhone 14 Pro Max has a ton of things going for it. The current lowest price is £957.50, but make sure you compare a few different merchants and delivery options to get the very best deal for you.";
+
+/* Class = "UILabel"; text = "23 ratings"; ObjectID = "bAY-Y5-1nE"; */
+"bAY-Y5-1nE.text" = "23 ratings";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "gk3-2W-cdN"; */
+"gk3-2W-cdN.text" = "5";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "zMb-zh-K58"; */
+"zMb-zh-K58.text" = "12";

@@ -9,27 +9,53 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var modeLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var wishlistLabel: UILabel!
+    @IBOutlet weak var policyLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var switchView: UISwitch!
+    @IBOutlet var arrowIcons: [UIImageView]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = LocalizationKeys.settings.rawValue.localizeString()
     }
 
     @IBAction func changeAppAppearance(_ sender: Any) {
         if switchView.isOn {
             UIWindow.key?.overrideUserInterfaceStyle = .dark
-//            UserDefaults.standard.theme = ThemeMode.dark.rawValue
+            UserDefaults.standard.appTheme = AppTheme.dark.rawValue
         }
         else{
             UIWindow.key?.overrideUserInterfaceStyle = .light
-//            UserDefaults.standard.theme = ThemeMode.light.rawValue
+            UserDefaults.standard.appTheme = AppTheme.light.rawValue
         }
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        switchView.isOn = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? true : false
+        UIWindow.key?.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emailLabel.text = LocalizationKeys.email.rawValue.localizeString()
+        aboutLabel.text = LocalizationKeys.aboutQaaren.rawValue.localizeString()
+        policyLabel.text = LocalizationKeys.policy.rawValue.localizeString()
+        wishlistLabel.text = LocalizationKeys.wishlist.rawValue.localizeString()
+        languageLabel.text = LocalizationKeys.language.rawValue.localizeString()
+        modeLabel.text = LocalizationKeys.mode.rawValue.localizeString()
+        
+        arrowIcons.forEach { imageView in
+            imageView.image = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? UIImage(named: "arrow-rtl") : UIImage(named: "arrow-ltr")
+        }
+    }
+    
     // MARK: - Table view data source
 
    /* override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,8 +69,12 @@ class SettingsTableViewController: UITableViewController {
     }*/
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.row == 3{
             Switcher.gotoWishlist(delegate: self)
+        }
+        else if indexPath.row == 4{
+            Switcher.gotoLanguage(delegate: self)
         }
     }
 

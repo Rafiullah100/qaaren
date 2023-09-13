@@ -1,0 +1,51 @@
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "1xb-bp-G84"; */
+"1xb-bp-G84.title" = "Settings";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "8VC-Yx-650"; */
+"8VC-Yx-650.text" = "Language";
+
+/* Class = "UITextField"; placeholder = "search"; ObjectID = "ADE-vT-5hK"; */
+"ADE-vT-5hK.placeholder" = "search";
+
+/* Class = "UINavigationItem"; title = "Notifications"; ObjectID = "FfI-t9-dM6"; */
+"FfI-t9-dM6.title" = "Notifications";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "GrY-x4-PVi"; */
+"GrY-x4-PVi.text" = "Email";
+
+/* Class = "UITabBarItem"; title = "Categories"; ObjectID = "NFt-uu-4Wo"; */
+"NFt-uu-4Wo.title" = "Categories";
+
+/* Class = "UILabel"; text = "About Qaaren"; ObjectID = "Njd-ah-o2M"; */
+"Njd-ah-o2M.text" = "About Qaaren";
+
+/* Class = "UILabel"; text = "Wishlist"; ObjectID = "NrB-tB-eX7"; */
+"NrB-tB-eX7.text" = "Wishlist";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "RIG-dc-1gK"; */
+"RIG-dc-1gK.title" = "Profile";
+
+/* Class = "UILabel"; text = "Push Notifications"; ObjectID = "Tip-48-kuy"; */
+"Tip-48-kuy.text" = "Push Notifications";
+
+/* Class = "UILabel"; text = "Mute All Notifications"; ObjectID = "Vbj-xM-BB4"; */
+"Vbj-xM-BB4.text" = "Mute All Notifications";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "YwX-NP-CqU"; */
+"YwX-NP-CqU.text" = "Privacy Policy";
+
+/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "dwA-EF-v7Q"; */
+"dwA-EF-v7Q.title" = "Notifications";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "hOs-Qp-1bE"; */
+"hOs-Qp-1bE.normalTitle" = "Continue";
+
+/* Class = "UILabel"; text = "Dark Mode"; ObjectID = "ri3-68-iv6"; */
+"ri3-68-iv6.text" = "Dark Mode";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "xqq-DW-X1W"; */
+"xqq-DW-X1W.title" = "Settings";
+
+/* Class = "UITextField"; placeholder = "search"; ObjectID = "zMB-jL-xuw"; */
+"zMB-jL-xuw.placeholder" = "search";

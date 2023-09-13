@@ -85,6 +85,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="arrowImageView" destination="OaH-XR-mcr" id="XDW-8I-A5K"/>
                 <outlet property="titleLabel" destination="WfJ-5v-gD5" id="TLb-ok-Ysq"/>
             </connections>
             <point key="canvasLocation" x="42" y="21"/>

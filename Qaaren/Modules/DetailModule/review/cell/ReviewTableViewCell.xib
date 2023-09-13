@@ -301,6 +301,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="backgroundColor"/>
+            <connections>
+                <outlet property="helpfulLabel" destination="yaU-8r-xes" id="4Pi-dN-daN"/>
+            </connections>
             <point key="canvasLocation" x="306.87022900763355" y="205.63380281690141"/>
         </tableViewCell>
     </objects>

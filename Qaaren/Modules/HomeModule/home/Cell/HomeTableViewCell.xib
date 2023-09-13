@@ -84,7 +84,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="iUQ-Tr-UNa"/>
+                                                            <constraint firstAttribute="width" priority="250" constant="50" id="iUQ-Tr-UNa"/>
                                                             <constraint firstItem="r4p-V2-Qsm" firstAttribute="centerY" secondItem="nSr-nH-pYa" secondAttribute="centerY" id="qq0-Rq-4Ib"/>
                                                             <constraint firstAttribute="trailing" secondItem="r4p-V2-Qsm" secondAttribute="trailing" id="z4O-qA-qzP"/>
                                                         </constraints>
@@ -146,6 +146,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="V5o-5U-Ukw" id="IMb-hS-tik"/>
+                <outlet property="headerLabel" destination="msu-0Y-khz" id="PPs-tq-dvB"/>
+                <outlet property="subHeaderLabel" destination="M9n-vN-QEf" id="tbN-8D-lVw"/>
+                <outlet property="viewAllLabel" destination="r4p-V2-Qsm" id="x8S-iS-9MW"/>
             </connections>
             <point key="canvasLocation" x="189.31297709923663" y="-17.95774647887324"/>
         </tableViewCell>

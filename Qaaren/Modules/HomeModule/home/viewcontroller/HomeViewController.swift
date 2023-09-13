@@ -26,14 +26,13 @@ class HomeViewController: UIViewController {
     
     var selectedIndexPath: IndexPath?
     var viewModel = HomeViewModel()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel.itemsArray = ["All", "Home", "Electronics", "Clothings", "Grocery", "Photography", "Gaming & Entertainment", "Beauty and Health"]
         selectedIndexPath = IndexPath(row: 0, section: 0)
     }
+    
     
     @IBAction func filterBtnAction(_ sender: Any) {
         Switcher.gotoFilterVC(delegate: self)
@@ -42,11 +41,11 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+//        collectionView.semanticContentAttribute = UserDefaults.standard.selectedLanguage == AppLanguage.english.rawValue ? .forceLeftToRight : .forceRightToLeft
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.itemsArray.count
     }
@@ -95,4 +94,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return 360.0
     }
 }
+
+
 

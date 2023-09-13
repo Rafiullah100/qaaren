@@ -25,6 +25,8 @@ class SplashViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIWindow.key.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
+
         let imageView: UIImageView = view.viewWithTag(101) as! UIImageView
         imageView.image = UIImage.gif(name: "launch")
     }

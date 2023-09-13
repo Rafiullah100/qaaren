@@ -14,6 +14,8 @@ enum CardType {
 
 class ProductCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var favoriteIcon: UIImageView!
     
     var type: CardType?{
@@ -22,10 +24,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        priceLabel.text = LocalizationKeys.price.rawValue.localizeString()
+        amountLabel.text = "590-882 \(LocalizationKeys.sar.rawValue.localizeString())"
     }
-
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class MyCategoryViewController: BaseViewController {
 
+    @IBOutlet weak var browseLabel: UILabel!
+    @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.register(UINib(nibName: "SelectedCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: SelectedCategoryTableViewCell.cellReuseIdentifier())
@@ -20,7 +22,9 @@ class MyCategoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .backWithTitle
-        viewControllerTitle = "My Categories"
+        viewControllerTitle = LocalizationKeys.myCategories.rawValue.localizeString()
+        categoriesLabel.text = LocalizationKeys.selectedCategories.rawValue.localizeString()
+        browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
     }
     
     override func viewWillAppear(_ animated: Bool) {

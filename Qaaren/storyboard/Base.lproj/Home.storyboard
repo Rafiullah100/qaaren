@@ -158,6 +158,7 @@
                     <connections>
                         <outlet property="buttonsView" destination="reu-M0-xNN" id="oue-Ms-VLq"/>
                         <outlet property="containerView" destination="af1-iU-Kzc" id="Hvx-A0-S2Q"/>
+                        <outlet property="continueButton" destination="hOs-Qp-1bE" id="fbZ-nN-ErH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8il-Kt-63I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,7 +360,7 @@
         <!--Notifications-->
         <scene sceneID="6Qb-wG-yOq">
             <objects>
-                <viewController id="yjA-y7-Ojt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationViewController" id="yjA-y7-Ojt" customClass="NotificationViewController" customModule="Qaaren" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YfP-b9-XEN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,6 +491,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notifications" id="FfI-t9-dM6"/>
+                    <connections>
+                        <outlet property="muteLabel" destination="Vbj-xM-BB4" id="FeR-xE-goj"/>
+                        <outlet property="notificationLabel" destination="Tip-48-kuy" id="Mw3-7p-GUi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlU-tY-zBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,12 +581,13 @@
                                                                     <constraints>
                                                                         <constraint firstItem="GrY-x4-PVi" firstAttribute="centerY" secondItem="Hjs-Yx-gZx" secondAttribute="centerY" id="79e-zS-icE"/>
                                                                         <constraint firstItem="GrY-x4-PVi" firstAttribute="leading" secondItem="Hjs-Yx-gZx" secondAttribute="leading" id="E0b-Dp-6Jq"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GrY-x4-PVi" secondAttribute="trailing" constant="20" symbolic="YES" id="wd4-j2-1eI"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-y6-rT0">
                                                                     <rect key="frame" x="323" y="0.0" width="30" height="40"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-Ba-dOW">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-ltr" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-Ba-dOW">
                                                                             <rect key="frame" x="2.6666666666666856" y="7.6666666666666679" width="25" height="25.000000000000004"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="25" id="gb2-Z3-K3r"/>
@@ -645,12 +651,13 @@
                                                                     <constraints>
                                                                         <constraint firstItem="Njd-ah-o2M" firstAttribute="centerY" secondItem="5Jf-vY-YnO" secondAttribute="centerY" id="PYM-Ne-sf6"/>
                                                                         <constraint firstItem="Njd-ah-o2M" firstAttribute="leading" secondItem="5Jf-vY-YnO" secondAttribute="leading" id="UgW-hr-lMN"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Njd-ah-o2M" secondAttribute="trailing" constant="20" symbolic="YES" id="gBj-NY-oHY"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7I-BB-ho4">
                                                                     <rect key="frame" x="323" y="0.0" width="30" height="50"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="JzP-Yd-hwr">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-ltr" translatesAutoresizingMaskIntoConstraints="NO" id="JzP-Yd-hwr">
                                                                             <rect key="frame" x="2.6666666666666856" y="12.666666666666664" width="25" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="25" id="ffD-kV-f6c"/>
@@ -713,13 +720,14 @@
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="YwX-NP-CqU" firstAttribute="centerY" secondItem="1VM-SK-EBH" secondAttribute="centerY" id="Xxu-fi-fg6"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YwX-NP-CqU" secondAttribute="trailing" constant="20" symbolic="YES" id="YNf-pB-YMm"/>
                                                                         <constraint firstItem="YwX-NP-CqU" firstAttribute="leading" secondItem="1VM-SK-EBH" secondAttribute="leading" id="bCy-aY-QYx"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7x-vS-msY">
                                                                     <rect key="frame" x="323" y="0.0" width="30" height="50"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-Du-T4X">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-ltr" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-Du-T4X">
                                                                             <rect key="frame" x="2.6666666666666856" y="12.666666666666664" width="25" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="25" id="Is0-5a-72T"/>
@@ -783,12 +791,13 @@
                                                                     <constraints>
                                                                         <constraint firstItem="NrB-tB-eX7" firstAttribute="centerY" secondItem="9SU-AP-mtS" secondAttribute="centerY" id="TNV-4I-sXx"/>
                                                                         <constraint firstItem="NrB-tB-eX7" firstAttribute="leading" secondItem="9SU-AP-mtS" secondAttribute="leading" id="XS0-Rg-DW7"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NrB-tB-eX7" secondAttribute="trailing" constant="20" symbolic="YES" id="kon-yJ-N48"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-SP-MrD">
                                                                     <rect key="frame" x="323" y="0.0" width="30" height="50"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-G7-G3A">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-ltr" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-G7-G3A">
                                                                             <rect key="frame" x="2.6666666666666856" y="12.666666666666664" width="25" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="25" id="IA9-GA-PcK"/>
@@ -851,13 +860,14 @@
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="8VC-Yx-650" firstAttribute="centerY" secondItem="rov-o5-hGn" secondAttribute="centerY" id="Rjr-5x-XUF"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8VC-Yx-650" secondAttribute="trailing" constant="20" symbolic="YES" id="gix-Mm-6Ey"/>
                                                                         <constraint firstItem="8VC-Yx-650" firstAttribute="leading" secondItem="rov-o5-hGn" secondAttribute="leading" id="yAJ-4T-3gF"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-GN-IGg">
                                                                     <rect key="frame" x="323" y="0.0" width="30" height="50"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-y0-ika">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-ltr" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-y0-ika">
                                                                             <rect key="frame" x="2.6666666666666856" y="12.666666666666664" width="25" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="25" id="RTI-0R-B7k"/>
@@ -921,6 +931,7 @@
                                                                     <constraints>
                                                                         <constraint firstItem="ri3-68-iv6" firstAttribute="leading" secondItem="DNM-nu-LMb" secondAttribute="leading" id="W5m-NJ-c9r"/>
                                                                         <constraint firstItem="ri3-68-iv6" firstAttribute="centerY" secondItem="DNM-nu-LMb" secondAttribute="centerY" id="Xf5-73-g0J"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ri3-68-iv6" secondAttribute="trailing" constant="20" symbolic="YES" id="bnC-QN-CUn"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WY-hH-l4g">
@@ -976,7 +987,18 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="xqq-DW-X1W"/>
                     <connections>
+                        <outlet property="aboutLabel" destination="Njd-ah-o2M" id="jZE-6O-c1M"/>
+                        <outlet property="emailLabel" destination="GrY-x4-PVi" id="K3b-8s-oIF"/>
+                        <outlet property="languageLabel" destination="8VC-Yx-650" id="mJA-bk-0GA"/>
+                        <outlet property="modeLabel" destination="ri3-68-iv6" id="uqm-zQ-10n"/>
+                        <outlet property="policyLabel" destination="YwX-NP-CqU" id="N15-Wh-0Kr"/>
                         <outlet property="switchView" destination="rut-Ga-26V" id="1fk-hi-YPC"/>
+                        <outlet property="wishlistLabel" destination="NrB-tB-eX7" id="I7H-5t-jBf"/>
+                        <outletCollection property="arrowIcons" destination="9s1-Ba-dOW" collectionClass="NSMutableArray" id="a1l-pc-HoO"/>
+                        <outletCollection property="arrowIcons" destination="JzP-Yd-hwr" collectionClass="NSMutableArray" id="FE8-ru-0JJ"/>
+                        <outletCollection property="arrowIcons" destination="vUa-Du-T4X" collectionClass="NSMutableArray" id="Acz-lW-Nfo"/>
+                        <outletCollection property="arrowIcons" destination="Bg2-G7-G3A" collectionClass="NSMutableArray" id="7jF-Kj-MEs"/>
+                        <outletCollection property="arrowIcons" destination="0Yz-y0-ika" collectionClass="NSMutableArray" id="Rid-Mh-ehG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vic-JH-OeQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1023,11 +1045,11 @@
             </objects>
             <point key="canvasLocation" x="2321.3740458015268" y="-1044.3661971830986"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="g4N-uz-aRX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MRy-Ed-Wmo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings-selected" id="1xb-bp-G84"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings-selected" id="1xb-bp-G84"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaC-aT-luU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1042,11 +1064,11 @@
             </objects>
             <point key="canvasLocation" x="2286.2595419847326" y="-371.12676056338029"/>
         </scene>
-        <!--Notifications-->
+        <!--Navigation Controller-->
         <scene sceneID="nHI-u0-Wxc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fa2-NP-AdJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" image="bell" selectedImage="bell-selected" id="dwA-EF-v7Q"/>
+                    <tabBarItem key="tabBarItem" title="" image="bell" selectedImage="bell-selected" id="dwA-EF-v7Q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BUv-va-9kV">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1061,11 +1083,11 @@
             </objects>
             <point key="canvasLocation" x="4020.6106870229005" y="-1042.2535211267607"/>
         </scene>
-        <!--Categories-->
+        <!--Navigation Controller-->
         <scene sceneID="B1v-DU-wsB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iD5-Rh-1UQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" image="categories" selectedImage="categories-selected" id="NFt-uu-4Wo"/>
+                    <tabBarItem key="tabBarItem" title="" image="categories" selectedImage="categories-selected" id="NFt-uu-4Wo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qzH-1C-8hR">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1080,11 +1102,11 @@
             </objects>
             <point key="canvasLocation" x="658.77862595419845" y="-1043.661971830986"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="aBX-N9-4IS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c0u-1K-7tS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile-selected" id="RIG-dc-1gK"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile" selectedImage="profile-selected" id="RIG-dc-1gK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8y9-t5-LyC">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1101,7 +1123,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow" width="23" height="22"/>
+        <image name="arrow-ltr" width="23" height="22"/>
         <image name="bell" width="23" height="25"/>
         <image name="bell-selected" width="70" height="59"/>
         <image name="categories" width="24" height="24"/>

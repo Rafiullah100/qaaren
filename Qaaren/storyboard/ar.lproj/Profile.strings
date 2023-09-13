@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = " Browse All"; ObjectID = "7Rt-vY-1Ak"; */
+"7Rt-vY-1Ak.text" = " Browse All";
+
+/* Class = "UILabel"; text = "Selected Sources"; ObjectID = "JpQ-2C-ySb"; */
+"JpQ-2C-ySb.text" = "Selected Sources";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "LMV-qS-sgl"; */
+"LMV-qS-sgl.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = " Browse All"; ObjectID = "OcW-ES-Z2d"; */
+"OcW-ES-Z2d.text" = " Browse All";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "WHM-BC-wd3"; */
+"WHM-BC-wd3.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Selected Categories"; ObjectID = "XcR-cv-W6M"; */
+"XcR-cv-W6M.text" = "Selected Categories";
+
+/* Class = "UITextField"; text = "NigarGulalay"; ObjectID = "d2d-7x-rIp"; */
+"d2d-7x-rIp.text" = "NigarGulalay";
+
+/* Class = "UITextField"; text = "Nigargulalay43@gmail.com"; ObjectID = "dSr-iO-DN1"; */
+"dSr-iO-DN1.text" = "Nigargulalay43@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "mYH-4S-PZd"; */
+"mYH-4S-PZd.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "pkB-Lq-jXp"; */
+"pkB-Lq-jXp.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "smS-Jx-EkW"; */
+"smS-Jx-EkW.normalTitle" = "Edit";
+
+/* Class = "UITextField"; text = "NigarGulalay"; ObjectID = "tVa-0B-y8M"; */
+"tVa-0B-y8M.text" = "NigarGulalay";
+
+/* Class = "UITextField"; text = "+92 4567890"; ObjectID = "uLg-8I-y3T"; */
+"uLg-8I-y3T.text" = "+92 4567890";

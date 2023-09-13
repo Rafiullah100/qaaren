@@ -13,18 +13,29 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
         tabBarController?.tabBar.items?[2].title = ""
-        
-        if let tabBar = self.tabBarController?.tabBar {
-            let normalTextAttributes: [NSAttributedString.Key: Any] = [
-                .foregroundColor: UIColor.white,
-                .font: Constants.fontNameMedium
-            ]
-            
-            tabBar.items?.forEach { item in
-                item.setTitleTextAttributes(normalTextAttributes, for: .normal)
-            }
-        }
-        
+//        
+//        if let tabBar = self.tabBarController?.tabBar {
+//            let normalTextAttributes: [NSAttributedString.Key: Any] = [
+//                .foregroundColor: UIColor.white,
+//                .font: Constants.fontNameMedium
+//            ]
+//            
+//            tabBar.items?.forEach { item in
+//                item.setTitleTextAttributes(normalTextAttributes, for: .normal)
+////                tabBar.items?[4].title = LocalizationKeys.notifications.rawValue.localizeString()
+////                tabBar.items?[3].title = LocalizationKeys.settings.rawValue.localizeString()
+////                tabBar.items?[2].title = LocalizationKeys.home.rawValue.localizeString()
+////                tabBar.items?[1].title = LocalizationKeys.category.rawValue.localizeString()
+////                tabBar.items?[0].title = LocalizationKeys.profile.rawValue.localizeString()
+//            }
+//            
+//        }
+        updateTabBarItemsTitles(selectedIndex: 2)
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
@@ -38,19 +49,19 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
             if index == selectedIndex {
                 viewController.tabBarItem.title = ""
             } else if index == 0 {
-                viewController.tabBarItem.title = "Profile"
+                viewController.tabBarItem.title = LocalizationKeys.profile.rawValue.localizeString()
             }
             else if index == 1 {
-                viewController.tabBarItem.title = "Categories"
+                viewController.tabBarItem.title = LocalizationKeys.category.rawValue.localizeString()
             }
             else if index == 2 {
-                viewController.tabBarItem.title = "Home"
+                viewController.tabBarItem.title = LocalizationKeys.home.rawValue.localizeString()
             }
             else if index == 3 {
-                viewController.tabBarItem.title = "Settings"
+                viewController.tabBarItem.title = LocalizationKeys.settings.rawValue.localizeString()
             }
             else if index == 4 {
-                viewController.tabBarItem.title = "Notifications"
+                viewController.tabBarItem.title = LocalizationKeys.notifications.rawValue.localizeString()
             }
         }
     }

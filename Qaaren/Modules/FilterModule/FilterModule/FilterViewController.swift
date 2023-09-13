@@ -9,6 +9,11 @@ import UIKit
 
 class FilterViewController: UIViewController {
 
+    @IBOutlet weak var filterButtton: UIButton!
+    @IBOutlet weak var maximumLabel: UILabel!
+    @IBOutlet weak var minimumLabel: UILabel!
+    @IBOutlet weak var priceRangeLabel: UILabel!
+    @IBOutlet weak var sourcesLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     
@@ -20,6 +25,12 @@ class FilterViewController: UIViewController {
         textField.inputView = pickerView
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
+        priceRangeLabel.text = LocalizationKeys.selectPriceRange.rawValue.localizeString()
+        minimumLabel.attributedText = Helper.attributedText(text1: "500 ", text2: LocalizationKeys.sar.rawValue.localizeString())
+        maximumLabel.attributedText = Helper.attributedText(text1: "5000 ", text2: LocalizationKeys.sar.rawValue.localizeString())
+        filterButtton.setTitle(LocalizationKeys.applyFilter.rawValue.localizeString(), for: .normal)
     }
     
     @IBAction func cancelButtonAction(_ sender: UIButton) {

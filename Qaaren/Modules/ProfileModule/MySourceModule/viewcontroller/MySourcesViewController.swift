@@ -9,6 +9,8 @@ import UIKit
 
 class MySourcesViewController: BaseViewController {
 
+    @IBOutlet weak var browseLabel: UILabel!
+    @IBOutlet weak var sourcesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.register(UINib(nibName: "SelectedCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: SelectedCategoryTableViewCell.cellReuseIdentifier())
@@ -20,7 +22,9 @@ class MySourcesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .backWithTitle
-        viewControllerTitle = "My Sources"
+        viewControllerTitle = LocalizationKeys.mySources.rawValue.localizeString()
+        sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
+        browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
     }
     
     override func viewWillAppear(_ animated: Bool) {

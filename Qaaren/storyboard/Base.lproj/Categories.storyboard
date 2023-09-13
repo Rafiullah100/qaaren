@@ -165,6 +165,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9kx-YP-TtM"/>
                     <connections>
+                        <outlet property="label" destination="Ox2-vG-AG6" id="XNo-1k-PES"/>
                         <outlet property="tableView" destination="Bfp-MH-MIz" id="kem-rX-ulj"/>
                     </connections>
                 </viewController>
@@ -322,6 +323,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WRh-VE-FBe"/>
                     <connections>
+                        <outlet property="label" destination="5X2-Bj-S7I" id="I1T-Zg-2Hd"/>
                         <outlet property="tableView" destination="ZeD-br-yZu" id="ld1-IA-VLk"/>
                     </connections>
                 </viewController>

@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "0ZB-BP-JDg"; */
+"0ZB-BP-JDg.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "87s-E1-cVz"; */
+"87s-E1-cVz.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Gkq-QH-SQv"; */
+"Gkq-QH-SQv.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "JKS-Vl-wK3"; */
+"JKS-Vl-wK3.normalTitle" = "Sign up";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "OVR-5m-gUs"; */
+"OVR-5m-gUs.text" = "Email Address";
+
+/* Class = "UILabel"; text = "or sign in using"; ObjectID = "Qio-4P-X8g"; */
+"Qio-4P-X8g.text" = "or sign in using";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "WLm-5N-BUO"; */
+"WLm-5N-BUO.text" = "Password";
+
+/* Class = "UILabel"; text = "Don’t have an account?"; ObjectID = "Wcy-xY-w5U"; */
+"Wcy-xY-w5U.text" = "Don’t have an account?";
+
+/* Class = "UILabel"; text = "Google"; ObjectID = "bSo-c6-AKH"; */
+"bSo-c6-AKH.text" = "Google";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "cpj-gT-J7F"; */
+"cpj-gT-J7F.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Don’t have an account?"; ObjectID = "haS-OD-nFh"; */
+"haS-OD-nFh.text" = "Don’t have an account?";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "ij7-qw-ZRb"; */
+"ij7-qw-ZRb.normalTitle" = "Sign in";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "l5s-X3-82i"; */
+"l5s-X3-82i.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "lEo-GA-rqq"; */
+"lEo-GA-rqq.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "mle-bz-RaC"; */
+"mle-bz-RaC.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "ngb-Tg-Quy"; */
+"ngb-Tg-Quy.text" = "Password";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "oTT-YL-Bnp"; */
+"oTT-YL-Bnp.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Skip Login"; ObjectID = "tB1-Gj-vJR"; */
+"tB1-Gj-vJR.normalTitle" = "Skip Login";
+
+/* Class = "UIButton"; normalTitle = "sign up"; ObjectID = "u0T-36-iYn"; */
+"u0T-36-iYn.normalTitle" = "sign up";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "u8u-Aw-Sd2"; */
+"u8u-Aw-Sd2.text" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Facebook"; ObjectID = "xQ0-OK-EMT"; */
+"xQ0-OK-EMT.text" = "Facebook";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "ztz-2a-Ms8"; */
+"ztz-2a-Ms8.text" = "Email Address";

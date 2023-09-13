@@ -20,7 +20,7 @@ class DetailViewModel {
     
     
     init() {
-        itemsArray = [Tab(title: "Compare", image: "Comparison", selectedImage: "Comparison-selected"), Tab(title: "About", image: "Info", selectedImage: "Info-selected"),  Tab(title: "Reviews", image: "review", selectedImage: "review-selected"),  Tab(title: "Location", image: "location", selectedImage: "location-selected"),  Tab(title: "Alerts", image: "alert", selectedImage: "alert-selected")]
+        itemsArray = [Tab(title: LocalizationKeys.compare.rawValue.localizeString(), image: "Comparison", selectedImage: "Comparison-selected"), Tab(title: LocalizationKeys.about.rawValue.localizeString(), image: "Info", selectedImage: "Info-selected"),  Tab(title: LocalizationKeys.reviews.rawValue.localizeString(), image: "review", selectedImage: "review-selected"),  Tab(title: LocalizationKeys.location.rawValue.localizeString(), image: "location", selectedImage: "location-selected"),  Tab(title: LocalizationKeys.alerts.rawValue.localizeString(), image: "alert", selectedImage: "alert-selected")]
         
         let compareVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "CompareeViewController") as! CompareeViewController
         let infoVC = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController

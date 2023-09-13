@@ -9,10 +9,15 @@ import UIKit
 
 class AlertViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var notifymeLabel: UILabel!
+    @IBOutlet weak var createLabel: UILabel!
     @IBOutlet weak var radioButtonView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailTextField.placeholder = LocalizationKeys.receiveAlert.rawValue.localizeString()
+        notifymeLabel.text = LocalizationKeys.priceDropped.rawValue.localizeString()
+        createLabel.text = LocalizationKeys.createAlert.rawValue.localizeString()
     }
     
     @IBAction func radioButtonAction(_ sender: Any) {

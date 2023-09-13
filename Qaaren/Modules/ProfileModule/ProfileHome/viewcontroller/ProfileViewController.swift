@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    let arr = ["Personal Information", "My Sources", "My Categories", "Wishlist"]
+    let arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.mySources.rawValue.localizeString(), LocalizationKeys.myCategories.rawValue.localizeString(), LocalizationKeys.wishlist.rawValue.localizeString()]
     
     
     override func viewDidLoad() {

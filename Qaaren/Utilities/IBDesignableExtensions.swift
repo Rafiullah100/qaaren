@@ -178,21 +178,20 @@ extension UIView {
     }
     
     
-    @IBInspectable var semanticFlipped: Bool {
-        get {
-            return !transform.isIdentity
-        }
-        set {
-            if newValue == true {
-                self.semanticFlipView()
-            }
-        }
-    }
-    
-    func semanticFlipView() {
-        self.transform = CGAffineTransform(scaleX: -1, y: 1)
-         
-    }
+//    @IBInspectable var semanticFlipped: Bool {
+//        get {
+//            return !transform.isIdentity
+//        }
+//        set {
+//            if newValue == true {
+//                self.semanticFlipView()
+//            }
+//        }
+//    }
+//    
+//    func semanticFlipView() {
+//        self.transform = CGAffineTransform(scaleX: -1, y: 1)
+//    }
     
     func addColorShadowMethod() {
         layer.masksToBounds = false

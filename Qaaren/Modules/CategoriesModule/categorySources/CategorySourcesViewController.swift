@@ -9,6 +9,7 @@ import UIKit
 
 class CategorySourcesViewController: UIViewController {
 
+    @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var buttonsView: ButtonsView!
     @IBOutlet weak var containerView: UIView!
     
@@ -18,6 +19,7 @@ class CategorySourcesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        continueButton.setTitle(LocalizationKeys.continueTitle.rawValue.localizeString(), for: .normal)
         buttonsView.delegate = self
         add(categoryVC, in: containerView)
     }

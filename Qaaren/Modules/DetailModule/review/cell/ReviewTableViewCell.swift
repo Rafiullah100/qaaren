@@ -9,9 +9,11 @@ import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var helpfulLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        helpfulLabel.text = LocalizationKeys.helpful.rawValue.localizeString()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

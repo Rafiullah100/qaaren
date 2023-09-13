@@ -42,6 +42,9 @@ class ButtonsView: UIView {
         addSubview(buttonsView)
 //        newsButtonView.viewShadow(CustomColor.shadowColor)
         setupView(.category)
+        
+        sourcesButton.setTitle(LocalizationKeys.sources.rawValue.localizeString(), for: .normal)
+        categoryButton.setTitle(LocalizationKeys.categories.rawValue.localizeString(), for: .normal)
     }
 
     @IBAction func categoryBtnAction(_ sender: Any) {

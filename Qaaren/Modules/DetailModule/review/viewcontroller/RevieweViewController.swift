@@ -9,6 +9,9 @@ import UIKit
 
 class RevieweViewController: UIViewController {
 
+    @IBOutlet weak var addReviewButton: UIButton!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var ratingandReviewLabel: UILabel!
     @IBOutlet weak var tableView: AutoSizingUiTableView!{
         didSet{
             tableView.delegate = self
@@ -22,6 +25,18 @@ class RevieweViewController: UIViewController {
         tableView.numberOfRows = 5
         tableView.cellHeight = 200.0
         tableView.estimatedRowHeight = 44.0
+        updateUI()
+    }
+    
+    private func updateUI(){
+        
+        ratingLabel.text = LocalizationKeys.rating.rawValue.localizeString()
+        ratingandReviewLabel.text = LocalizationKeys.ratingsAndReviews.rawValue.localizeString()
+        addReviewButton.setTitle(LocalizationKeys.addReview.rawValue.localizeString(), for: .normal)
+    }
+    
+    @IBAction func addReviewBtn(_ sender: Any) {
+        Switcher.gotoAddReviewVC(delegate: self)
     }
 }
 

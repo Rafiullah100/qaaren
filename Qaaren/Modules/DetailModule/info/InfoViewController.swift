@@ -9,10 +9,12 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
+        descriptionLabel.text = LocalizationKeys.description.rawValue.localizeString()
     }
     
    

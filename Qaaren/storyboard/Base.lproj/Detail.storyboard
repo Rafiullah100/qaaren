@@ -60,6 +60,11 @@
                                                                                             <constraint firstAttribute="height" constant="36" id="4eB-4X-N6K"/>
                                                                                             <constraint firstAttribute="width" constant="36" id="zAb-Mg-0bK"/>
                                                                                         </constraints>
+                                                                                        <userDefinedRuntimeAttributes>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                                <real key="value" value="0.0"/>
+                                                                                            </userDefinedRuntimeAttribute>
+                                                                                        </userDefinedRuntimeAttributes>
                                                                                     </imageView>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovD-qb-2kf">
                                                                                         <rect key="frame" x="0.0" y="0.3333333333333286" width="36" height="36"/>
@@ -85,10 +90,10 @@
                                                                                         <real key="value" value="18"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                        <real key="value" value="0.5"/>
+                                                                                        <real key="value" value="1"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
@@ -124,10 +129,10 @@
                                                                                         <real key="value" value="18"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                        <real key="value" value="0.5"/>
+                                                                                        <real key="value" value="1"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
@@ -165,10 +170,10 @@
                                                                                         <real key="value" value="18"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                        <real key="value" value="0.5"/>
+                                                                                        <real key="value" value="1"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
@@ -207,10 +212,10 @@
                                                                                         <real key="value" value="18"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                        <real key="value" value="2"/>
+                                                                                        <real key="value" value="1"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                        <color key="value" red="0.24705882352941178" green="0.86274509803921573" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
@@ -407,38 +412,42 @@
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY7-7o-0AN">
                                                                                         <rect key="frame" x="91.666666666666657" y="0.0" width="261.33333333333337" height="40"/>
                                                                                         <subviews>
-                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF9-uW-5Q1">
-                                                                                                <rect key="frame" x="0.0" y="9.6666666666666856" width="244.66666666666666" height="21"/>
-                                                                                                <attributedString key="attributedText">
-                                                                                                    <fragment content="Price Range:">
-                                                                                                        <attributes>
-                                                                                                            <color key="NSColor" red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                                            <font key="NSFont" size="16" name="Poppins-Medium"/>
-                                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                                        </attributes>
-                                                                                                    </fragment>
-                                                                                                    <fragment content=" ">
-                                                                                                        <attributes>
-                                                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                                            <font key="NSFont" size="17" name="Poppins-Medium"/>
-                                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                                        </attributes>
-                                                                                                    </fragment>
-                                                                                                    <fragment content="80 SAR - 120 SAR">
-                                                                                                        <attributes>
-                                                                                                            <color key="NSColor" systemColor="labelColor"/>
-                                                                                                            <font key="NSFont" size="18" name="Poppins-SemiBold"/>
-                                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                                        </attributes>
-                                                                                                    </fragment>
-                                                                                                </attributedString>
-                                                                                                <nil key="highlightedColor"/>
-                                                                                            </label>
+                                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1B5-UB-ABz">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="245.33333333333334" height="40"/>
+                                                                                                <subviews>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF9-uW-5Q1">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="40"/>
+                                                                                                        <constraints>
+                                                                                                            <constraint firstAttribute="width" priority="250" constant="91.670000000000002" id="QOH-Uw-rCf"/>
+                                                                                                        </constraints>
+                                                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                                                                                        <color key="textColor" name="blueishColor"/>
+                                                                                                        <nil key="highlightedColor"/>
+                                                                                                    </label>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwJ-nk-PZT">
+                                                                                                        <rect key="frame" x="96.666666666666671" y="0.0" width="148.66666666666663" height="40"/>
+                                                                                                        <attributedString key="attributedText">
+                                                                                                            <fragment content="80 SAR - 120 SAR">
+                                                                                                                <attributes>
+                                                                                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                                                                                    <font key="NSFont" size="18" name="Poppins-SemiBold"/>
+                                                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                                                </attributes>
+                                                                                                            </fragment>
+                                                                                                        </attributedString>
+                                                                                                        <nil key="highlightedColor"/>
+                                                                                                    </label>
+                                                                                                </subviews>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" priority="250" constant="244.66999999999999" id="zVT-5q-pr6"/>
+                                                                                                </constraints>
+                                                                                            </stackView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
-                                                                                            <constraint firstItem="zF9-uW-5Q1" firstAttribute="leading" secondItem="zY7-7o-0AN" secondAttribute="leading" id="Fuf-Ac-vef"/>
-                                                                                            <constraint firstItem="zF9-uW-5Q1" firstAttribute="centerY" secondItem="zY7-7o-0AN" secondAttribute="centerY" id="Lwo-ce-rSu"/>
+                                                                                            <constraint firstItem="1B5-UB-ABz" firstAttribute="top" secondItem="zY7-7o-0AN" secondAttribute="top" id="VXO-sk-RXF"/>
+                                                                                            <constraint firstItem="1B5-UB-ABz" firstAttribute="leading" secondItem="zY7-7o-0AN" secondAttribute="leading" id="qEF-Hq-hpb"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="1B5-UB-ABz" secondAttribute="bottom" id="umS-Di-hvZ"/>
                                                                                         </constraints>
                                                                                     </view>
                                                                                 </subviews>
@@ -508,38 +517,44 @@
                                                         <subviews>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Ff-2eK">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="348"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <segue destination="OZf-rC-0IP" kind="embed" id="AG0-1a-o9y"/>
                                                                 </connections>
                                                             </containerView>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYA-aY-lm4">
                                                                 <rect key="frame" x="0.0" y="348" width="353" height="348"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <segue destination="hrn-tV-4Tc" kind="embed" id="mJR-hZ-7xf"/>
                                                                 </connections>
                                                             </containerView>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azz-K0-HmS">
                                                                 <rect key="frame" x="0.0" y="696" width="353" height="348"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <segue destination="z7c-Sp-gWr" kind="embed" id="Ban-Lk-p5K"/>
                                                                 </connections>
                                                             </containerView>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWc-I4-E6S">
-                                                                <rect key="frame" x="0.0" y="1044" width="353" height="348"/>
-                                                                <connections>
-                                                                    <segue destination="igT-PN-Trc" kind="embed" id="aXR-0p-g37"/>
-                                                                </connections>
-                                                            </containerView>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXc-sK-Lcg">
-                                                                <rect key="frame" x="0.0" y="1392" width="353" height="348"/>
+                                                                <rect key="frame" x="0.0" y="1044" width="353" height="348"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <segue destination="e8l-bS-bHM" kind="embed" id="ehC-1Q-Gzw"/>
                                                                 </connections>
                                                             </containerView>
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWc-I4-E6S">
+                                                                <rect key="frame" x="0.0" y="1392" width="353" height="348"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <connections>
+                                                                    <segue destination="igT-PN-Trc" kind="embed" id="aXR-0p-g37"/>
+                                                                </connections>
+                                                            </containerView>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Wk4-br-jFf" firstAttribute="top" secondItem="Th1-7u-ULj" secondAttribute="top" id="5FA-iH-6OH"/>
                                                     <constraint firstItem="Wk4-br-jFf" firstAttribute="leading" secondItem="Th1-7u-ULj" secondAttribute="leading" id="DMb-Gw-1nq"/>
@@ -583,21 +598,24 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountLabel" destination="DwJ-nk-PZT" id="EVa-Ii-bfS"/>
                         <outlet property="collectionView" destination="Kwi-Nr-ZRH" id="E1W-Wt-fbl"/>
                         <outlet property="headerImageView" destination="XjE-1B-ENL" id="P2D-mn-Nc4"/>
+                        <outlet property="priceRangeLabel" destination="zF9-uW-5Q1" id="fxf-aE-Ufa"/>
                         <outlet property="scrollView" destination="agX-jo-zB1" id="s7j-af-qn3"/>
                         <outletCollection property="containerViews" destination="EKs-Ff-2eK" collectionClass="NSMutableArray" id="FMq-9I-B8m"/>
                         <outletCollection property="containerViews" destination="OYA-aY-lm4" collectionClass="NSMutableArray" id="08b-Vw-ASX"/>
                         <outletCollection property="containerViews" destination="azz-K0-HmS" collectionClass="NSMutableArray" id="dIX-D0-zU7"/>
-                        <outletCollection property="containerViews" destination="UWc-I4-E6S" collectionClass="NSMutableArray" id="D11-DO-FqW"/>
-                        <outletCollection property="containerViews" destination="mXc-sK-Lcg" collectionClass="NSMutableArray" id="wJC-Ia-jlc"/>
                         <outletCollection property="imageViews" destination="3MB-FB-ueV" collectionClass="NSMutableArray" id="e3t-jF-rzk"/>
-                        <outletCollection property="containerViews" destination="DoH-oN-xrI" collectionClass="NSMutableArray" id="VY1-z6-CMd"/>
-                        <outletCollection property="containerViews" destination="GKO-nu-l74" collectionClass="NSMutableArray" id="hmr-8B-grZ"/>
-                        <outletCollection property="containerViews" destination="NdK-NE-Bnt" collectionClass="NSMutableArray" id="vwa-I1-2mX"/>
                         <outletCollection property="imageViews" destination="DoH-oN-xrI" collectionClass="NSMutableArray" id="OYd-qx-vja"/>
                         <outletCollection property="imageViews" destination="GKO-nu-l74" collectionClass="NSMutableArray" id="BtR-Ja-tWB"/>
                         <outletCollection property="imageViews" destination="NdK-NE-Bnt" collectionClass="NSMutableArray" id="TPr-hM-TOR"/>
+                        <outletCollection property="sliderImagesContainer" destination="Iu4-rN-foN" collectionClass="NSMutableArray" id="ZRh-cF-xFi"/>
+                        <outletCollection property="sliderImagesContainer" destination="aDw-tN-nay" collectionClass="NSMutableArray" id="FPA-yk-4hY"/>
+                        <outletCollection property="sliderImagesContainer" destination="Gpx-15-kng" collectionClass="NSMutableArray" id="g8D-0I-RC9"/>
+                        <outletCollection property="sliderImagesContainer" destination="dgH-wH-f2s" collectionClass="NSMutableArray" id="12d-qJ-Bv7"/>
+                        <outletCollection property="containerViews" destination="mXc-sK-Lcg" collectionClass="NSMutableArray" id="Hp6-Zr-sGJ"/>
+                        <outletCollection property="containerViews" destination="UWc-I4-E6S" collectionClass="NSMutableArray" id="jxo-oC-VwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -652,7 +670,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-nb-Kfu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="20"/>
+                                                        <rect key="frame" x="0.0" y="-2" width="99.666666666666671" height="24"/>
                                                         <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -722,6 +740,9 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                             <constraint firstItem="5bt-Z6-KhR" firstAttribute="top" secondItem="5jy-Lv-Z9a" secondAttribute="top" id="pCw-od-N5a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="2ZH-nb-Kfu" id="vmI-H4-eeQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lur-rn-wXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -770,10 +791,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="120"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="lXy-cu-lPP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="69.666666666666671"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="83"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J61-16-BET">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="56"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" priority="250" constant="66" id="C1F-7y-x2G"/>
                                                                                 </constraints>
@@ -782,7 +803,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAY-Y5-1nE">
-                                                                                <rect key="frame" x="0.0" y="51" width="105" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="0.0" y="61" width="105" height="22"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
                                                                                 <color key="textColor" name="grayWhiteColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1570,11 +1591,47 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                     <constraint firstAttribute="trailing" secondItem="Jmj-dK-Rcl" secondAttribute="trailing" id="yuq-Bn-d2d"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-Ld-9pP">
-                                                <rect key="frame" x="0.0" y="150" width="353" height="139"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YW-bx-cfc">
+                                                <rect key="frame" x="0.0" y="150" width="353" height="60"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="139"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87N-Fu-GWY">
+                                                        <rect key="frame" x="223" y="10" width="130" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="BDZ-Sz-TQ2"/>
+                                                            <constraint firstAttribute="width" constant="130" id="YyT-4n-70o"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="+ Add a review">
+                                                            <color key="titleColor" name="blueishColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="blueishColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addReviewBtn:" destination="z7c-Sp-gWr" eventType="touchUpInside" id="840-jo-dcO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="VjM-tw-636"/>
+                                                    <constraint firstAttribute="trailing" secondItem="87N-Fu-GWY" secondAttribute="trailing" id="k3n-cq-89X"/>
+                                                    <constraint firstItem="87N-Fu-GWY" firstAttribute="centerY" secondItem="4YW-bx-cfc" secondAttribute="centerY" id="uST-pn-EXS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-Ld-9pP">
+                                                <rect key="frame" x="0.0" y="210" width="353" height="79"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="79"/>
                                                         <color key="backgroundColor" name="backgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -1608,6 +1665,9 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addReviewButton" destination="87N-Fu-GWY" id="fvJ-yB-1hM"/>
+                        <outlet property="ratingLabel" destination="bAY-Y5-1nE" id="utr-kw-x83"/>
+                        <outlet property="ratingandReviewLabel" destination="SUu-B0-35g" id="jnT-zb-bxi"/>
                         <outlet property="tableView" destination="XTV-ja-uqm" id="m4R-6L-13D"/>
                     </connections>
                 </viewController>
@@ -1728,7 +1788,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-pS-ikh">
                                                         <rect key="frame" x="0.0" y="5" width="353" height="50"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email to receive alerts " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubf-on-nck">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter email to receive alerts " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubf-on-nck">
                                                                 <rect key="frame" x="20" y="0.0" width="333" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1785,6 +1845,9 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="createLabel" destination="8Y3-qx-bVB" id="1xc-Fr-Bvf"/>
+                        <outlet property="emailTextField" destination="Ubf-on-nck" id="qZX-iW-pBp"/>
+                        <outlet property="notifymeLabel" destination="EMz-Av-gAT" id="VdL-bm-7eK"/>
                         <outlet property="radioButtonView" destination="xnt-2q-GxP" id="aZn-Qr-F6v"/>
                     </connections>
                 </viewController>
@@ -1876,7 +1939,9 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="Od3-LT-Dbb" id="udE-I1-NZ0"/>
+                        <outlet property="locationLabel" destination="AwY-cJ-WBF" id="lLa-sx-hRa"/>
+                        <outlet property="mapView" destination="Od3-LT-Dbb" id="Zg9-Dy-Ldi"/>
+                        <outlet property="viewLabel" destination="ax5-eK-IYp" id="Caz-VI-k1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hp5-KJ-DTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1926,12 +1991,20 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                             <constraint firstAttribute="width" constant="20" id="uYC-Ax-619"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-tL-kV2">
+                                        <rect key="frame" x="20" y="47.333333333333336" width="151.33333333333334" height="22.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Xy1-tL-kV2" firstAttribute="leading" secondItem="e0x-Cj-Imx" secondAttribute="leading" constant="20" id="7V5-R2-So1"/>
                                     <constraint firstAttribute="bottom" secondItem="ieH-DD-mUv" secondAttribute="bottom" constant="10" id="Jze-Ye-8Df"/>
                                     <constraint firstAttribute="trailing" secondItem="ieH-DD-mUv" secondAttribute="trailing" constant="20" id="bbt-ed-Zl5"/>
                                     <constraint firstAttribute="height" constant="80" id="pTq-R9-m1v"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xy1-tL-kV2" secondAttribute="bottom" constant="10" id="zOf-sK-BA0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1948,6 +2021,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="locationLabel" destination="Xy1-tL-kV2" id="7r1-2V-jjW"/>
                         <outlet property="mapView" destination="6ui-M9-xuS" id="kTS-r7-M4t"/>
                     </connections>
                 </viewController>

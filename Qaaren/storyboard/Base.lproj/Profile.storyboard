@@ -427,6 +427,11 @@
                     </view>
                     <connections>
                         <outlet property="headerView" destination="6Qs-HI-gVc" id="A8j-We-yea"/>
+                        <outlet property="saveButton" destination="WHM-BC-wd3" id="Ey6-mR-TKf"/>
+                        <outletCollection property="editButtons" destination="mYH-4S-PZd" collectionClass="NSMutableArray" id="ZvV-pQ-Kxi"/>
+                        <outletCollection property="editButtons" destination="pkB-Lq-jXp" collectionClass="NSMutableArray" id="P9i-Yd-pzu"/>
+                        <outletCollection property="editButtons" destination="LMV-qS-sgl" collectionClass="NSMutableArray" id="rRO-kO-yNa"/>
+                        <outletCollection property="editButtons" destination="smS-Jx-EkW" collectionClass="NSMutableArray" id="0gZ-pc-dzi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -535,6 +540,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="browseLabel" destination="7Rt-vY-1Ak" id="3LU-dd-QBT"/>
+                        <outlet property="categoriesLabel" destination="XcR-cv-W6M" id="J1B-j9-GVf"/>
                         <outlet property="tableView" destination="pQD-o4-FbK" id="wOG-DT-Sf7"/>
                     </connections>
                 </viewController>
@@ -644,6 +651,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="browseLabel" destination="OcW-ES-Z2d" id="ux0-WQ-idS"/>
+                        <outlet property="sourcesLabel" destination="JpQ-2C-ySb" id="bec-b4-rvS"/>
                         <outlet property="tableView" destination="AZG-LE-2Ox" id="L7U-Lq-84g"/>
                     </connections>
                 </viewController>
