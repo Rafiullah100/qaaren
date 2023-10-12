@@ -21,7 +21,7 @@ class MySourcesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        type = .backWithTitle
+        type = .detail
         viewControllerTitle = LocalizationKeys.mySources.rawValue.localizeString()
         sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()

@@ -21,7 +21,7 @@ class MyCategoryViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        type = .backWithTitle
+        type = .detail
         viewControllerTitle = LocalizationKeys.myCategories.rawValue.localizeString()
         categoriesLabel.text = LocalizationKeys.selectedCategories.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()

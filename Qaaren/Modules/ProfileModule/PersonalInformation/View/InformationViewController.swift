@@ -14,14 +14,12 @@ class InformationViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        type = .backWithTitle
+        type = .detail
         viewControllerTitle = LocalizationKeys.personalInformation.rawValue.localizeString()
         editButtons.forEach { button in
             button.setTitle(LocalizationKeys.edit.rawValue.localizeString(), for: .normal)
         }
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

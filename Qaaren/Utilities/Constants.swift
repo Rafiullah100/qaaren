@@ -14,6 +14,7 @@ struct HowTo {
     let image: String?
 }
 
+
 struct Constants {
     static let appColor = #colorLiteral(red: 0.9682764411, green: 0.6770070195, blue: 0.4894526005, alpha: 1)
     static let fontName = "manrope"
@@ -26,7 +27,7 @@ struct Constants {
 
     static let appBoldFont = UIFont(name: "manrope-bold", size: 12.0)
     static let appRegularFont = UIFont(name: "manrope", size: 12.0)
-    
+    static let errorMessage = "Something went wrong!"
     static let newsSection = ["Latest", "Politics", "Financial", "Sports", "SciTech", "Entertainment", "Health", "Tourism", "Blend"]
     
     static let opanionSection = ["Hasan Nisar", "Hamid Mir", "Aftab Iqbal", "Hasan Nisar", "Hasan Nisar"]

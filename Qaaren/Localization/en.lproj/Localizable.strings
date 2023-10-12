@@ -10,7 +10,7 @@
 "noAccount" = "Don't have an account?";
 "orSignin" = "or sign in using";
 "name" = "Name";
-"alreadyAccount" = "Already have an account";
+"alreadyAccount" = "Already have an account?";
 "confirmPassword" = "Confirm Password";
 
 "home" = "Home";
@@ -66,7 +66,7 @@
 "arabic" = "Arabic";
 "languageSelection" = "Language Selection";
 
-"email" = "email";
+"email" = "Email";
 "policy" = "Privacy Policy";
 "language" = "Language";
 "mode" = "Dark Mode";

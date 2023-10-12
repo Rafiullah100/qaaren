@@ -172,7 +172,11 @@ extension UICollectionViewCell{
 
 extension UIViewController {
     
-
+    public func showAlert(title: String = "", message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func add(_ child: UIViewController, in container: UIView) {
         addChild(child)
@@ -227,5 +231,11 @@ extension String{
 extension UICollectionViewFlowLayout {
     open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return true
+    }
+}
+
+extension String{
+    var asUrl: URL? {
+        return URL(string: self)
     }
 }

@@ -185,10 +185,10 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BKH-U4-Z7n">
                                                         <rect key="frame" x="20" y="0.0" width="353" height="40"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quS-MH-K57">
+                                                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="quS-MH-K57">
                                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FhK-lh-Pxc">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FhK-lh-Pxc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0L-bx-qHo">
@@ -209,7 +209,7 @@
                                                                                     <constraint firstItem="Kca-sU-yxP" firstAttribute="centerX" secondItem="z0L-bx-qHo" secondAttribute="centerX" id="gh3-um-Doz"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-vT-5hK">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-vT-5hK">
                                                                                 <rect key="frame" x="35" y="10.666666666666673" width="253" height="18.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>

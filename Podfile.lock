@@ -1,28 +1,40 @@
 PODS:
+  - Alamofire (5.0.5)
   - GoogleMaps (7.4.0):
     - GoogleMaps/Maps (= 7.4.0)
   - GoogleMaps/Base (7.4.0)
   - GoogleMaps/Maps (7.4.0):
     - GoogleMaps/Base
   - IQKeyboardManager (6.5.11)
+  - OTPFieldView (1.0.1)
+  - SpinKit (1.2.0)
   - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.2)
   - GoogleMaps
   - IQKeyboardManager
+  - OTPFieldView
+  - SpinKit
   - SwiftGifOrigin
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - GoogleMaps
     - IQKeyboardManager
+    - OTPFieldView
+    - SpinKit
     - SwiftGifOrigin
 
 SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: b07f7e9de1d72e632061223d8981ae0d0adc5db2
+PODFILE CHECKSUM: 2512509d3f093a3dbc00829cac19de1189bd06d5
 
 COCOAPODS: 1.11.3

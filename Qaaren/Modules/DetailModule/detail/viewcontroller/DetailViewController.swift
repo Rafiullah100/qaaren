@@ -29,6 +29,7 @@ class DetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        type = .detail
         updateUI()
     }
     
@@ -37,7 +38,6 @@ class DetailViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
         
         containerViews.first?.isHidden = false
-        type = .detail
         selectedIndexPath = IndexPath(row: 0, section: 0)
         sliderImages(index: 0)
         switchTab(selectedTab: selectedIndexPath?.row ?? 0)

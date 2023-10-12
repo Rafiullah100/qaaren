@@ -9,5 +9,8 @@ target 'Qaaren' do
   pod 'GoogleMaps'
   pod 'SwiftGifOrigin'
   pod 'IQKeyboardManager' #iOS8 and later
+  pod 'OTPFieldView'
+  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'SpinKit'
 
 end

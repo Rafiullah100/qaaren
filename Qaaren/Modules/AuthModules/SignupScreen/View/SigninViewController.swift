@@ -7,8 +7,10 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+class SignupViewController: BaseViewController {
 
+    @IBOutlet weak var secureConfirmIcon: UIImageView!
+    @IBOutlet weak var securePasswordIcon: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var alreadyLabel: UILabel!
     @IBOutlet weak var singupButton: UIButton!
@@ -21,9 +23,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
    
+    private var viewModel: SignupViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SignupViewModel()
         updateUI()
+        bindResult()
     }
     
     private func updateUI(){
@@ -40,8 +46,42 @@ class SignupViewController: UIViewController {
         singupButton.setTitle(LocalizationKeys.signup.rawValue.localizeString(), for: .normal)
     }
     
-     @IBAction func signinBtn(_ sender: Any) {
+    
+    @IBAction func passwordSecureButtonAction(_ sender: Any) {
+        passwordTextField.isSecureTextEntry.toggle()
+        securePasswordIcon.image = passwordTextField.isSecureTextEntry == true ? UIImage(named: "hide-icon") : UIImage(named: "eye")
+    }
+    
+    @IBAction func confirmSecureButtonAction(_ sender: Any) {
+        confirmTextField.isSecureTextEntry.toggle()
+        secureConfirmIcon.image = confirmTextField.isSecureTextEntry == true ? UIImage(named: "hide-icon") : UIImage(named: "eye")
+    }
+    
+    @IBAction func signupButtonAction(_ sender: Any) {
+        let signup = SignupInputModel(name: nameTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "", confirm: confirmTextField.text ?? "")
+        let validationResponse = viewModel.isFormValid(user: signup)
+        if validationResponse.isValid {
+            self.animateSpinner()
+            viewModel.SignupUser()
+        }
+        else{
+            showAlert(message: validationResponse.message)
+        }
+    }
+    
+    private func bindResult(){
+        viewModel.bindResultToView = { [unowned self] in
+            stopAnimation()
+            if viewModel.signup?.success == true{
+                Switcher.gotoOtpScreen(delegate: self, email: emailTextField.text ?? "")
+            }
+            else{
+                showAlert(message: Constants.errorMessage)
+            }
+        }
+    }
+    
+    @IBAction func signinBtn(_ sender: Any) {
          navigationController?.popViewController(animated: true)
      }
-
 }

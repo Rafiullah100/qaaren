@@ -23,7 +23,7 @@ class LanguageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        type = .backWithTitle
+        type = .detail
         viewControllerTitle = LocalizationKeys.languageSelection.rawValue.localizeString()
         englishLabel.text = LocalizationKeys.english.rawValue.localizeString()
         arabicLabel.text = LocalizationKeys.arabic.rawValue.localizeString()

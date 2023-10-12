@@ -20,15 +20,18 @@
 //
 
 import UIKit
+import SpinKit
 enum ViewControllerType {
     case backWithTitle
     case detail
+    case center
 }
 
 
 
 class BaseViewController: UIViewController, UINavigationControllerDelegate {
-    
+    let spinnerView = RTSpinKitView(style: .styleThreeBounce, color: CustomColor.appColor.color, spinnerSize: 70.0)
+
 
     var isOverlayViewAdded: Bool = false
 
@@ -40,7 +43,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         didSet {
             titleLabel?.text = viewControllerTitle ?? ""
             switch type {
-            case .backWithTitle:
+            case .detail, .center:
                 addCenterLabel()
             default:
                 break
@@ -77,6 +80,16 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 //        SideMenuManager.default.leftMenuNavigationController = menu
 //        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
+    
+    func animateSpinner() {
+        spinnerView?.center = view.center
+        view.addSubview(spinnerView ?? UIView())
+        spinnerView?.startAnimating()
+    }
+    
+    func stopAnimation() {
+        spinnerView?.stopAnimating()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -86,6 +99,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             setupBackButtonWithTitle()
         case .detail:
             setupDetailButtons()
+        case .center:
+            print("")
         }
     }
     
@@ -155,7 +170,6 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 35))
         imageView.contentMode = .scaleAspectFit
-        print(viewControllerTitle)
 //        imageView.image = viewControllerTitle == "" ? #imageLiteral(resourceName: "back-arrow") : UIImage(named: "arrow-black")
         
         imageView.image = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? UIImage(named: "arrow-black-rtl") : UIImage(named: "arrow-black-ltr")
@@ -178,6 +192,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         buttonView.addSubview(button)
         buttonView.addSubview(imageView)
         buttonView.addSubview(labelbgView)
+        buttonView.backgroundColor = .red
         let barButton = UIBarButtonItem.init(customView: buttonView)
         self.navigationItem.leftBarButtonItem = barButton
     }

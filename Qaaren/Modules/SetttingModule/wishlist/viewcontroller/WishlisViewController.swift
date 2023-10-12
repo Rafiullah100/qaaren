@@ -20,8 +20,8 @@ class WishlisViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        type = .backWithTitle
-        viewControllerTitle = "My Wishlist"
+        type = .detail
+        viewControllerTitle = LocalizationKeys.wishlist.rawValue.localizeString()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,7 @@ class WishlisViewController: BaseViewController {
 extension WishlisViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -284,7 +284,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="oOf-JO-EMA" firstAttribute="centerY" secondItem="D02-cX-YvF" secondAttribute="centerY" id="5Qt-XB-bfr"/>
                                                     <constraint firstItem="oOf-JO-EMA" firstAttribute="centerX" secondItem="D02-cX-YvF" secondAttribute="centerX" id="hep-5o-0qM"/>
@@ -297,7 +297,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="dLS-7Y-6By" firstAttribute="leading" secondItem="GFX-7k-rCu" secondAttribute="leading" constant="20" id="5FX-o7-9Ey"/>
                                     <constraint firstItem="dLS-7Y-6By" firstAttribute="top" secondItem="GFX-7k-rCu" secondAttribute="top" constant="20" id="Ndu-FD-Ygf"/>
@@ -306,7 +306,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cbZ-Jm-qZB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="cbZ-Jm-qZB" firstAttribute="bottom" secondItem="GFX-7k-rCu" secondAttribute="bottom" id="6MF-yU-usV"/>
                             <constraint firstItem="GFX-7k-rCu" firstAttribute="leading" secondItem="cbZ-Jm-qZB" secondAttribute="leading" id="RsS-3f-xeG"/>

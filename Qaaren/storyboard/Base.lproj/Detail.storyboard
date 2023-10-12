@@ -1789,7 +1789,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                         <rect key="frame" x="0.0" y="5" width="353" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter email to receive alerts " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubf-on-nck">
-                                                                <rect key="frame" x="20" y="0.0" width="333" height="50"/>
+                                                                <rect key="frame" x="20" y="0.0" width="313" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -1799,7 +1799,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                             <constraint firstItem="Ubf-on-nck" firstAttribute="leading" secondItem="HRY-pS-ikh" secondAttribute="leading" constant="20" id="31m-4g-hFb"/>
                                                             <constraint firstAttribute="height" constant="50" id="daM-VA-CjV"/>
                                                             <constraint firstItem="Ubf-on-nck" firstAttribute="top" secondItem="HRY-pS-ikh" secondAttribute="top" id="hiN-tt-5WX"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ubf-on-nck" secondAttribute="trailing" id="luL-w8-8pf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ubf-on-nck" secondAttribute="trailing" constant="20" id="luL-w8-8pf"/>
                                                             <constraint firstAttribute="bottom" secondItem="Ubf-on-nck" secondAttribute="bottom" id="vMh-ov-Koo"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
