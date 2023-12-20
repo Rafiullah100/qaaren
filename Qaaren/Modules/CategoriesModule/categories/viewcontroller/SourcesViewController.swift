@@ -17,9 +17,28 @@ class SourcesViewController: UIViewController {
             tableView.dataSource = self
         }
     }
+    
+    private var viewModel = AllCategoryViewModel()
+    private var selectedIndex: IndexPath?{
+        didSet{
+            guard let sourceID = viewModel.getSourceID(for: selectedIndex?.row ?? 0) else {return}
+            viewModel.addSource(sourceID: sourceID)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = LocalizationKeys.allSources.rawValue.localizeString()
+        viewModel.getAllSources()
+        viewModel.sources.bind { _ in
+            self.tableView.reloadData()
+        }
+        
+        viewModel.success.bind { success in
+            guard success?.status == 1 else{return}
+            self.viewModel.ChangeSourceStatus(for: self.selectedIndex?.row ?? 0)
+            self.tableView.reloadRows(at: [self.selectedIndex ?? IndexPath()], with: .automatic)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,16 +53,20 @@ class SourcesViewController: UIViewController {
 
 extension SourcesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getSourcesCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.cellReuseIdentifier()) as! CategoriesTableViewCell
-        cell.titleLabel.text = "Amazon SA"
+        cell.source = viewModel.getSources(for: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath
     }
 }

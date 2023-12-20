@@ -20,10 +20,4 @@ class TabCollectionViewCell: UICollectionViewCell {
     
     
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
 }

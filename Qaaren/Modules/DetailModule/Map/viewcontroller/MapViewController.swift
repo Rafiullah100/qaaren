@@ -13,6 +13,10 @@ class MapViewController: BaseViewController {
     @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var mapView: GMSMapView!
+    
+    var latitude: String?
+    var longitude: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

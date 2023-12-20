@@ -302,7 +302,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <connections>
+                <outlet property="dateLabel" destination="96O-vA-mdr" id="IAT-M1-Ahc"/>
                 <outlet property="helpfulLabel" destination="yaU-8r-xes" id="4Pi-dN-daN"/>
+                <outlet property="nameLabel" destination="iPG-Sj-94H" id="qiv-X3-o9N"/>
+                <outlet property="textView" destination="gzO-QF-Z5N" id="0bz-dW-hGW"/>
+                <outlet property="userImageView" destination="mv7-AY-pCj" id="oKO-hV-HrK"/>
             </connections>
             <point key="canvasLocation" x="306.87022900763355" y="205.63380281690141"/>
         </tableViewCell>

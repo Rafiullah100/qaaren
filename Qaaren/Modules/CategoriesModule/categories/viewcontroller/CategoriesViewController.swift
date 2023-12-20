@@ -17,9 +17,33 @@ class CategoriesViewController: BaseViewController {
             tableView.dataSource = self
         }
     }
+    private var selectedIndex: IndexPath?{
+        didSet{
+            guard let catID = viewModel.getCatID(for: selectedIndex?.row ?? 0) else {return}
+            viewModel.addCategory(categoryId: catID)
+        }
+    }
+    
+    var viewModel = AllCategoryViewModel()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindView()
         label.text = LocalizationKeys.allCategories.rawValue.localizeString()
+        viewModel.getAllCategories()
+    }
+    
+    private func bindView(){
+        viewModel.categories.bind { allCategories in
+            self.tableView.reloadData()
+        }
+        
+        viewModel.success.bind { success in
+            guard success?.status == 1 else{return}
+            self.viewModel.ChangeCategoyStatus(for: self.selectedIndex?.row ?? 0)
+            self.tableView.reloadRows(at: [self.selectedIndex ?? IndexPath()], with: .automatic)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,16 +58,21 @@ class CategoriesViewController: BaseViewController {
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.cellReuseIdentifier()) as! CategoriesTableViewCell
-        cell.titleLabel.text = "Wearables"
+        guard let category = viewModel.getCategory(for: indexPath.row) else { return cell }
+        cell.category = category
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath
     }
 }

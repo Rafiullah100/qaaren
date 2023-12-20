@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import Firebase
 struct HowTo {
     let text1: String?
     let text2: String?
@@ -16,6 +16,8 @@ struct HowTo {
 
 
 struct Constants {
+    static var clientID = FirebaseApp.app()?.options.clientID
+
     static let appColor = #colorLiteral(red: 0.9682764411, green: 0.6770070195, blue: 0.4894526005, alpha: 1)
     static let fontName = "manrope"
     static let fontNameBold = "manrope-Bold"
@@ -63,4 +65,7 @@ struct Constants {
    "• Alibaba.com",
    "• Markavip.com",
     ]
+    
+    static let rtl = 1
+    static let ltr = 0
 }

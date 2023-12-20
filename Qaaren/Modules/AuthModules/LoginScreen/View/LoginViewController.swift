@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import GoogleSignIn
 class LoginViewController: BaseViewController {
     
     @IBOutlet weak var secureIcon: UIImageView!
@@ -23,10 +23,14 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var skipLabel: UIButton!
     
     private var viewModel: LoginViewModel!
+    private var isLoginButtonTapped = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        emailTextField.text = "ali@gmail.com"
+        emailTextField.textAlignment = Helper.isRTL() ? .right : .left
+        passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
+        emailTextField.text = "zas@gmail.com"
         passwordTextField.text = "123456"
         updateUI()
         initVM()
@@ -61,21 +65,41 @@ class LoginViewController: BaseViewController {
         let validationResponse = viewModel.isFormValid(user: login)
         if validationResponse.isValid {
             self.animateSpinner()
-            viewModel.loginUser()
+            viewModel.authenticateUser()
         }
         else{
             showAlert(message: validationResponse.message)
         }
     }
     
-    private func bindResult(){
-        viewModel.bindResultToView = { [unowned self] in
-            stopAnimation()
-            if viewModel.login?.success == true && viewModel.login != nil{
-                Switcher.gotoHomeVC(delegate: self)
+    @IBAction func googleSigninBtn(_ sender: Any) {
+        let clientID = Constants.clientID ?? ""
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] result, error in
+            guard error == nil else {
+                return
             }
-            else{
-                showAlert(message: Constants.errorMessage)
+            if let result = result,
+               let email = result.user.profile?.email,
+               let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString {
+//                self?.parameters = ["username": email, "profile_image": imageURL]
+//                self?.loginUser(completion: completion)
+            }
+        }
+    }
+    
+    private func bindResult(){
+        viewModel.errorMessage.bind { [weak self] errorMessage in
+            guard let self = self, let errorMessage = errorMessage else {return}
+            self.showAlert(message: errorMessage)
+        }
+        
+        viewModel.isUserExist.bind { [weak self] isExist in
+            guard let self = self else{return}
+            self.stopAnimation()
+            if isExist == true{
+                Switcher.gotoHomeVC(delegate: self)
             }
         }
     }

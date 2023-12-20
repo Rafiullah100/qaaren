@@ -12,22 +12,50 @@ class AlertViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var notifymeLabel: UILabel!
     @IBOutlet weak var createLabel: UILabel!
-    @IBOutlet weak var radioButtonView: UIView!
+    
+    private let pickerView = UIPickerView()
+    private let viewModel = AlertViewModel()
+    var productID: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.placeholder = LocalizationKeys.receiveAlert.rawValue.localizeString()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        emailTextField.inputView = pickerView
+//        emailTextField.placeholder = LocalizationKeys.receiveAlert.rawValue.localizeString()
         notifymeLabel.text = LocalizationKeys.priceDropped.rawValue.localizeString()
         createLabel.text = LocalizationKeys.createAlert.rawValue.localizeString()
+        
+        viewModel.alert.bind { [unowned self] alert in
+            showAlert(message: alert?.message ?? "")
+        }
     }
     
     @IBAction func radioButtonAction(_ sender: Any) {
-        if radioButtonView.layer.borderWidth == 1{
-            radioButtonView.layer.borderColor = CustomColor.uiColor(.blueishColor).cgColor
-            radioButtonView.layer.borderWidth = 8
+        if emailTextField.text == "" {
+            showAlert(message: "Please select event type!")
         }
         else{
-            radioButtonView.layer.borderColor = CustomColor.borderColor.color.cgColor
-            radioButtonView.layer.borderWidth = 1
+            viewModel.callAlert(eventType: emailTextField.text ?? "", productID: productID ?? 0)
         }
     }
+}
+
+
+extension AlertViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+          return 1
+      }
+
+      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+          return viewModel.eventType().count
+      }
+
+      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          return viewModel.getTitle(at: row).capitalized
+      }
+
+      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+          emailTextField.text = viewModel.getTitle(at: row).capitalized
+      }
 }

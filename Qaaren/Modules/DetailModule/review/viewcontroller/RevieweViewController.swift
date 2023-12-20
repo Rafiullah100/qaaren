@@ -19,6 +19,9 @@ class RevieweViewController: UIViewController {
             tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.cellReuseIdentifier())
         }
     }
+    var productID: Int?
+    private var viewModel = ReviewViewModel()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +31,15 @@ class RevieweViewController: UIViewController {
         updateUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.reviewList.bind { [unowned self] _ in
+            tableView.reloadData()
+        }
+        viewModel.getReviewList(productID: productID ?? 0)
+    }
+    
     private func updateUI(){
-        
         ratingLabel.text = LocalizationKeys.rating.rawValue.localizeString()
         ratingandReviewLabel.text = LocalizationKeys.ratingsAndReviews.rawValue.localizeString()
         addReviewButton.setTitle(LocalizationKeys.addReview.rawValue.localizeString(), for: .normal)
@@ -43,11 +53,12 @@ class RevieweViewController: UIViewController {
 
 extension RevieweViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ReviewTableViewCell = tableView.dequeueReusableCell(withIdentifier: ReviewTableViewCell.cellReuseIdentifier()) as! ReviewTableViewCell
+        cell.review = viewModel.getReview(for: indexPath.row)
         return cell
     }
     

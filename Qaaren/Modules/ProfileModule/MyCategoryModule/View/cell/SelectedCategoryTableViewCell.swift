@@ -18,8 +18,8 @@ class SelectedCategoryTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        radioButtonView.layer.borderColor = selected ? CustomColor.borderColor.color.cgColor : CustomColor.uiColor(.blueishColor).cgColor
-        radioButtonView.layer.borderWidth = selected ? 1 : 5
+//        radioButtonView.layer.borderColor = selected ? CustomColor.borderColor.color.cgColor : CustomColor.uiColor(.blueishColor).cgColor
+//        radioButtonView.layer.borderWidth = selected ? 1 : 5
     }
     
 }

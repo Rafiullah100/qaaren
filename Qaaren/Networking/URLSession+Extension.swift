@@ -54,17 +54,17 @@ extension URLSession{
                                method: Method,
                                parameters: [String: Any]? = nil) -> URLRequest? {
         var urlString = ""
-        if route == .weatherApi  {
-            urlString = route.description
-        }
-        else{
+//        if route == .weatherApi  {
+//            urlString = route.description
+//        }
+//        else{
             urlString = Route.baseUrl + route.description
-        }
+//        }
         print(urlString)
         guard let url = urlString.asUrl else { return nil }
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        urlRequest.addValue(UserDefaults.standard.token ?? "", forHTTPHeaderField: "x-access-token")
+        urlRequest.addValue(UserDefaults.standard.token ?? "", forHTTPHeaderField: "x-access-token")
 //        urlRequest.addValue(UserDefaults.standard.languageCode ?? "", forHTTPHeaderField: "lang-code")
         urlRequest.httpMethod = method.rawValue
         print(urlRequest.headers)

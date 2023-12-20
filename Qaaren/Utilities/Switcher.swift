@@ -38,8 +38,10 @@ class Switcher {
         delegate.present(vc, animated: true, completion: nil)
     }
     
-    static func gotoDetailVC(delegate: UIViewController){
+    static func gotoDetailVC(delegate: UIViewController, productID: Int){
+        print(productID)
         let vc = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.productID = productID
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
         vc.tabBarController?.tabBar.isHidden = false
@@ -89,6 +91,16 @@ class Switcher {
 //        vc.hidesBottomBarWhenPushed = false
         vc.email = email
         vc.modalPresentationStyle = .fullScreen
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoViewAllScreen(delegate: UIViewController, productID: Int){
+        print(productID)
+        let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ViewAllViewController") as! ViewAllViewController
+        vc.productID = productID
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        vc.tabBarController?.tabBar.isHidden = false
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
 }

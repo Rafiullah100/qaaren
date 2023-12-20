@@ -15,7 +15,6 @@ class CategorySourcesViewController: UIViewController {
     
     let categoryVC = UIStoryboard(name: Storyboard.category.rawValue, bundle: nil).instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
     let sourceVC = UIStoryboard(name: Storyboard.category.rawValue, bundle: nil).instantiateViewController(withIdentifier: "SourcesViewController") as! SourcesViewController
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

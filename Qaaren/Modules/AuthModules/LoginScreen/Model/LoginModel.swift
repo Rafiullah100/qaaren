@@ -60,3 +60,15 @@ struct ValidationResponse {
     let isValid: Bool
     let message: String
 }
+
+struct ChangePasswordModel: Codable {
+    let status: Int?
+    let message: String?
+}
+
+struct ChangePasswordInputModel: Codable {
+    let oldPassword: String
+    
+    let password: String
+    let confrimpassword: String
+}

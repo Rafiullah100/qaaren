@@ -21,7 +21,6 @@ extension UserDefaults{
     enum userdefaultsKey: String {
         case selectedLanguage
         case appTheme
-        
         case name
         case email
         case mobile
@@ -29,6 +28,7 @@ extension UserDefaults{
         case uuid
         case token
         case isLogin
+        case isRTL
     }
     
     var selectedLanguage: String?  {
@@ -109,6 +109,15 @@ extension UserDefaults{
         }
         set {
             set(newValue, forKey: userdefaultsKey.isLogin.rawValue)
+        }
+    }
+    
+    var isRTL: Int?{
+        get {
+            value(forKey: userdefaultsKey.isRTL.rawValue) as? Int
+        }
+        set{
+            set(newValue, forKey: userdefaultsKey.isRTL.rawValue)
         }
     }
 }

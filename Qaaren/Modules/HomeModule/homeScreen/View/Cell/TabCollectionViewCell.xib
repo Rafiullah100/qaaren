@@ -24,10 +24,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyt-iN-uxD">
-                        <rect key="frame" x="3" y="3" width="54" height="34"/>
+                        <rect key="frame" x="2" y="3" width="56" height="34"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Af4-03-J48">
-                                <rect key="frame" x="0.33333333333333215" y="7" width="53.666666666666671" height="20"/>
+                                <rect key="frame" x="1.3333333333333321" y="7" width="53.666666666666671" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comparison" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-ib-IV8">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
@@ -66,8 +66,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="dyt-iN-uxD" secondAttribute="bottom" constant="3" id="INw-qI-pqo"/>
-                <constraint firstItem="dyt-iN-uxD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="UZ7-Ie-0PU"/>
-                <constraint firstAttribute="trailing" secondItem="dyt-iN-uxD" secondAttribute="trailing" constant="3" id="Z37-f2-2xJ"/>
+                <constraint firstItem="dyt-iN-uxD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="UZ7-Ie-0PU"/>
+                <constraint firstAttribute="trailing" secondItem="dyt-iN-uxD" secondAttribute="trailing" constant="2" id="Z37-f2-2xJ"/>
                 <constraint firstItem="dyt-iN-uxD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="gfO-il-d0m"/>
             </constraints>
             <connections>

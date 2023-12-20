@@ -38,14 +38,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mi-kD-ovS">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="30"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg7-Zw-iaq">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hg7-Zw-iaq">
                                                 <rect key="frame" x="0.0" y="0.0" width="286" height="30"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-7Q-3nn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="211" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyo-hY-7rL">
-                                                                <rect key="frame" x="0.0" y="2.6666666666666679" width="120" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="211" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="18"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -53,8 +53,11 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="gyo-hY-7rL" secondAttribute="bottom" id="EGS-6s-2dF"/>
                                                             <constraint firstItem="gyo-hY-7rL" firstAttribute="leading" secondItem="0qq-7Q-3nn" secondAttribute="leading" id="EUg-4g-1EL"/>
-                                                            <constraint firstItem="gyo-hY-7rL" firstAttribute="centerY" secondItem="0qq-7Q-3nn" secondAttribute="centerY" id="mXG-F6-NgB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gyo-hY-7rL" secondAttribute="trailing" id="Gxx-Wl-K8q"/>
+                                                            <constraint firstItem="gyo-hY-7rL" firstAttribute="top" secondItem="0qq-7Q-3nn" secondAttribute="top" id="LSC-jc-Nrg"/>
+                                                            <constraint firstItem="gyo-hY-7rL" firstAttribute="leading" secondItem="0qq-7Q-3nn" secondAttribute="leading" id="cOQ-6F-fvO"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHf-Y0-kl1">
@@ -476,10 +479,21 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="amountLabel" destination="87C-zZ-Hcc" id="f3W-Hb-Sao"/>
+                <outlet property="dateLabel" destination="8uz-0U-umv" id="uH0-Om-xBf"/>
                 <outlet property="locationLabel" destination="IEj-xi-2DA" id="2f1-oY-H78"/>
+                <outlet property="locationTypeLabel" destination="3Od-dR-dNl" id="9Mm-k7-mRi"/>
+                <outlet property="logoImageView" destination="gcb-Rc-8T8" id="ZoK-tU-xFw"/>
+                <outlet property="nameLabel" destination="gyo-hY-7rL" id="MrJ-HT-l3P"/>
                 <outlet property="nearLabel" destination="frL-5p-UWR" id="rXj-cx-OXM"/>
+                <outlet property="nearValueLabel" destination="96h-iU-LS8" id="rM3-uW-bnh"/>
                 <outlet property="priceLabel" destination="gXs-78-uPO" id="7j5-WX-3d6"/>
+                <outlet property="reviewCountLabel" destination="FZO-5j-di3" id="dMe-0z-C6S"/>
                 <outlet property="reviewLabel" destination="j5c-Z6-0ZD" id="qOV-rS-i8h"/>
+                <outletCollection property="ratingStar" destination="qoa-Sp-a8K" collectionClass="NSMutableArray" id="5hw-2M-dRE"/>
+                <outletCollection property="ratingStar" destination="cev-7v-H6e" collectionClass="NSMutableArray" id="40w-89-E1u"/>
+                <outletCollection property="ratingStar" destination="GkS-m2-9TT" collectionClass="NSMutableArray" id="7pn-46-aeY"/>
+                <outletCollection property="ratingStar" destination="bMb-Jq-bmu" collectionClass="NSMutableArray" id="4ZW-BU-TjR"/>
+                <outletCollection property="ratingStar" destination="ryW-vg-WT7" collectionClass="NSMutableArray" id="6dD-ZH-tQj"/>
             </connections>
             <point key="canvasLocation" x="-41.221374045801525" y="19.718309859154932"/>
         </tableViewCell>

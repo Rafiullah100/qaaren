@@ -9,19 +9,27 @@ import UIKit
 
 class WishlisViewController: BaseViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!{
+
+    @IBOutlet weak var tableView: UITableView!{
         didSet{
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ProductCollectionViewCell.cellReuseIdentifier())
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: HomeTableViewCell.cellReuseIdentifier())
         }
     }
-    
-    
+    var viewModel = MyWishlistViewModel()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
         viewControllerTitle = LocalizationKeys.wishlist.rawValue.localizeString()
+        viewModel.myWishlist.bind { _ in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        viewModel.getWishlist()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,22 +38,26 @@ class WishlisViewController: BaseViewController {
     }
 }
 
-extension WishlisViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+extension WishlisViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getCount()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! ProductCollectionViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellReuseIdentifier()) as! HomeTableViewCell
         cell.type = .favorite
+        guard let cat = viewModel.getSingleCategory(at: indexPath.row) else { return cell }
+        cell.wishlistCategory = cat
+        cell.didTappedProduct = { productID in
+            print(productID)
+            Switcher.gotoDetailVC(delegate: self, productID: productID)
+        }
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellsAcross: CGFloat = 2
-        let spaceBetweenCells: CGFloat = 10
-        let width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-        return CGSize(width: width, height: 280)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 360.0
     }
 }
+
+

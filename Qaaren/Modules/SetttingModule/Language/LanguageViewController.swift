@@ -7,6 +7,11 @@
 
 import UIKit
 
+//enum LanguageDirection: Int {
+//    case rtl = 1
+//    case ltr = 0
+//}
+
 class LanguageViewController: BaseViewController {
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var arabicButton: UIButton!
@@ -22,14 +27,12 @@ class LanguageViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         type = .detail
         viewControllerTitle = LocalizationKeys.languageSelection.rawValue.localizeString()
         englishLabel.text = LocalizationKeys.english.rawValue.localizeString()
         arabicLabel.text = LocalizationKeys.arabic.rawValue.localizeString()
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
-        
-        if UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue{
+        if UserDefaults.standard.selectedLanguage != AppLanguage.arabic.rawValue{
             selectedRadioButton = englishButton
             radioButtonTapped(arabicButton)
         }
@@ -43,6 +46,7 @@ class LanguageViewController: BaseViewController {
 //        selectedRadioButton?.isSelected = false
 //        englishButton.isSelected = true
 //        selectedRadioButton = englishButton
+//        UserDefaults.standard.isRTL = LanguageDirection.ltr.rawValue
         radioButtonTapped(englishButton)
     }
     
@@ -50,6 +54,7 @@ class LanguageViewController: BaseViewController {
 //        selectedRadioButton?.isSelected = false
 //        arabicButton.isSelected = true
 //        selectedRadioButton = arabicButton
+//        UserDefaults.standard.isRTL = LanguageDirection.rtl.rawValue
         radioButtonTapped(arabicButton)
     }
     

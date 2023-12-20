@@ -9,7 +9,8 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var viewAllLabel: UILabel!
+
+    @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var subHeaderLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -20,14 +21,37 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
     
-    var didTappedProduct: (() -> Void)? = nil
+    var didTappedProduct: ((Int) -> Void)? = nil
+    var subCategory: SubCategoryModel?{
+        didSet{
+            collectionView.reloadData()
+            headerLabel.text = subCategory?.title
+        }
+    }
+    
+    var type: CardType?
+    var indexPath: IndexPath?
+    var didTappedViewAll: (() -> Void)? = nil
 
+    
+    var wishlistCategory: Wishlist? {
+        didSet {
+            collectionView.reloadData()
+            headerLabel.text = wishlistCategory?.category
+        }
+    }
+    
+    let viewModel = ProductCellViewModel()
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
 //        headerLabel.text = LocalizationKeys.google.rawValue.localizeString()
-        viewAllLabel.text = LocalizationKeys.viewAll.rawValue.localizeString()
-
+        viewAllButton.setTitle(LocalizationKeys.viewAll.rawValue.localizeString(), for: .normal)
+        viewModel.success.bind { response in
+            guard response?.status == true else {return}
+            
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,18 +59,33 @@ class HomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func viewAllBtnAction(_ sender: Any) {
+        didTappedViewAll?()
+    }
 }
 
 
 extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return type == .favorite ? wishlistCategory?.products?.count ?? 0 : subCategory?.catalogue?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! ProductCollectionViewCell
-        cell.type = .home
+        if type == .home {
+            cell.product = subCategory?.catalogue?[indexPath.row]
+        }
+        else if type == .favorite{
+            cell.wishlistProduct = wishlistCategory?.products?[indexPath.row]
+        }
+        
+        cell.didTappedFavorite = {
+            let productID = self.type == .home ? self.subCategory?.catalogue?[indexPath.row].id : self.wishlistCategory?.products?[indexPath.row].catalogues?.id
+            self.indexPath = indexPath
+            self.viewModel.getCategories(productID: productID ?? 0)
+        }
         return cell
     }
     
@@ -58,6 +97,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didTappedProduct?()
+        type == .home ? didTappedProduct?(subCategory?.catalogue?[indexPath.row].id ?? 0) : didTappedProduct?(wishlistCategory?.products?[indexPath.row].catalogues?.id ?? 0)
     }
 }
+

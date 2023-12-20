@@ -8,18 +8,17 @@
 import Foundation
 
 class SignupViewModel {
-    var parameters: [String: Any]?
-    var bindResultToView: (() -> Void) = { }
-    
-    var signup: SignupModel? {
-        didSet{
-            self.bindResultToView()
-        }
-    }
+    var errorMessage: Observable<String> = Observable("")
+    var signup: Observable<SignupModel> = Observable(nil)
 
+    var parameters: [String: Any]?
+    
     func isFormValid(user: SignupInputModel) -> ValidationResponse {
         if user.name.isEmpty || user.email.isEmpty || user.password.isEmpty || user.confirm.isEmpty {
             return ValidationResponse(isValid: false, message: "Please fill all field and try again!")
+        }
+        else if !Helper.isValidEmail(email: user.email){
+            return ValidationResponse(isValid: false, message: "Please enter a valid email!")
         }
         else if user.password != user.confirm{
             return ValidationResponse(isValid: false, message: "Password doesn't match!")
@@ -30,13 +29,13 @@ class SignupViewModel {
         }
     }
     
-    func SignupUser(){
+    func signupUser(){
         URLSession.shared.request(route: .signup, method: .post, parameters: parameters, model: SignupModel.self) { result in
             switch result {
             case .success(let signup):
-                self.signup = signup
+                self.signup.value = signup
             case .failure(let error):
-                self.signup = nil
+                self.errorMessage.value = error.localizedDescription
             }
         }
     }

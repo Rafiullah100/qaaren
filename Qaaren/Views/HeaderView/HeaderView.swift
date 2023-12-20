@@ -9,6 +9,9 @@ import UIKit
 
 class HeaderView: UIView {
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var nameLabell: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var nameView: UIView!
     override init(frame: CGRect) {

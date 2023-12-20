@@ -6,12 +6,20 @@
 //
 
 import UIKit
-
+import SDWebImage
 class InformationViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
     @IBOutlet var editButtons: [UIButton]!
     
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var headerView: HeaderView!
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var mobileTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var updateButton: UIButton!
+    private var viewModel = ProfileViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
@@ -20,6 +28,13 @@ class InformationViewController: BaseViewController {
             button.setTitle(LocalizationKeys.edit.rawValue.localizeString(), for: .normal)
         }
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
+        updateUI()
+        viewModel.myProfile.bind { _ in
+            DispatchQueue.main.async {
+                self.updateUI()
+            }
+        }
+        viewModel.getMyProfile()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,16 +42,29 @@ class InformationViewController: BaseViewController {
         headerView.nameView.isHidden = true
         headerView.emailView.isHidden = true
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        
+    }
+    
+   
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        headerView.imageView.layer.cornerRadius = headerView.imageView.frame.height * 0.5
+    }
+    
+    private func updateUI(){
+        print(viewModel.getName())
+        nameTextField.text = viewModel.getName()
+        emailTextField.text = viewModel.getEmail()
+        headerView.imageView.sd_setImage(with: URL(string: Route.baseUrl + viewModel.getImage()), placeholderImage: UIImage(named: "placeholder"))
+        mobileTextField.text = viewModel.getMobile()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func saveBtnAction(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func updateBtnAction(_ sender: Any) {
+    }
 }

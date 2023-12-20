@@ -30,7 +30,7 @@ enum ViewControllerType {
 
 
 class BaseViewController: UIViewController, UINavigationControllerDelegate {
-    let spinnerView = RTSpinKitView(style: .styleThreeBounce, color: CustomColor.appColor.color, spinnerSize: 70.0)
+    let spinnerView = RTSpinKitView(style: .styleThreeBounce, color: CustomColor.appSecondryColor.color, spinnerSize: 70.0)
 
 
     var isOverlayViewAdded: Bool = false

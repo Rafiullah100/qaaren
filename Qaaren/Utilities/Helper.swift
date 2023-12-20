@@ -8,10 +8,9 @@
 import Foundation
 import UIKit
 open class Helper{
-    static let shared = Helper()
     
     
-    static func cellSize(noOfCells: Int, space: Int, collectionView: UICollectionView)-> CGSize{
+    class func cellSize(noOfCells: Int, space: Int, collectionView: UICollectionView)-> CGSize{
         let cellsAcross: CGFloat = CGFloat(noOfCells)
         let spaceBetweenCells: CGFloat = CGFloat(space)
         var width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells)
@@ -20,7 +19,7 @@ open class Helper{
         return CGSize(width: width, height: 45)
     }
     
-    static func attributedText(text1: String, text2: String)-> NSMutableAttributedString{
+    class func attributedText(text1: String, text2: String)-> NSMutableAttributedString{
         let text1Attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont(name: Constants.fontNameMedium, size: 19) ?? UIFont(),
             .foregroundColor: UIColor.label
@@ -39,6 +38,17 @@ open class Helper{
         combinedAttributedString.append(attributedString2)
         return combinedAttributedString
     }
+    
+    class func isValidEmail(email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+    
+   class func isRTL() -> Bool{
+        return UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? true : false
+    }
+
 }
 
 

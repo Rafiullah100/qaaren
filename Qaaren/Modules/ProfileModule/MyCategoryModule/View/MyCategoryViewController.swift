@@ -18,6 +18,7 @@ class MyCategoryViewController: BaseViewController {
             tableView.dataSource = self
         }
     }
+    private let viewModel = MyCategoryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,11 @@ class MyCategoryViewController: BaseViewController {
         viewControllerTitle = LocalizationKeys.myCategories.rawValue.localizeString()
         categoriesLabel.text = LocalizationKeys.selectedCategories.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
+
+        viewModel.myCategories.bind { _ in
+            self.tableView.reloadData()
+        }
+        viewModel.getMyCategories()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,12 +42,12 @@ class MyCategoryViewController: BaseViewController {
 
 extension MyCategoryViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SelectedCategoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: SelectedCategoryTableViewCell.cellReuseIdentifier()) as! SelectedCategoryTableViewCell
-//        cell.titleLabel.text = "Wearables"
+        cell.titleLabel.text = viewModel.getMyCategory(at: indexPath.row)
         return cell
     }
     

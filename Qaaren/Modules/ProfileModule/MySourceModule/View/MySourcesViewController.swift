@@ -18,6 +18,7 @@ class MySourcesViewController: BaseViewController {
             tableView.dataSource = self
         }
     }
+    private var viewModel = MySourcesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,11 @@ class MySourcesViewController: BaseViewController {
         viewControllerTitle = LocalizationKeys.mySources.rawValue.localizeString()
         sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
+        
+        viewModel.getMyCategories()
+        viewModel.mySources.bind { _ in
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,12 +42,12 @@ class MySourcesViewController: BaseViewController {
 
 extension MySourcesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SelectedCategoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: SelectedCategoryTableViewCell.cellReuseIdentifier()) as! SelectedCategoryTableViewCell
-        cell.titleLabel.text = "Amazon"
+        cell.titleLabel.text = viewModel.getMySource(at: indexPath.row)
         return cell
     }
     

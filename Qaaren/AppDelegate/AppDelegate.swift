@@ -7,7 +7,8 @@
 
 import UIKit
 import GoogleMaps
-
+import Firebase
+import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        UIView.appearance().semanticContentAttribute = .forceRightToLeft
         GMSServices.provideAPIKey("AIzaSyBC2Xdb2ato7ULwuGnDjPLXLAvqUZx_1VM")
-        
+        FirebaseApp.configure()
+
         UIView.appearance().semanticContentAttribute = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? .forceRightToLeft : .forceLeftToRight
         return true
     }

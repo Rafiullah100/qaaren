@@ -23,13 +23,20 @@ class SignupViewController: BaseViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
    
-    private var viewModel: SignupViewModel!
+    private var viewModel = SignupViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SignupViewModel()
         updateUI()
-        bindResult()
+        viewModel.signup.bind { [unowned self] signup in
+            self.stopAnimation()
+            if signup?.success == true{
+                Switcher.gotoOtpScreen(delegate: self, email: emailTextField.text ?? "")
+            }
+            else{
+                showAlert(message: signup?.message ?? "")
+            }
+        }
     }
     
     private func updateUI(){
@@ -46,7 +53,6 @@ class SignupViewController: BaseViewController {
         singupButton.setTitle(LocalizationKeys.signup.rawValue.localizeString(), for: .normal)
     }
     
-    
     @IBAction func passwordSecureButtonAction(_ sender: Any) {
         passwordTextField.isSecureTextEntry.toggle()
         securePasswordIcon.image = passwordTextField.isSecureTextEntry == true ? UIImage(named: "hide-icon") : UIImage(named: "eye")
@@ -62,22 +68,10 @@ class SignupViewController: BaseViewController {
         let validationResponse = viewModel.isFormValid(user: signup)
         if validationResponse.isValid {
             self.animateSpinner()
-            viewModel.SignupUser()
+            self.viewModel.signupUser()
         }
         else{
             showAlert(message: validationResponse.message)
-        }
-    }
-    
-    private func bindResult(){
-        viewModel.bindResultToView = { [unowned self] in
-            stopAnimation()
-            if viewModel.signup?.success == true{
-                Switcher.gotoOtpScreen(delegate: self, email: emailTextField.text ?? "")
-            }
-            else{
-                showAlert(message: Constants.errorMessage)
-            }
         }
     }
     
