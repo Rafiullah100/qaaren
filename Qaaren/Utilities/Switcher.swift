@@ -31,8 +31,10 @@ class Switcher {
         delegate.present(vc, animated: true, completion: nil)
     }
     
-    static func gotoAddReviewVC(delegate: UIViewController){
+    static func gotoAddReviewVC(delegate: UIViewController, productID: Int){
         let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "AddReviewViewController") as! AddReviewViewController
+        vc.delegate = delegate as? any AddReviewProtocol
+        vc.productID = productID
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         delegate.present(vc, animated: true, completion: nil)

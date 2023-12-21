@@ -23,6 +23,7 @@ class AlertViewController: UIViewController {
         pickerView.dataSource = self
         emailTextField.inputView = pickerView
 //        emailTextField.placeholder = LocalizationKeys.receiveAlert.rawValue.localizeString()
+        emailTextField.placeholder = "Select event"
         notifymeLabel.text = LocalizationKeys.priceDropped.rawValue.localizeString()
         createLabel.text = LocalizationKeys.createAlert.rawValue.localizeString()
         

@@ -6,14 +6,22 @@
 //
 
 import UIKit
-
+enum ImageSource {
+    case photoLibrary
+    case camera
+}
 class HeaderView: UIView {
 
+    @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabell: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var nameView: UIView!
+    
+    var didTappedCamera: (() -> Void)? = nil
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commoninit()
@@ -31,4 +39,7 @@ class HeaderView: UIView {
         addSubview(headerView)
     }
 
+    @IBAction func cameraBtnAction(_ sender: Any) {
+        didTappedCamera?()
+    }
 }

@@ -13,6 +13,7 @@ class LoginViewModel {
     var errorMessage: Observable<String> = Observable("")
     var login: LoginModel?
     var isAuthenticationInProgress: Bool = false
+    var googleLogin: Observable<SuccessModel> = Observable(nil)
 
     var parameters: [String: Any]?
     
@@ -41,6 +42,17 @@ class LoginViewModel {
                 else{
                     self.errorMessage.value = login.message
                 }
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func googleSignin(email: String) {
+        URLSession.shared.request(route: .googleSignin, method: .post, parameters: ["username": email], model: SuccessModel.self) { result in
+            switch result {
+            case .success(let google):
+                self.googleLogin.value = google
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }

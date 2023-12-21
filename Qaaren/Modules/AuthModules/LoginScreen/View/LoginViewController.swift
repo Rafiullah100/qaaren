@@ -83,8 +83,7 @@ class LoginViewController: BaseViewController {
             if let result = result,
                let email = result.user.profile?.email,
                let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString {
-//                self?.parameters = ["username": email, "profile_image": imageURL]
-//                self?.loginUser(completion: completion)
+                   self?.viewModel.googleSignin(email: email)
             }
         }
     }
@@ -101,6 +100,10 @@ class LoginViewController: BaseViewController {
             if isExist == true{
                 Switcher.gotoHomeVC(delegate: self)
             }
+        }
+        
+        viewModel.googleLogin.bind { [unowned self] response in
+            showAlert(message: response?.message ?? "")
         }
     }
     

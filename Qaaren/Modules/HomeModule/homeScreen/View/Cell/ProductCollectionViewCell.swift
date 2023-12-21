@@ -34,11 +34,12 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     var product: Catalogue?{
         didSet{
+            favoriteIcon.image = UIImage(named: product?.isWishlist == 1 ? "favorite_red" : "favorite_gray")
             thumbnail.sd_setImage(with: URL(string: product?.items?.first?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = product?.title
             totalReviewLabel.text = "(\(product?.totalReviews ?? 0))"
             watchLabel.text = "\(product?.watchCount ?? 0)"
-//            amountLabel.text = "\(product?.minPrice ?? 0)-\(product?.maxPrice ?? 0) \(LocalizationKeys.sar.rawValue.localizeString())"
+            amountLabel.text = "\(product?.minPrice ?? "")-\(product?.maxPrice ?? "") \(LocalizationKeys.sar.rawValue.localizeString())"
             for (index, starImageView) in ratingStar.enumerated() {
                 guard let rating = Double(product?.totalRating ?? "0") else { return }
                 let imageName = index < Int(round(rating)) ? "star" : "star-unfill"
@@ -65,7 +66,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     var viewAllProduct: ViewallItem?{
         didSet{
             thumbnail.sd_setImage(with: URL(string: viewAllProduct?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
-            nameLabel.text = viewAllProduct?.category
+            nameLabel.text = viewAllProduct?.catalogue
             totalReviewLabel.text = "(\(viewAllProduct?.totalReviews ?? 0))"
             amountLabel.text = "\(viewAllProduct?.price ?? "") \(LocalizationKeys.sar.rawValue.localizeString())"
             watchLabel.text = "\(viewAllProduct?.sourceCount ?? 0)"

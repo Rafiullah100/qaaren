@@ -9,45 +9,6 @@ import Foundation
 
 
 
-//struct MyWishlistModel: Codable {
-//    let success: Bool?
-//    let wishlist: [Wishlist]?
-//}
-//
-//// MARK: - Catalogues
-//struct Catalogues: Codable {
-//    let id: Int?
-//    let title, slug, additionalFilters, colors: String?
-//    let watchCount: Int?
-//    let totalRating: String?
-//    let totalReviews: Int?
-//    let categories: Wishlist?
-//    let items: [Item]?
-//}
-//
-//// MARK: - Product
-//struct Product: Codable {
-//    let id, userID: Int?
-//    let catalogues: Catalogues?
-//    let image: String?
-//    let minPrice: Int?
-//    let maxPrice: Int?
-//}
-//
-//// MARK: - Wishlist
-//struct Wishlist: Codable {
-//    let id: Int?
-//    let category, categoryAr: String?
-//    let products: [Product]?
-//}
-//
-//// MARK: - Item
-//struct Item: Codable {
-//    let price: String?
-//    let image: String?
-//    let brand: String?
-//}
-
 struct MyWishlistModel: Codable {
     let success: Bool?
     let wishlist: [Wishlist]?
@@ -79,7 +40,8 @@ struct Product: Codable {
     let id, userID: Int?
     let catalogues: Catalogues?
     let image: String?
-    let minPrice, maxPrice: Int?
+    let minPrice: Double?
+    let maxPrice: Double?
 
     enum CodingKeys: String, CodingKey {
         case id

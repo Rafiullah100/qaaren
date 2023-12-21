@@ -72,3 +72,8 @@ struct AlertModel: Codable {
     let message: String?
 }
 
+struct WatchModel: Codable {
+    let success: Bool?
+}
+
+

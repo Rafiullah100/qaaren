@@ -21,7 +21,6 @@ class RevieweViewController: UIViewController {
     }
     var productID: Int?
     private var viewModel = ReviewViewModel()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +33,7 @@ class RevieweViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.reviewList.bind { [unowned self] _ in
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
         viewModel.getReviewList(productID: productID ?? 0)
     }
@@ -46,7 +45,7 @@ class RevieweViewController: UIViewController {
     }
     
     @IBAction func addReviewBtn(_ sender: Any) {
-        Switcher.gotoAddReviewVC(delegate: self)
+        Switcher.gotoAddReviewVC(delegate: self, productID: productID ?? 0)
     }
 }
 
@@ -64,5 +63,12 @@ extension RevieweViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
+    }
+}
+
+extension RevieweViewController: AddReviewProtocol{
+    func reviewAdded(review: AddReviewModel) {
+        guard let addedReview = review.reviewData else { return }
+        self.viewModel.reviewList.value?.insert(addedReview, at: 0)
     }
 }

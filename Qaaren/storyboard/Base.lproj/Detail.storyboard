@@ -568,6 +568,7 @@
                         <outlet property="amountLabel" destination="DwJ-nk-PZT" id="EVa-Ii-bfS"/>
                         <outlet property="collectionView" destination="Kwi-Nr-ZRH" id="E1W-Wt-fbl"/>
                         <outlet property="containerView" destination="ela-Pq-jI8" id="gb4-Pg-LW2"/>
+                        <outlet property="favoriteIcon" destination="CuX-US-Mv7" id="ZFv-v5-plf"/>
                         <outlet property="headerImageView" destination="XjE-1B-ENL" id="P2D-mn-Nc4"/>
                         <outlet property="nameLabel" destination="ZhL-nF-SAF" id="bPS-Br-9ib"/>
                         <outlet property="priceRangeLabel" destination="zF9-uW-5Q1" id="fxf-aE-Ufa"/>
@@ -595,7 +596,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-ur-PjM" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-ur-PjM" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                             </tableView>
@@ -1596,7 +1597,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-Ld-9pP">
                                                 <rect key="frame" x="0.0" y="210" width="393" height="583"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="583"/>
                                                         <color key="backgroundColor" name="backgroundColor"/>
                                                     </tableView>

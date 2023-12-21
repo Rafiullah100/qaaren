@@ -29,9 +29,17 @@ struct ReviewUsers: Codable {
 }
 
 
+
+struct AddReviewModel: Codable {
+    let reviewData: ReviewModel?
+    let success: Bool?
+    let message: String?
+}
+
+
+
 struct ReviewInoutModel {
     let review: String?
     let rating: Int?
     let id: Int?
-    
 }

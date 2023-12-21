@@ -62,7 +62,7 @@ struct ItemDetail: Codable {
 //    let totalLikes, likes: [JSONAny]?
     let images: [String]?
     let description: String?
-
+    let isWishlist: Bool?
     enum CodingKeys: String, CodingKey {
         case id, title, slug
         case additionalFilters = "additional_filters"
@@ -76,6 +76,7 @@ struct ItemDetail: Codable {
         case totalReviewsCount = "total_reviews_count"
 //        case totalLikes = "total_likes"
         case /*likes,*/ images, description
+        case isWishlist = "is_wishlist"
     }
 }
 

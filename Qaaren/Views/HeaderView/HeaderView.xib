@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="Qaaren" customModuleProvider="target">
             <connections>
+                <outlet property="cameraView" destination="0UY-ca-mYJ" id="vgv-D3-RZ2"/>
                 <outlet property="emailView" destination="6wC-ty-tEv" id="K0K-E7-hQx"/>
                 <outlet property="imageView" destination="MDp-nu-hD1" id="JQ7-4D-dfC"/>
                 <outlet property="nameLabell" destination="Au3-ah-DHL" id="4ti-nf-qiO"/>
@@ -69,7 +70,7 @@
                                                 <constraint firstItem="MDp-nu-hD1" firstAttribute="top" secondItem="NJC-Yh-SRO" secondAttribute="top" constant="12" id="mCU-XE-4X5"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-ca-mYJ">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-ca-mYJ">
                                             <rect key="frame" x="145.66666666666666" y="77" width="30" height="25"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="M4T-cK-HhS">
@@ -79,13 +80,24 @@
                                                         <constraint firstAttribute="height" constant="17" id="qIp-ZF-g7U"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-kN-Zq9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="cameraBtnAction:" destination="-1" eventType="touchUpInside" id="XFv-Ca-JVz"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
-                                            <color key="backgroundColor" name="appColor"/>
+                                            <color key="backgroundColor" name="blueishColor"/>
                                             <constraints>
                                                 <constraint firstItem="M4T-cK-HhS" firstAttribute="centerY" secondItem="0UY-ca-mYJ" secondAttribute="centerY" id="0gJ-oh-K4T"/>
                                                 <constraint firstItem="M4T-cK-HhS" firstAttribute="centerX" secondItem="0UY-ca-mYJ" secondAttribute="centerX" id="2bt-Ps-kkR"/>
+                                                <constraint firstItem="Uwc-kN-Zq9" firstAttribute="top" secondItem="0UY-ca-mYJ" secondAttribute="top" id="FZL-C0-Q04"/>
                                                 <constraint firstAttribute="height" constant="25" id="R6i-tu-8V9"/>
                                                 <constraint firstAttribute="width" constant="30" id="XSo-oV-nRX"/>
+                                                <constraint firstItem="Uwc-kN-Zq9" firstAttribute="leading" secondItem="0UY-ca-mYJ" secondAttribute="leading" id="Zlo-RI-2li"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uwc-kN-Zq9" secondAttribute="trailing" id="pmE-35-leO"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uwc-kN-Zq9" secondAttribute="bottom" id="q6H-Zl-GlN"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
@@ -166,11 +178,11 @@
     <resources>
         <image name="Ellipse 41" width="80" height="80"/>
         <image name="camera" width="23" height="21"/>
-        <namedColor name="appColor">
-            <color red="0.95294117647058818" green="0.61176470588235299" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blueishColor">
+            <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="shadowColor">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

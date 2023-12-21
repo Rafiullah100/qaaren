@@ -27,6 +27,7 @@ class DetailViewController: BaseViewController {
     }
     @IBOutlet weak var containerView: UIStackView!
     
+    @IBOutlet weak var favoriteIcon: UIImageView!
     private var selectedIndexPath: IndexPath?
     private var viewModel = DetailViewModel()
     var productID: Int?
@@ -61,6 +62,7 @@ class DetailViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        viewModel.addView(productID: productID ?? 0)
     }
     
     private func bindProductDetail(){
@@ -73,7 +75,7 @@ class DetailViewController: BaseViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
         selectedIndexPath = IndexPath(row: 0, section: 0)
-        sliderImages(index: 1)
+        sliderImages(index: 0)
     }
     
     private func updateUI(){
@@ -84,6 +86,7 @@ class DetailViewController: BaseViewController {
         priceRangeLabel.text = LocalizationKeys.priceRange.rawValue.localizeString()
         amountLabel.text = "590 - 882 \(LocalizationKeys.sar.rawValue.localizeString())"
         headerImageView.sd_setImage(with: URL(string: viewModel.getImages(0)), placeholderImage: UIImage(named: "placeholder"))
+        favoriteIcon.image = UIImage(named: viewModel.isWishlisted() == true ? "favorite_red" : "favorite_gray")
         for (index, imgView) in imageViews.enumerated() {
             imgView.sd_setImage(with: URL(string: viewModel.getImages(index)), placeholderImage: UIImage(named: "placeholder"))
         }

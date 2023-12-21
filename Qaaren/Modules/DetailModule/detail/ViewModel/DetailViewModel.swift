@@ -52,6 +52,17 @@ class DetailViewModel {
         }
     }
     
+    func addView(productID: Int) {
+        URLSession.shared.request(route: .watch(productID), method: .get, parameters: [:], model: WatchModel.self) { result in
+            switch result {
+            case .success(let view):
+                print(view)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func getTitle() -> String {
         return self.productDetail.value?.itemDetail?.title ?? ""
     }
@@ -76,6 +87,10 @@ class DetailViewModel {
     
     func getDescription() -> String {
         return self.productDetail.value.debugDescription
+    }
+    
+    func isWishlisted() -> Bool {
+        return self.productDetail.value?.itemDetail?.isWishlist ?? false
     }
 
 }

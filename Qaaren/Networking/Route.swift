@@ -29,6 +29,9 @@ enum Route {
     case viewAll(Int)
     case changePassword
     case priceAlert
+    case googleSignin
+    case updateProfile
+    case watch(Int)
     
     var description: String {
         switch self {
@@ -72,6 +75,12 @@ enum Route {
             return "mobile/users/password/update"
         case .priceAlert:
             return "mobile/price-alerts/create"
+        case .googleSignin:
+            return "mobile/auth/google-login"
+        case .updateProfile:
+            return "mobile/users/profile/update"
+        case .watch(let id):
+            return "mobile/items/get-items/item/\(id)/watch_count"
         } 
     }
 }

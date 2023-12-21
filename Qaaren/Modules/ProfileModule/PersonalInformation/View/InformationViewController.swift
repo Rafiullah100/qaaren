@@ -18,7 +18,10 @@ class InformationViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var updateButton: UIButton!
+    
     private var viewModel = ProfileViewModel()
+    var imagePicker: UIImagePickerController!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +38,40 @@ class InformationViewController: BaseViewController {
             }
         }
         viewModel.getMyProfile()
+        
+        headerView.didTappedCamera = {
+            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                self.selectImageFrom(.photoLibrary)
+                return
+            }
+            self.selectImageFrom(.camera)
+        }
+        
+        viewModel.editProfile.bind { [unowned self] editProfile in
+            self.stopAnimation()
+            self.showAlert(message: editProfile?.message ?? "")
+        }
+    }
+    
+    func selectImageFrom(_ source: ImageSource){
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        switch source {
+        case .camera:
+            imagePicker.sourceType = .camera
+        case .photoLibrary:
+            imagePicker.sourceType = .photoLibrary
+        }
+        present(imagePicker, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         headerView.nameView.isHidden = true
         headerView.emailView.isHidden = true
+        headerView.cameraView.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        
-        
     }
-    
-   
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -63,8 +88,30 @@ class InformationViewController: BaseViewController {
 
     
     @IBAction func saveBtnAction(_ sender: Any) {
+        let edit = EditProfileInputModel(name: nameTextField.text ?? "", email: emailTextField.text ?? "", mobile: mobileTextField.text ?? "", image: headerView.imageView.image ?? UIImage())
+        let validationResponse = viewModel.isFormValid(user: edit)
+        if validationResponse.isValid {
+            self.animateSpinner()
+            viewModel.updateProfile(image: headerView.imageView.image ?? UIImage())
+        }
+        else{
+            showAlert(message: validationResponse.message)
+        }
     }
     
     @IBAction func updateBtnAction(_ sender: Any) {
+        
+    }
+}
+
+extension InformationViewController: UIImagePickerControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
+        headerView.imageView.image = selectedImage
     }
 }

@@ -49,8 +49,13 @@ class HomeTableViewCell: UITableViewCell {
 //        headerLabel.text = LocalizationKeys.google.rawValue.localizeString()
         viewAllButton.setTitle(LocalizationKeys.viewAll.rawValue.localizeString(), for: .normal)
         viewModel.success.bind { response in
-            guard response?.status == true else {return}
-            
+            guard response?.success == true else {return}
+            guard let indexPath = self.indexPath else{return}
+            let isWishlist = self.subCategory?.catalogue?[indexPath.row].isWishlist
+            self.subCategory?.catalogue?[indexPath.row].isWishlist = isWishlist == 0 ? 1 : 0
+            DispatchQueue.main.async {
+                self.collectionView.reloadItems(at: [indexPath])
+            }
         }
     }
 
@@ -84,7 +89,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.didTappedFavorite = {
             let productID = self.type == .home ? self.subCategory?.catalogue?[indexPath.row].id : self.wishlistCategory?.products?[indexPath.row].catalogues?.id
             self.indexPath = indexPath
-            self.viewModel.getCategories(productID: productID ?? 0)
+            self.viewModel.makeFavorite(productID: productID ?? 0)
         }
         return cell
     }

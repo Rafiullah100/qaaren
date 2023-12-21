@@ -421,12 +421,15 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdc-6N-9gA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="VMH-0A-j5t">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="VMH-0A-j5t">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-Ww-8s8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="oneStarBtn:" destination="xCO-Jc-j9X" eventType="touchUpInside" id="xF0-mv-cc4"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -445,12 +448,15 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C34-0h-d9g">
                                                                 <rect key="frame" x="30" y="0.0" width="25" height="25"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-oE-5D3">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-oE-5D3">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHJ-eE-Zgm">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="twoStarBtn:" destination="xCO-Jc-j9X" eventType="touchUpInside" id="YJQ-B8-mnv"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -469,12 +475,15 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kp3-YX-YJx">
                                                                 <rect key="frame" x="60" y="0.0" width="25" height="25"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-f4-Pnx">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-f4-Pnx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPK-DD-9VP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="threeStarBtn:" destination="xCO-Jc-j9X" eventType="touchUpInside" id="vLb-hO-nFw"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -493,12 +502,15 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-Cg-QwO">
                                                                 <rect key="frame" x="90" y="0.0" width="25" height="25"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="kk8-E0-gpz">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="kk8-E0-gpz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj7-62-thk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="fourStarBtn:" destination="xCO-Jc-j9X" eventType="touchUpInside" id="ART-WN-XhG"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -517,12 +529,15 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-aP-dM0">
                                                                 <rect key="frame" x="120" y="0.0" width="25" height="25"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="Z76-FY-scN">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfill" translatesAutoresizingMaskIntoConstraints="NO" id="Z76-FY-scN">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeI-Ma-mS5">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="fiveStarBtn:" destination="xCO-Jc-j9X" eventType="touchUpInside" id="dJp-na-NWG"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -658,7 +673,13 @@
                     </view>
                     <connections>
                         <outlet property="reviewLabel" destination="jEU-dT-jDf" id="Om4-Ae-hfn"/>
+                        <outlet property="submitButton" destination="L35-Xh-tyK" id="vNH-Xv-R2z"/>
                         <outlet property="textView" destination="lTe-rz-yB2" id="Lgx-vq-7Hb"/>
+                        <outletCollection property="ratingImageView" destination="VMH-0A-j5t" collectionClass="NSMutableArray" id="pNu-RL-7Kl"/>
+                        <outletCollection property="ratingImageView" destination="KbZ-oE-5D3" collectionClass="NSMutableArray" id="Y82-yu-hKr"/>
+                        <outletCollection property="ratingImageView" destination="Evc-f4-Pnx" collectionClass="NSMutableArray" id="F06-N9-7ag"/>
+                        <outletCollection property="ratingImageView" destination="kk8-E0-gpz" collectionClass="NSMutableArray" id="luh-QY-Jzv"/>
+                        <outletCollection property="ratingImageView" destination="Z76-FY-scN" collectionClass="NSMutableArray" id="diy-Hh-H5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIz-Ui-8N5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
