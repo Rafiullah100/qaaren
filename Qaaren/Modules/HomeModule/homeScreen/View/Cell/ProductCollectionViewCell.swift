@@ -50,6 +50,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     var wishlistProduct: Product?{
         didSet{
+            favoriteIcon.image = UIImage(named: "favorite_red")
             thumbnail.sd_setImage(with: URL(string: wishlistProduct?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = wishlistProduct?.catalogues?.title
             totalReviewLabel.text = "(\(wishlistProduct?.catalogues?.totalReviews ?? 0))"

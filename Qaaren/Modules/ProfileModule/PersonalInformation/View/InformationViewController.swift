@@ -32,8 +32,10 @@ class InformationViewController: BaseViewController {
         }
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
         updateUI()
+        self.animateSpinner()
         viewModel.myProfile.bind { _ in
             DispatchQueue.main.async {
+                self.stopAnimation()
                 self.updateUI()
             }
         }
@@ -70,6 +72,7 @@ class InformationViewController: BaseViewController {
         headerView.nameView.isHidden = true
         headerView.emailView.isHidden = true
         headerView.cameraView.isHidden = false
+        headerView.logoutButtonView.isHidden = true
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     

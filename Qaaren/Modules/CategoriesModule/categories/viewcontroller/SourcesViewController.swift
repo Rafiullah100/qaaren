@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SourcesViewController: UIViewController {
+class SourcesViewController: BaseViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableView: UITableView!{
@@ -29,8 +29,10 @@ class SourcesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = LocalizationKeys.allSources.rawValue.localizeString()
+        self.animateSpinner()
         viewModel.getAllSources()
         viewModel.sources.bind { _ in
+            self.stopAnimation()
             self.tableView.reloadData()
         }
         

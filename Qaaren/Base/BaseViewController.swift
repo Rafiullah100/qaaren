@@ -163,8 +163,6 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         self.navigationItem.leftBarButtonItem = backButton
     }
     
-
-    
     func addBackButtonWithTitle() {
         let button = UIButton.init(type: .custom)
         button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)

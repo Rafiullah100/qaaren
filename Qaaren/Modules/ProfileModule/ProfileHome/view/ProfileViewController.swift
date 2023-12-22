@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     private func updateUI(){
@@ -61,11 +62,15 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         headerView.imageView.sd_setImage(with: URL(string: Route.baseUrl + (UserDefaults.standard.profileImage ?? "")), placeholderImage: UIImage(named: "placeholder"))
         headerView.imageView.layer.cornerRadius = headerView.imageView.frame.height * 0.5
         headerView.imageView.layer.masksToBounds = true
+        headerView.logout = {
+            UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue])
+            Switcher.logout(delegate: self)
+        }
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 210.0
+        return 240.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

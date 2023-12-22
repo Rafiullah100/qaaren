@@ -27,7 +27,9 @@ class MyCategoryViewController: BaseViewController {
         categoriesLabel.text = LocalizationKeys.selectedCategories.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
 
+        self.animateSpinner()
         viewModel.myCategories.bind { _ in
+            self.stopAnimation()
             self.tableView.reloadData()
         }
         viewModel.getMyCategories()

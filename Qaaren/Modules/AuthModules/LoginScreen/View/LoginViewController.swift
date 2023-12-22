@@ -30,8 +30,8 @@ class LoginViewController: BaseViewController {
         self.navigationController?.navigationBar.isHidden = true
         emailTextField.textAlignment = Helper.isRTL() ? .right : .left
         passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
-        emailTextField.text = "zas@gmail.com"
-        passwordTextField.text = "123456"
+//        emailTextField.text = "zas@gmail.com"
+//        passwordTextField.text = "123456"
         updateUI()
         initVM()
         bindResult()
@@ -42,6 +42,7 @@ class LoginViewController: BaseViewController {
     }
     
     private func updateUI(){
+        
         skipLabel.setTitle(LocalizationKeys.skipLogin.rawValue.localizeString(), for: .normal)
         emailAddress.text = LocalizationKeys.emailAddress.rawValue.localizeString()
         signupLabel.setTitle(LocalizationKeys.signup.rawValue.localizeString(), for: .normal)
@@ -83,6 +84,7 @@ class LoginViewController: BaseViewController {
             if let result = result,
                let email = result.user.profile?.email,
                let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString {
+                self?.animateSpinner()
                    self?.viewModel.googleSignin(email: email)
             }
         }
@@ -103,6 +105,7 @@ class LoginViewController: BaseViewController {
         }
         
         viewModel.googleLogin.bind { [unowned self] response in
+            self.stopAnimation()
             showAlert(message: response?.message ?? "")
         }
     }

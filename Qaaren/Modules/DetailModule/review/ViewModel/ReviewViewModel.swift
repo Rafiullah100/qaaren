@@ -57,4 +57,8 @@ class ReviewViewModel {
             }
         }
     }
+    
+//    func getRatingValue(rating: Int) -> Int {
+//        <#function body#>
+//    }
 }

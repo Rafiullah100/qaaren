@@ -31,11 +31,13 @@ class CategoriesViewController: BaseViewController {
         super.viewDidLoad()
         bindView()
         label.text = LocalizationKeys.allCategories.rawValue.localizeString()
+        self.animateSpinner()
         viewModel.getAllCategories()
     }
     
     private func bindView(){
         viewModel.categories.bind { allCategories in
+            self.stopAnimation()
             self.tableView.reloadData()
         }
         

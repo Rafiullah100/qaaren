@@ -121,3 +121,22 @@ extension UserDefaults{
         }
     }
 }
+
+
+extension UserDefaults {
+    class func clean(exceptKeys keysToKeep: [String] = []) {
+        guard let aValidIdentifier = Bundle.main.bundleIdentifier else { return }
+        let defaults = UserDefaults.standard
+        var valuesToKeep: [String: Any] = [:]
+        for key in keysToKeep {
+            if let value = defaults.value(forKey: key) {
+                valuesToKeep[key] = value
+            }
+        }
+        defaults.removePersistentDomain(forName: aValidIdentifier)
+        for (key, value) in valuesToKeep {
+            defaults.setValue(value, forKey: key)
+        }
+        defaults.synchronize()
+    }
+}

@@ -12,6 +12,7 @@ enum ImageSource {
 }
 class HeaderView: UIView {
 
+    @IBOutlet weak var logoutButtonView: UIView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabell: UILabel!
@@ -20,8 +21,8 @@ class HeaderView: UIView {
     @IBOutlet weak var nameView: UIView!
     
     var didTappedCamera: (() -> Void)? = nil
-    
-    
+    var logout: (() -> Void)? = nil
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commoninit()
@@ -41,5 +42,8 @@ class HeaderView: UIView {
 
     @IBAction func cameraBtnAction(_ sender: Any) {
         didTappedCamera?()
+    }
+    @IBAction func logoutBtnAction(_ sender: Any) {
+        logout?()
     }
 }

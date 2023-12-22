@@ -56,6 +56,7 @@ class DetailViewController: BaseViewController {
         super.viewDidLoad()
         print(productID ?? 0)
         type = .detail
+        self.animateSpinner()
         viewModel.getDetail(productID: productID ?? 0)
         bindProductDetail()
     }
@@ -67,6 +68,7 @@ class DetailViewController: BaseViewController {
     
     private func bindProductDetail(){
         viewModel.productDetail.bind { [unowned self] _ in
+            self.stopAnimation()
             updateUI()
         }
     }

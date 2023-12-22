@@ -24,8 +24,10 @@ class WishlisViewController: BaseViewController {
         super.viewDidLoad()
         type = .detail
         viewControllerTitle = LocalizationKeys.wishlist.rawValue.localizeString()
+        self.animateSpinner()
         viewModel.myWishlist.bind { _ in
             DispatchQueue.main.async {
+                self.stopAnimation()
                 self.tableView.reloadData()
             }
         }

@@ -224,7 +224,7 @@ extension UIWindow {
 
 extension String{
     func localizeString() -> String {
-        let loc = UserDefaults.standard.selectedLanguage == AppLanguage.english.rawValue ? "en" : "ar"
+        let loc = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? "ar" : "en"
         let path = Bundle.main.path(forResource: loc, ofType: "lproj")
         let bundle = Bundle(path: path!)
         return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")

@@ -912,10 +912,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taD-4T-WAy">
-                                                                                                <rect key="frame" x="105" y="0.0" width="113" height="24"/>
+                                                                                                <rect key="frame" x="105" y="0.0" width="146" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vv9-rh-aPb">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="113" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="146" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="8XZ-Tp-3HB"/>
                                                                                                         </constraints>
@@ -936,10 +936,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgA-57-ibj">
-                                                                                                <rect key="frame" x="233" y="0.0" width="50" height="24"/>
+                                                                                                <rect key="frame" x="266" y="0.0" width="17" height="24"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-zh-K58">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="17" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1071,10 +1071,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SL2-Y2-hbe">
-                                                                                                <rect key="frame" x="105" y="0.0" width="113.66666666666669" height="24"/>
+                                                                                                <rect key="frame" x="104.99999999999999" y="0.0" width="153.66666666666663" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="87P-vM-9zK">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="113.66666666666667" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.66666666666666" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="x0p-aa-9TQ"/>
                                                                                                         </constraints>
@@ -1095,10 +1095,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-ih-cJn">
-                                                                                                <rect key="frame" x="233.66666666666671" y="0.0" width="49.333333333333343" height="24"/>
+                                                                                                <rect key="frame" x="273.66666666666669" y="0.0" width="9.3333333333333144" height="24"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-2W-cdN">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="24"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1219,10 +1219,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-kZ-gJn">
-                                                                                                <rect key="frame" x="105" y="0.0" width="113.66666666666669" height="24"/>
+                                                                                                <rect key="frame" x="104.99999999999999" y="0.0" width="153.66666666666663" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-nb-WWj">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="113.66666666666667" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.66666666666666" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="IB3-kD-gjK"/>
                                                                                                         </constraints>
@@ -1243,10 +1243,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-mM-sSI">
-                                                                                                <rect key="frame" x="233.66666666666671" y="0.0" width="49.333333333333343" height="24"/>
+                                                                                                <rect key="frame" x="273.66666666666669" y="0.0" width="9.3333333333333144" height="24"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXO-rX-hOk">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="24"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1356,10 +1356,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-b6-mS7">
-                                                                                                <rect key="frame" x="105" y="0.0" width="114" height="24"/>
+                                                                                                <rect key="frame" x="105" y="0.0" width="154" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-AN-TLl">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="114" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="154" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="mMP-go-QmE"/>
                                                                                                         </constraints>
@@ -1380,10 +1380,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-id-74f">
-                                                                                                <rect key="frame" x="234" y="0.0" width="49" height="24"/>
+                                                                                                <rect key="frame" x="274" y="0.0" width="9" height="24"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eel-oN-HS7">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1482,10 +1482,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAn-Pa-zae">
-                                                                                                <rect key="frame" x="105" y="0.0" width="113.33333333333331" height="24"/>
+                                                                                                <rect key="frame" x="105.00000000000001" y="0.0" width="153.33333333333337" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Dmk-4m-XED">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="113.33333333333333" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.33333333333334" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="V5U-tj-uhH"/>
                                                                                                         </constraints>
@@ -1506,10 +1506,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENo-Xt-gUa">
-                                                                                                <rect key="frame" x="233.33333333333329" y="0.0" width="49.666666666666657" height="24"/>
+                                                                                                <rect key="frame" x="273.33333333333331" y="0.0" width="9.6666666666666856" height="24"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfH-UJ-u5T">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="24"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1634,6 +1634,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                     <connections>
                         <outlet property="addReviewButton" destination="87N-Fu-GWY" id="fvJ-yB-1hM"/>
                         <outlet property="ratingLabel" destination="bAY-Y5-1nE" id="utr-kw-x83"/>
+                        <outlet property="ratingStarLabel" destination="J61-16-BET" id="oqQ-VP-bFF"/>
                         <outlet property="ratingandReviewLabel" destination="SUu-B0-35g" id="jnT-zb-bxi"/>
                         <outlet property="tableView" destination="XTV-ja-uqm" id="m4R-6L-13D"/>
                     </connections>

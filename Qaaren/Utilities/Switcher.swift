@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class Switcher {
+    static func logout(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = true
+        delegate.navigationController?.pushViewController(vc, animated: false)
+//        delegate.present(vc, animated: true)
+    }
     
     static func gotoLoginVC(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController

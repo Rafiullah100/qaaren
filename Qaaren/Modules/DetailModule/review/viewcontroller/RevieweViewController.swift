@@ -9,6 +9,7 @@ import UIKit
 
 class RevieweViewController: UIViewController {
 
+    @IBOutlet weak var ratingStarLabel: UILabel!
     @IBOutlet weak var addReviewButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratingandReviewLabel: UILabel!

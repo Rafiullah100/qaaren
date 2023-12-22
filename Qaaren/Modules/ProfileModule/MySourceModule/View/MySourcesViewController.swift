@@ -28,7 +28,9 @@ class MySourcesViewController: BaseViewController {
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
         
         viewModel.getMyCategories()
+        self.animateSpinner()
         viewModel.mySources.bind { _ in
+            self.stopAnimation()
             self.tableView.reloadData()
         }
     }

@@ -17,9 +17,13 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            Switcher.gotoLoginVC(delegate: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if Helper.isLogin() == true{
+                Switcher.gotoHomeVC(delegate: self)
+            }
+            else{
+                Switcher.gotoLoginVC(delegate: self)
+            }
         }
     }
     
