@@ -86,7 +86,7 @@ class DetailViewModel {
     }
     
     func getDescription() -> String {
-        return self.productDetail.value.debugDescription
+        return self.productDetail.value?.itemDetail?.description ?? ""
     }
     
     func isWishlisted() -> Bool {

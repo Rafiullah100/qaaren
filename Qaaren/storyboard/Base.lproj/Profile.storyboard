@@ -58,18 +58,18 @@
                                                                         <rect key="frame" x="0.0" y="15" width="333" height="40"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oED-vO-snp">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="38"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="39"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTU-RT-Enw">
-                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="38"/>
+                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="39"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v75-6I-7u9">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                 <subviews>
-                                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NigarGulalay" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVa-0B-y8M">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NigarGulalay" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVa-0B-y8M">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
-                                                                                                        <textInputTraits key="textInputTraits"/>
+                                                                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                                                                     </textField>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -81,15 +81,18 @@
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-ZL-Xlw">
-                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="38"/>
+                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="39"/>
                                                                                                 <subviews>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYH-4S-PZd">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                                         <state key="normal" title="Edit">
                                                                                                             <color key="titleColor" name="blueishColor"/>
                                                                                                         </state>
+                                                                                                        <connections>
+                                                                                                            <action selector="nameEditBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bod-qo-j6Q"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -113,10 +116,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcv-kj-V5g">
-                                                                                <rect key="frame" x="0.0" y="38" width="333" height="2"/>
+                                                                                <rect key="frame" x="0.0" y="39" width="333" height="1"/>
                                                                                 <color key="backgroundColor" name="shadowColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="2" id="CPW-A4-nUs"/>
+                                                                                    <constraint firstAttribute="height" constant="1" id="CPW-A4-nUs"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
@@ -138,18 +141,18 @@
                                                                         <rect key="frame" x="0.0" y="15" width="333" height="40"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-Iv-go0">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="38"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="39"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-Jz-gOX">
-                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="38"/>
+                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="39"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-6q-ATF">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                 <subviews>
-                                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nigargulalay43@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-iO-DN1">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nigargulalay43@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-iO-DN1">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
-                                                                                                        <textInputTraits key="textInputTraits"/>
+                                                                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                                                     </textField>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -161,15 +164,18 @@
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-So-4ML">
-                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="38"/>
+                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="39"/>
                                                                                                 <subviews>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkB-Lq-jXp">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                                         <state key="normal" title="Edit">
                                                                                                             <color key="titleColor" name="blueishColor"/>
                                                                                                         </state>
+                                                                                                        <connections>
+                                                                                                            <action selector="emailEditBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4jx-Qq-VaO"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -193,10 +199,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5D-Y6-P8w">
-                                                                                <rect key="frame" x="0.0" y="38" width="333" height="2"/>
+                                                                                <rect key="frame" x="0.0" y="39" width="333" height="1"/>
                                                                                 <color key="backgroundColor" name="shadowColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="2" id="U7F-fu-302"/>
+                                                                                    <constraint firstAttribute="height" constant="1" id="U7F-fu-302"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
@@ -218,18 +224,23 @@
                                                                         <rect key="frame" x="0.0" y="15" width="333" height="40"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ots-UJ-QB6">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="38"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="39"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzX-5Y-n7o">
-                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="38"/>
+                                                                                        <rect key="frame" x="5" y="0.0" width="328" height="39"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWS-7I-8Uj">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                 <subviews>
-                                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+92 4567890" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-8I-y3T">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+92 4567890" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-8I-y3T">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
-                                                                                                        <textInputTraits key="textInputTraits"/>
+                                                                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                                                                        <userDefinedRuntimeAttributes>
+                                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                                                                <integer key="value" value="11"/>
+                                                                                                            </userDefinedRuntimeAttribute>
+                                                                                                        </userDefinedRuntimeAttributes>
                                                                                                     </textField>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -241,15 +252,18 @@
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvT-fu-67a">
-                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="38"/>
+                                                                                                <rect key="frame" x="288" y="0.0" width="40" height="39"/>
                                                                                                 <subviews>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smS-Jx-EkW">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="39"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                                         <state key="normal" title="Edit">
                                                                                                             <color key="titleColor" name="blueishColor"/>
                                                                                                         </state>
+                                                                                                        <connections>
+                                                                                                            <action selector="phoneEditBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2zP-L2-Roc"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -273,10 +287,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM1-JR-IP6">
-                                                                                <rect key="frame" x="0.0" y="38" width="333" height="2"/>
+                                                                                <rect key="frame" x="0.0" y="39" width="333" height="1"/>
                                                                                 <color key="backgroundColor" name="shadowColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="2" id="v2f-bD-RBo"/>
+                                                                                    <constraint firstAttribute="height" constant="1" id="v2f-bD-RBo"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
@@ -294,17 +308,17 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-o8-Zw4">
                                                                 <rect key="frame" x="0.0" y="165" width="333" height="55"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="43o-Hu-9W6">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="43o-Hu-9W6">
                                                                         <rect key="frame" x="0.0" y="15" width="150" height="25"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pap-Fb-6H0">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="29.666666666666668"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="26.666666666666668"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" priority="250" constant="187" id="Prn-uU-LDl"/>
                                                                                 </constraints>
-                                                                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
+                                                                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <state key="normal" title="Update password?">
+                                                                                <state key="normal" title="Update Password ?">
                                                                                     <color key="titleColor" name="blueishColor"/>
                                                                                 </state>
                                                                                 <connections>
@@ -316,7 +330,7 @@
                                                                                 <rect key="frame" x="0.0" y="24.666666666666686" width="150" height="0.33333333333333215"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74Q-pE-8G0">
-                                                                                        <rect key="frame" x="10" y="0.0" width="130" height="0.33333333333333331"/>
+                                                                                        <rect key="frame" x="15" y="0.0" width="120" height="0.33333333333333331"/>
                                                                                         <color key="backgroundColor" name="blueishColor"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <color key="textColor" name="blueishColor"/>
@@ -326,8 +340,8 @@
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="0.5" id="8oo-Ii-9JG"/>
-                                                                                    <constraint firstItem="74Q-pE-8G0" firstAttribute="leading" secondItem="irO-gh-grs" secondAttribute="leading" constant="10" id="Nqx-Ao-LFE"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="74Q-pE-8G0" secondAttribute="trailing" constant="10" id="YtP-Zn-L5J"/>
+                                                                                    <constraint firstItem="74Q-pE-8G0" firstAttribute="leading" secondItem="irO-gh-grs" secondAttribute="leading" constant="15" id="Nqx-Ao-LFE"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="74Q-pE-8G0" secondAttribute="trailing" constant="15" id="YtP-Zn-L5J"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="74Q-pE-8G0" secondAttribute="bottom" id="eWV-am-bRg"/>
                                                                                     <constraint firstItem="74Q-pE-8G0" firstAttribute="top" secondItem="irO-gh-grs" secondAttribute="top" id="lMI-7p-Z5b"/>
                                                                                 </constraints>

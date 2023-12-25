@@ -30,8 +30,8 @@ class LoginViewController: BaseViewController {
         self.navigationController?.navigationBar.isHidden = true
         emailTextField.textAlignment = Helper.isRTL() ? .right : .left
         passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
-//        emailTextField.text = "zas@gmail.com"
-//        passwordTextField.text = "123456"
+        emailTextField.text = "zas@gmail.com"
+        passwordTextField.text = "123456"
         updateUI()
         initVM()
         bindResult()

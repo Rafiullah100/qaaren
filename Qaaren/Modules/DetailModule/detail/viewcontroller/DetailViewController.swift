@@ -121,7 +121,7 @@ class DetailViewController: BaseViewController {
         case 1:
             addChild(infoVC)
             self.add(infoVC, in: containerView)
-//            infoVC.descriptionText = viewModel.get
+            infoVC.descriptionText = viewModel.getDescription()
             infoVC.view.frame = containerView.bounds
             containerView.addSubview(infoVC.view)
             infoVC.didMove(toParent: self)
@@ -177,7 +177,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.nameLabel.isHidden = true
         cell.iconView.isHidden = false
         cell.nameLabel.textColor = .white
-        cell.cardView.layer.cornerRadius = 0
+//        cell.cardView.layer.cornerRadius = 0
         cell.nameLabel.font = UIFont(name: Constants.fontNameMedium, size: 19.0)
         cell.cardView.backgroundColor = CustomColor.tabBGColor.color
         if indexPath == selectedIndexPath {

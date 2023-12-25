@@ -34,6 +34,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     var product: Catalogue?{
         didSet{
+            print(product?.items?.first?.image ?? "")
             favoriteIcon.image = UIImage(named: product?.isWishlist == 1 ? "favorite_red" : "favorite_gray")
             thumbnail.sd_setImage(with: URL(string: product?.items?.first?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = product?.title

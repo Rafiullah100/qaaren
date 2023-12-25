@@ -33,7 +33,7 @@ class SourcesViewController: BaseViewController {
         viewModel.getAllSources()
         viewModel.sources.bind { _ in
             self.stopAnimation()
-            self.tableView.reloadData()
+            self.viewModel.getSourcesCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
         }
         
         viewModel.success.bind { success in

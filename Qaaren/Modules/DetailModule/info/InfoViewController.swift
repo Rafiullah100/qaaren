@@ -15,14 +15,8 @@ class InfoViewController: UIViewController {
     
     var descriptionText: String?{
         didSet{
-            if isViewLoaded{
-                textView.text = descriptionText
-            }
+            textView.attributedText = Helper.parseLocalHtml(descriptionText ?? "")
         }
-    }
-    
-    private func updateTextView() {
-        textView.text = descriptionText
     }
     
     override func viewDidLoad() {

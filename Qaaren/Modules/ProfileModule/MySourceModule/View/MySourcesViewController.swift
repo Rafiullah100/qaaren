@@ -31,7 +31,7 @@ class MySourcesViewController: BaseViewController {
         self.animateSpinner()
         viewModel.mySources.bind { _ in
             self.stopAnimation()
-            self.tableView.reloadData()
+            self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
         }
     }
     

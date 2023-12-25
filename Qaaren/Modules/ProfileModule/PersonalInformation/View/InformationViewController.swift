@@ -105,6 +105,21 @@ class InformationViewController: BaseViewController {
     @IBAction func updateBtnAction(_ sender: Any) {
         
     }
+    
+    @IBAction func nameEditBtn(_ sender: Any) {
+        nameTextField.becomeFirstResponder()
+        nameTextField.isUserInteractionEnabled.toggle()
+    }
+    
+    @IBAction func emailEditBtn(_ sender: Any) {
+        emailTextField.becomeFirstResponder()
+        emailTextField.isUserInteractionEnabled.toggle()
+    }
+    
+    @IBAction func phoneEditBtn(_ sender: Any) {
+        mobileTextField.becomeFirstResponder()
+        mobileTextField.isUserInteractionEnabled.toggle()
+    }
 }
 
 extension InformationViewController: UIImagePickerControllerDelegate{

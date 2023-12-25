@@ -53,6 +53,22 @@ open class Helper{
         guard let login = UserDefaults.standard.isLogin else { return false }
         return login
     }
+    
+    class func parseLocalHtml(_ content: String) -> NSAttributedString {
+        if let data = content.data(using: .utf8) {
+            do {
+                let attributedString = try NSAttributedString(data: data,
+                                                              options: [.documentType: NSAttributedString.DocumentType.html],
+                                                              documentAttributes: nil)
+                return attributedString
+            } catch {
+                print("Error converting HTML to attributed string: \(error)")
+            }
+        } else {
+            print("Error converting HTML to attributed string:")
+        }
+        return NSAttributedString("")
+    }
 
 }
 
