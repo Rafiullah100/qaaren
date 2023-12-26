@@ -32,6 +32,7 @@ enum Route {
     case googleSignin
     case updateProfile
     case watch(Int)
+    case search(String)
     
     var description: String {
         switch self {
@@ -81,6 +82,8 @@ enum Route {
             return "mobile/users/profile/update"
         case .watch(let id):
             return "mobile/items/get-items/item/\(id)/watch_count"
+        case .search(let q):
+            return "mobile/search/text?q=\(q)"
         } 
     }
 }

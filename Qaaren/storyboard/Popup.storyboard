@@ -13,6 +13,9 @@
         <array key="manrope-bold.otf">
             <string>Manrope-Bold</string>
         </array>
+        <array key="manrope-medium.otf">
+            <string>Manrope-Medium</string>
+        </array>
         <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
@@ -615,12 +618,13 @@
                                                 <rect key="frame" x="0.0" y="230" width="333" height="75"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L35-Xh-tyK">
-                                                        <rect key="frame" x="106.66666666666666" y="17.666666666666629" width="120" height="40"/>
+                                                        <rect key="frame" x="91.666666666666686" y="17.666666666666629" width="150" height="40"/>
                                                         <color key="backgroundColor" name="blueishColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="eeM-Xc-Dbc"/>
+                                                            <constraint firstAttribute="width" constant="150" id="eeM-Xc-Dbc"/>
                                                             <constraint firstAttribute="height" constant="40" id="wgY-cV-tja"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="15"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Submit review">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

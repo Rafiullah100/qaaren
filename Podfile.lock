@@ -113,6 +113,7 @@ PODS:
   - SDWebImage (5.15.5):
     - SDWebImage/Core (= 5.15.5)
   - SDWebImage/Core (5.15.5)
+  - SearchTextField (1.2.4)
   - SpinKit (1.2.0)
   - SwiftGifOrigin (1.7.0)
 
@@ -125,6 +126,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - OTPFieldView
   - SDWebImage (~> 5.0)
+  - SearchTextField
   - SpinKit
   - SwiftGifOrigin
 
@@ -150,6 +152,7 @@ SPEC REPOS:
     - OTPFieldView
     - PromisesObjC
     - SDWebImage
+    - SearchTextField
     - SpinKit
     - SwiftGifOrigin
 
@@ -174,9 +177,10 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: fb17cdf5f0a598951c967802b37d628cc2f775bf
+PODFILE CHECKSUM: 8521da0442c4d5b659302ea9049fe63ace9b4eb3
 
 COCOAPODS: 1.11.3

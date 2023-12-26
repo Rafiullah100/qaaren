@@ -25,12 +25,13 @@
 "about" = "About";
 "location" = "Location";
 "alerts" = "Alerts";
+"alerts" = "Alerts";
 "description" = "Description";
 "reviews" = "Reviews";
 "priceDropped" = "Notify me when the price has dropped";
 "createAlert" = "Create Alert";
 "receiveAlert" = "Enter email to receive alerts ";
-"locationType" = "Location Type";
+"locationType" = "Location Type:";
 "nearest5Km" = "Nearest 5 KM:";
 "reviewWithColon" = "Reviews:";
 "ratingsAndReviews" = "Ratings & Reviews";

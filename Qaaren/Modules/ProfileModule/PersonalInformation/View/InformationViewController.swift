@@ -69,15 +69,15 @@ class InformationViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        headerView.nameView.isHidden = true
-        headerView.emailView.isHidden = true
-        headerView.cameraView.isHidden = false
-        headerView.logoutButtonView.isHidden = true
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+//        headerView.nameView.isHidden = true
+//        headerView.emailView.isHidden = true
+        headerView.cameraView.isHidden = false
+//        headerView.logoutButtonView.isHidden = true
         headerView.imageView.layer.cornerRadius = headerView.imageView.frame.height * 0.5
     }
     

@@ -15,7 +15,8 @@ class HomeViewModel {
     var categories: Observable<[CategoryModel]> = Observable(nil)
     var errorMessage: Observable<String> = Observable("")
     var subCategories: Observable<[SubCategoryModel]> = Observable(nil)
-    
+    var search: Observable<[SearchCatalogue]> = Observable(nil)
+
     init() {
         self.getCategories()
     }
@@ -65,5 +66,27 @@ class HomeViewModel {
     
     func getSubCategoryID(at index: Int) -> Int {
         return subCategories.value?[index].id ?? 0
+    }
+    
+    func fetchSearchResult(text: String){
+        URLSession.shared.request(route: .search(text), method: .get, parameters: nil, model: SearchModel.self) { result in
+            switch result {
+            case .success(let search):
+                print(search)
+                self.search.value = search.catalogue
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func getSearchTitles() -> [String] {
+        let titlesArray = self.search.value?.map { $0.title ?? ""}
+        return titlesArray ?? []
+    }
+    
+    func getSelectedProductID(at index: Int) -> Int? {
+        print(self.search.value)
+        return self.search.value?[index].id
     }
 }

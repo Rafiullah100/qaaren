@@ -14,7 +14,6 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var wishlistLabel: UILabel!
     @IBOutlet weak var policyLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var switchView: UISwitch!
     @IBOutlet var arrowIcons: [UIImageView]!
     
@@ -44,7 +43,6 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        emailLabel.text = LocalizationKeys.email.rawValue.localizeString()
         aboutLabel.text = LocalizationKeys.aboutQaaren.rawValue.localizeString()
         policyLabel.text = LocalizationKeys.policy.rawValue.localizeString()
         wishlistLabel.text = LocalizationKeys.wishlist.rawValue.localizeString()
@@ -69,11 +67,14 @@ class SettingsTableViewController: UITableViewController {
     }*/
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == 3{
+        if indexPath.row == 0{
+            Switcher.gotoAboutScreen(delegate: self)
+        }
+//        else if {}
+        else if indexPath.row == 2{
             Switcher.gotoWishlist(delegate: self)
         }
-        else if indexPath.row == 4{
+        else if indexPath.row == 3{
             Switcher.gotoLanguage(delegate: self)
         }
     }

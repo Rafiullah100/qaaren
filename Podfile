@@ -17,4 +17,6 @@ target 'Qaaren' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod "SearchTextField"
+
 end

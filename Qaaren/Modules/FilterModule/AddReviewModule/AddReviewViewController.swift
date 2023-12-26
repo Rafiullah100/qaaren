@@ -48,7 +48,7 @@ class AddReviewViewController: BaseViewController {
     }
     
     @IBAction func submitBtnAction(_ sender: Any) {
-        self.dismiss(animated: true)
+//        self.dismiss(animated: true)
         let add = ReviewInoutModel(review: textView.text, rating: rating, id: productID ?? 0)
         let validationResponse = viewModel.isFormValid(reviewInput: add)
         if validationResponse.isValid{

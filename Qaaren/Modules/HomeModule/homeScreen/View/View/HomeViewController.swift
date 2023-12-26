@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+import SearchTextField
 class HomeViewController: BaseViewController {
 
+    @IBOutlet weak var searchTextField: SearchTextField!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -33,6 +34,17 @@ class HomeViewController: BaseViewController {
         viewModel = HomeViewModel()
         bindCategoryResult()
         bindSubCategoryResult()
+        
+        searchTextField?.addTarget(self, action: #selector(HomeViewController.textFieldDidChange(_:)), for: .editingChanged)
+        viewModel.search.bind { _ in
+            self.searchTextField?.filterStrings(self.viewModel.getSearchTitles())
+        }
+        
+        searchTextField.itemSelectionHandler = { filteredResults, itemPosition in
+            guard let productID = self.viewModel.getSelectedProductID(at: itemPosition) else{return}
+            print(productID)
+            Switcher.gotoDetailVC(delegate: self, productID: productID)
+        }
     }
     
     private func bindCategoryResult(){
@@ -67,6 +79,13 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        guard let text = searchTextField.text, !text.isEmpty else {
+            self.searchTextField?.filterStrings([])
+            return  }
+        viewModel.fetchSearchResult(text: text)
     }
 }
 

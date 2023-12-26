@@ -94,10 +94,13 @@
                                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                                 <userDefinedRuntimeAttributes>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                                        <real key="value" value="0.0"/>
+                                                                                                        <real key="value" value="1"/>
                                                                                                     </userDefinedRuntimeAttribute>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
                                                                                                         <real key="value" value="10"/>
+                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     </userDefinedRuntimeAttribute>
                                                                                                 </userDefinedRuntimeAttributes>
                                                                                                 <connections>
@@ -167,15 +170,17 @@
                                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                                 <userDefinedRuntimeAttributes>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                                        <real key="value" value="0.0"/>
+                                                                                                        <real key="value" value="1"/>
                                                                                                     </userDefinedRuntimeAttribute>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
                                                                                                         <real key="value" value="10"/>
                                                                                                     </userDefinedRuntimeAttribute>
+                                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    </userDefinedRuntimeAttribute>
                                                                                                 </userDefinedRuntimeAttributes>
                                                                                                 <connections>
                                                                                                     <action selector="arabic:" destination="eTv-5I-Agg" eventType="touchUpInside" id="10F-cn-6tB"/>
-                                                                                                    <action selector="english:" destination="eTv-5I-Agg" eventType="touchUpInside" id="de6-k2-6ho"/>
                                                                                                 </connections>
                                                                                             </button>
                                                                                         </subviews>
@@ -240,12 +245,13 @@
                                                 <rect key="frame" x="0.0" y="80" width="353" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOf-JO-EMA">
-                                                        <rect key="frame" x="126.66666666666666" y="30" width="100" height="40"/>
+                                                        <rect key="frame" x="116.66666666666666" y="30" width="120" height="40"/>
                                                         <color key="backgroundColor" name="blueishColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Pja-by-xsZ"/>
-                                                            <constraint firstAttribute="width" constant="100" id="l2g-94-TIv"/>
+                                                            <constraint firstAttribute="width" constant="120" id="l2g-94-TIv"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="17"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="save">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,6 +310,59 @@
             </objects>
             <point key="canvasLocation" x="785.49618320610682" y="-2.1126760563380285"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="Jej-KL-PhM">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="18I-nu-A7P" customClass="AboutViewController" customModule="Qaaren" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="koq-fs-Gsq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-oG-EA7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-sy-fZP">
+                                        <rect key="frame" x="20" y="0.0" width="353" height="759"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                    <font key="NSFont" size="18" name="ArialMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0WG-sy-fZP" secondAttribute="trailing" constant="20" id="2df-LL-bNW"/>
+                                    <constraint firstItem="0WG-sy-fZP" firstAttribute="top" secondItem="Ahm-oG-EA7" secondAttribute="top" id="F6l-nm-ROZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="0WG-sy-fZP" secondAttribute="bottom" id="W6L-A9-B8e"/>
+                                    <constraint firstItem="0WG-sy-fZP" firstAttribute="leading" secondItem="Ahm-oG-EA7" secondAttribute="leading" constant="20" id="ZHZ-Wl-Uv6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kkm-sm-guE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kkm-sm-guE" firstAttribute="bottom" secondItem="Ahm-oG-EA7" secondAttribute="bottom" id="ICr-gA-LL8"/>
+                            <constraint firstItem="Ahm-oG-EA7" firstAttribute="top" secondItem="kkm-sm-guE" secondAttribute="top" id="Qbt-7T-QAZ"/>
+                            <constraint firstItem="kkm-sm-guE" firstAttribute="trailing" secondItem="Ahm-oG-EA7" secondAttribute="trailing" id="duA-G1-DKR"/>
+                            <constraint firstItem="Ahm-oG-EA7" firstAttribute="leading" secondItem="kkm-sm-guE" secondAttribute="leading" id="hxB-CU-ne8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="0WG-sy-fZP" id="zv8-nL-56E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjD-K1-7Kh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475.5725190839694" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="backgroundColor">
@@ -312,6 +371,9 @@
         <namedColor name="blueishColor">
             <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

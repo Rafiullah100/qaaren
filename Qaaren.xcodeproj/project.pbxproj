@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520028EC2B3ABA5F00E28725 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520028EB2B3ABA5F00E28725 /* AboutViewController.swift */; };
+		520028F02B3AC64E00E28725 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520028EF2B3AC64E00E28725 /* SearchModel.swift */; };
 		52052F1D2B22FDE300E32F88 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52052F1C2B22FDE300E32F88 /* DetailModel.swift */; };
 		520A08492AD6C0560032DE06 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A08482AD6C0560032DE06 /* SignupModel.swift */; };
 		520A084C2AD6C0CE0032DE06 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A084B2AD6C0CE0032DE06 /* SignupViewModel.swift */; };
@@ -126,6 +128,8 @@
 
 /* Begin PBXFileReference section */
 		26B13DD5E5B277A4765F6BCE /* Pods-Qaaren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qaaren.debug.xcconfig"; path = "Target Support Files/Pods-Qaaren/Pods-Qaaren.debug.xcconfig"; sourceTree = "<group>"; };
+		520028EB2B3ABA5F00E28725 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		520028EF2B3AC64E00E28725 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		52052F1C2B22FDE300E32F88 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		520A08482AD6C0560032DE06 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		520A084B2AD6C0CE0032DE06 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				5246487B2AA71E43004360DC /* SettingsTableViewController.swift */,
+				520028EB2B3ABA5F00E28725 /* AboutViewController.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				526C2E9B2A9F56BD0032EF94 /* BaseViewController.swift */,
+				520028EF2B3AC64E00E28725 /* SearchModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1262,6 +1268,7 @@
 				52AD06EE2B30525800CBBB24 /* AllCategoryModel.swift in Sources */,
 				524648812AA7243D004360DC /* WishlisViewController.swift in Sources */,
 				52B6D16C2AD6A7F400515F2A /* AppError.swift in Sources */,
+				520028F02B3AC64E00E28725 /* SearchModel.swift in Sources */,
 				527754C82A9C82FB0072222E /* Extensions.swift in Sources */,
 				52B0E9182AB03E46004C0E59 /* AddReviewViewController.swift in Sources */,
 				527754A52A9C80EF0072222E /* SceneDelegate.swift in Sources */,
@@ -1276,6 +1283,7 @@
 				526FAC2C2AD90FC3009828A3 /* HomeModel.swift in Sources */,
 				52AD092B2B21D18B003AEB53 /* ProductCollectionViewCell.swift in Sources */,
 				524FB47B2B32E3D90020A8CA /* ChangePasswordViewModel.swift in Sources */,
+				520028EC2B3ABA5F00E28725 /* AboutViewController.swift in Sources */,
 				52C9F27A2B3163E400E28A64 /* MyCategoryViewModel.swift in Sources */,
 				522B466F2AA70DB6005F2909 /* CategoriesTableViewCell.swift in Sources */,
 				522C985A2AD563FA0099A05E /* OTPViewController.swift in Sources */,

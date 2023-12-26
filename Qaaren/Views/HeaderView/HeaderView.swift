@@ -12,6 +12,7 @@ enum ImageSource {
 }
 class HeaderView: UIView {
 
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var logoutButtonView: UIView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!

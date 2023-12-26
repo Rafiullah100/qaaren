@@ -21,6 +21,7 @@
 
 import UIKit
 import SpinKit
+import SearchTextField
 enum ViewControllerType {
     case backWithTitle
     case detail
@@ -34,9 +35,12 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 
 
     var isOverlayViewAdded: Bool = false
+//    var searchView = UIView()
 
     var type: ViewControllerType = .backWithTitle
     var titleLabel: UILabel?
+//    var textField: SearchTextField?
+//    var searchArray: [SearchCatalogue]?
 
     
     var viewControllerTitle: String? {
@@ -53,7 +57,35 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
     
     func addCenterLabel() {
 
-        
+//        searchView = UIView()
+//        searchView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: (self.navigationController?.navigationBar.frame.width ?? 0.0) - 115, height: self.navigationController?.navigationBar.frame.height ?? 0.0))
+//        searchView.layer.cornerRadius = (self.navigationController?.navigationBar.frame.height ?? 0.0) / 2.0
+//        searchView.layer.borderWidth = 1.0
+//        searchView.layer.borderColor = UIColor.label.cgColor
+//        self.navigationItem.titleView = searchView
+//
+//        textField = SearchTextField(frame: searchView.frame)
+//        textField?.theme.font = UIFont.systemFont(ofSize: 17)
+//        textField?.theme.cellHeight = 35.0
+//        textField?.theme.borderWidth = 0.8
+//        textField?.theme.borderColor = .systemGray2
+//        textField?.theme.bgColor = .systemGray6
+//
+//        textField?.itemSelectionHandler = { filteredResults, itemPosition in
+//            guard let productID = self.searchArray?[itemPosition].id else { return  }
+//            Switcher.gotoDetailVC(delegate: self, productID: productID)
+//        }
+//
+//        textField?.theme.
+//        textField?.placeholder = LocalizationKeys.search.rawValue.localizeString()
+//        textField?.placeHolderColor = UIColor.lightGray
+//        textField?.clearButtonMode = .never
+//        textField?.addPadding(.left(20))
+//        textField?.textAlignment = Helper.shared.isRTL() ? .right : .left
+//        searchView.addSubview(textField ?? UITextField())
+//        textField?.addTarget(self, action: #selector(BaseViewController.textFieldDidChange(_:)), for: .editingChanged)
+//        searchView.isHidden = true
+
         titleLabel = UILabel()
         if let titleLabel = titleLabel {
             print(viewControllerTitle ?? "")
@@ -71,6 +103,12 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 //        searchView.addSubview(imageView)
     }
     
+//    @objc func textFieldDidChange(_ textField: UITextField) {
+//        guard let text = textField.text, !text.isEmpty else {
+//            self.textField?.filterStrings([])
+//            return  }
+//        productSearch(text: text)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -225,4 +263,30 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             dismiss(animated: true, completion: nil)
         }
     }
+    
+//    @objc func textFieldDidChange(_ textField: UITextField) {
+//        guard let text = textField.text, !text.isEmpty else {
+//            self.textField?.filterStrings([])
+//            return  }
+//        productSearch(text: text)
+//    }
+    
+    
+//    func productSearch(text: String){
+//        URLSession.shared.request(route: .search(text), method: .get, parameters: nil, model: SearchModel.self) { result in
+//            switch result {
+//            case .success(let search):
+//                if let searchDataArray = search.catalogue {
+//                    self.searchArray = []
+//                    self.textField?.filterStrings([])
+//                    self.searchArray = searchDataArray
+//                    let titlesArray = searchDataArray.map { $0.title ?? ""}
+//                    self.textField?.filterStrings(titlesArray)
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
 }
+

@@ -23,6 +23,7 @@
                 <outlet property="cameraView" destination="0UY-ca-mYJ" id="vgv-D3-RZ2"/>
                 <outlet property="emailView" destination="6wC-ty-tEv" id="K0K-E7-hQx"/>
                 <outlet property="imageView" destination="MDp-nu-hD1" id="JQ7-4D-dfC"/>
+                <outlet property="infoView" destination="h8f-xj-p1g" id="5vH-9o-8X2"/>
                 <outlet property="logoutButtonView" destination="PNx-1w-x8V" id="3na-iz-OYK"/>
                 <outlet property="nameLabell" destination="Au3-ah-DHL" id="4ti-nf-qiO"/>
                 <outlet property="nameView" destination="YaX-cC-JB6" id="Xw6-MA-rAN"/>
@@ -41,13 +42,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="321" height="200"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-B3-8ZF">
-                                    <rect key="frame" x="0.0" y="0.0" width="321" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="200"/>
                                     <subviews>
                                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NJC-Yh-SRO">
-                                            <rect key="frame" x="0.0" y="0.0" width="321" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321" height="190"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 41" translatesAutoresizingMaskIntoConstraints="NO" id="MDp-nu-hD1">
-                                                    <rect key="frame" x="120" y="12" width="81" height="81"/>
+                                                    <rect key="frame" x="70" y="12" width="181" height="181"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="MDp-nu-hD1" secondAttribute="height" multiplier="1:1" id="hb1-Uv-plS"/>
                                                     </constraints>
@@ -72,7 +73,7 @@
                                             </constraints>
                                         </view>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-ca-mYJ">
-                                            <rect key="frame" x="145.66666666666666" y="78" width="30" height="25"/>
+                                            <rect key="frame" x="145.66666666666666" y="178" width="30" height="25"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="M4T-cK-HhS">
                                                     <rect key="frame" x="6.3333333333333428" y="4" width="17" height="17"/>
@@ -118,8 +119,8 @@
                                         <constraint firstAttribute="height" priority="250" constant="99" id="zqg-o8-ZxF"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-xj-p1g">
-                                    <rect key="frame" x="0.0" y="100" width="321" height="40"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-xj-p1g">
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="40"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-mk-HlO">
                                             <rect key="frame" x="0.0" y="0.0" width="321" height="40"/>
@@ -128,7 +129,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="321" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigar Gulalay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-ah-DHL">
-                                                            <rect key="frame" x="104.66666666666669" y="-1.6666666666666714" width="112" height="23.666666666666668"/>
+                                                            <rect key="frame" x="104.66666666666669" y="-2" width="112" height="24"/>
                                                             <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -145,7 +146,7 @@
                                                     <rect key="frame" x="0.0" y="20" width="321" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigargulalay43@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-ec-Cer">
-                                                            <rect key="frame" x="69.666666666666686" y="0.3333333333333286" width="182" height="19.333333333333332"/>
+                                                            <rect key="frame" x="69.666666666666686" y="0.33333333333333215" width="182" height="19.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -169,14 +170,14 @@
                                         <constraint firstItem="z1B-mk-HlO" firstAttribute="top" secondItem="h8f-xj-p1g" secondAttribute="top" id="Y8t-Pb-U4W"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNx-1w-x8V">
-                                    <rect key="frame" x="0.0" y="140" width="321" height="60"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNx-1w-x8V">
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-l2-XjO">
                                             <rect key="frame" x="65.666666666666686" y="15" width="190" height="45"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HRE-2B-Ke1">
-                                                    <rect key="frame" x="30" y="2.6666666666666572" width="130" height="40"/>
+                                                    <rect key="frame" x="30" y="2.6666666666666679" width="130" height="40"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPm-eQ-BSd">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="40"/>

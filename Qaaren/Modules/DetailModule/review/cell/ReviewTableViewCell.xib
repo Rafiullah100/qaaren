@@ -193,6 +193,7 @@
                                             <constraint firstItem="gzO-QF-Z5N" firstAttribute="leading" secondItem="sb5-p0-BhW" secondAttribute="leading" id="AIR-Ly-uKw"/>
                                             <constraint firstAttribute="trailing" secondItem="gzO-QF-Z5N" secondAttribute="trailing" constant="20" id="QsI-VJ-EhL"/>
                                             <constraint firstAttribute="bottom" secondItem="gzO-QF-Z5N" secondAttribute="bottom" id="gqJ-W5-nM1"/>
+                                            <constraint firstAttribute="height" priority="250" constant="86" id="uSM-aQ-91K"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-82-MJy">

@@ -32,13 +32,14 @@ class LanguageViewController: BaseViewController {
         englishLabel.text = LocalizationKeys.english.rawValue.localizeString()
         arabicLabel.text = LocalizationKeys.arabic.rawValue.localizeString()
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
+//        print(UserDefaults.standard.selectedLanguage)
         if UserDefaults.standard.selectedLanguage != AppLanguage.arabic.rawValue{
             selectedRadioButton = englishButton
-            radioButtonTapped(arabicButton)
+            radioButtonTapped(englishButton)
         }
         else{
             selectedRadioButton = arabicButton
-            radioButtonTapped(englishButton)
+            radioButtonTapped(arabicButton)
         }
     }
 

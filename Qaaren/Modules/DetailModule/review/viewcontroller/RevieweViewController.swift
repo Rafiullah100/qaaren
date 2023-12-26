@@ -25,8 +25,9 @@ class RevieweViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.numberOfRows = 5
-        tableView.cellHeight = 200.0
+//        tableView.numberOfRows = 5
+//        tableView.cellHeight = 200.0
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         updateUI()
     }
@@ -42,7 +43,7 @@ class RevieweViewController: UIViewController {
     private func updateUI(){
         ratingLabel.text = LocalizationKeys.rating.rawValue.localizeString()
         ratingandReviewLabel.text = LocalizationKeys.ratingsAndReviews.rawValue.localizeString()
-        addReviewButton.setTitle(LocalizationKeys.addReview.rawValue.localizeString(), for: .normal)
+        addReviewButton.setTitle("+ \(LocalizationKeys.addReview.rawValue.localizeString())", for: .normal)
     }
     
     @IBAction func addReviewBtn(_ sender: Any) {
@@ -63,7 +64,7 @@ extension RevieweViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return UITableView.automaticDimension
     }
 }
 
