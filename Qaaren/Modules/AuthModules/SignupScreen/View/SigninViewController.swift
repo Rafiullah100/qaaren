@@ -24,7 +24,7 @@ class SignupViewController: BaseViewController {
     @IBOutlet weak var nameLabel: UILabel!
    
     private var viewModel = SignupViewModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -38,6 +38,8 @@ class SignupViewController: BaseViewController {
             }
         }
     }
+    
+    
     
     private func updateUI(){
         alreadyLabel.text = LocalizationKeys.alreadyAccount.rawValue.localizeString()

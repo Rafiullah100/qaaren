@@ -21,4 +21,12 @@ class FilterViewModel {
             }
         }
     }
+    
+    func getCount() -> Int {
+        return self.sourcesList.value?.count ?? 0
+    }
+    
+    func getTitle(at index: Int) -> String{
+        return self.sourcesList.value?[index].source ?? ""
+    }
 }

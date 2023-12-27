@@ -36,6 +36,7 @@ class CompareTableViewCell: UITableViewCell {
             nameLabel.text = product?.item
             locationTypeLabel.text = product?.locationType
             logoImageView.sd_setImage(with: URL(string: product?.logoURL ?? ""), placeholderImage: UIImage(named: "placeholder"))
+            dateLabel.text = Helper.dateFormate(dateString: product?.createdAt ?? "")
         }
     }
 

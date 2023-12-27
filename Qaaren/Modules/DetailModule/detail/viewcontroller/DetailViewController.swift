@@ -83,7 +83,6 @@ class DetailViewController: BaseViewController {
     private func updateUI(){
         addVCToContainer()
         print(viewModel.getTitle())
-        ratingLabel.text = "\(viewModel.getRating())"
         nameLabel.text = viewModel.getTitle()
         priceRangeLabel.text = LocalizationKeys.priceRange.rawValue.localizeString()
         amountLabel.text = "590 - 882 \(LocalizationKeys.sar.rawValue.localizeString())"
@@ -93,6 +92,8 @@ class DetailViewController: BaseViewController {
             imgView.sd_setImage(with: URL(string: viewModel.getImages(index)), placeholderImage: UIImage(named: "placeholder"))
         }
         rearrangeImages(imagesCount: viewModel.getImageCount())
+        guard let rat = Float(viewModel.getTotalStars()) else { return  }
+        ratingLabel.text = String(format: "%.1f", rat)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -129,12 +130,16 @@ class DetailViewController: BaseViewController {
             addChild(ratingVC)
             self.add(ratingVC, in: containerView)
             ratingVC.productID = productID
-            compareVC.view.frame = containerView.bounds
+            ratingVC.totalReview = viewModel.getTotalReviews()
+            ratingVC.stars = viewModel.getTotalStars()
+            ratingVC.view.frame = containerView.bounds
             containerView.addSubview(ratingVC.view)
             ratingVC.didMove(toParent: self)
         case 3:
             addChild(mapVC)
             self.add(mapVC, in: containerView)
+            print(viewModel.getNearestCoordinates())
+            mapVC.nearestCoordinates = viewModel.getNearestCoordinates()
             mapVC.view.frame = containerView.bounds
             containerView.addSubview(mapVC.view)
             mapVC.didMove(toParent: self)

@@ -9,6 +9,11 @@ import UIKit
 
 class RevieweViewController: UIViewController {
 
+    @IBOutlet weak var oneStarLabel: UILabel!
+    @IBOutlet weak var twoStarLabel: UILabel!
+    @IBOutlet weak var threeStarLabel: UILabel!
+    @IBOutlet weak var fourStarLabel: UILabel!
+    @IBOutlet weak var fiveStarLabel: UILabel!
     @IBOutlet weak var ratingStarLabel: UILabel!
     @IBOutlet weak var addReviewButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -22,28 +27,38 @@ class RevieweViewController: UIViewController {
     }
     var productID: Int?
     private var viewModel = ReviewViewModel()
-    
+    var totalReview: Int?
+    var stars: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        tableView.numberOfRows = 5
 //        tableView.cellHeight = 200.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
-        updateUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.reviewList.bind { [unowned self] _ in
             self.tableView.reloadData()
+            self.updateUI()
         }
         viewModel.getReviewList(productID: productID ?? 0)
     }
     
     private func updateUI(){
+        oneStarLabel.text = "\(viewModel.getReviewStar(for: "1"))"
+        twoStarLabel.text = "\(viewModel.getReviewStar(for: "1"))"
+        threeStarLabel.text = "\(viewModel.getReviewStar(for: "3"))"
+        fourStarLabel.text = "\(viewModel.getReviewStar(for: "4"))"
+        fiveStarLabel.text = "\(viewModel.getReviewStar(for: "5"))"
         ratingLabel.text = LocalizationKeys.rating.rawValue.localizeString()
         ratingandReviewLabel.text = LocalizationKeys.ratingsAndReviews.rawValue.localizeString()
         addReviewButton.setTitle("+ \(LocalizationKeys.addReview.rawValue.localizeString())", for: .normal)
+        ratingLabel.text = "\(totalReview ?? 0) Ratings"
+        guard let rat = Float(stars ?? "0.0") else { return  }
+        ratingStarLabel.text = String(format: "%.1f", rat)
     }
     
     @IBAction func addReviewBtn(_ sender: Any) {

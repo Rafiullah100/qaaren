@@ -13,6 +13,7 @@ class ProfileViewModel {
     var errorMessage: Observable<String> = Observable("")
     var parameters: [String: Any]?
     var editProfile: Observable<EditProfileModel> = Observable(nil)
+    var deleteAccount: Observable<DeleteModel> = Observable(nil)
 
     func getMyProfile(){
         URLSession.shared.request(route: .myProfile, method: .get, parameters: [:], model: ProfileModel.self) { result in
@@ -60,6 +61,17 @@ class ProfileViewModel {
             switch result {
             case .success(let profile):
                 self.editProfile.value = profile
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func delete(){
+        URLSession.shared.request(route: .deleteAccount, method: .post, parameters: [:], model: DeleteModel.self) { result in
+            switch result {
+            case .success(let delete):
+                self.deleteAccount.value = delete
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }

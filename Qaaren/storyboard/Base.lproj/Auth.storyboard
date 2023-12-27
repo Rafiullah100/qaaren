@@ -332,59 +332,7 @@
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9N-h8-xqO">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="40"/>
-                                                                                                <subviews>
-                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-3Y-oNP">
-                                                                                                        <rect key="frame" x="23.000000000000007" y="0.0" width="100.66666666666669" height="40"/>
-                                                                                                        <subviews>
-                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-D1-UyQ">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
-                                                                                                                <subviews>
-                                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="qys-dV-sDb">
-                                                                                                                        <rect key="frame" x="0.0" y="10" width="20" height="20"/>
-                                                                                                                        <constraints>
-                                                                                                                            <constraint firstAttribute="height" constant="20" id="skM-ZF-teu"/>
-                                                                                                                            <constraint firstAttribute="width" constant="20" id="zon-e3-KKr"/>
-                                                                                                                        </constraints>
-                                                                                                                    </imageView>
-                                                                                                                </subviews>
-                                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                                <constraints>
-                                                                                                                    <constraint firstItem="qys-dV-sDb" firstAttribute="centerY" secondItem="HE1-D1-UyQ" secondAttribute="centerY" id="90h-01-Y7H"/>
-                                                                                                                    <constraint firstItem="qys-dV-sDb" firstAttribute="centerX" secondItem="HE1-D1-UyQ" secondAttribute="centerX" id="H8P-h3-mKa"/>
-                                                                                                                    <constraint firstAttribute="width" constant="20" id="aGU-7P-yYQ"/>
-                                                                                                                </constraints>
-                                                                                                            </view>
-                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ4-PO-HU2">
-                                                                                                                <rect key="frame" x="25" y="0.0" width="75.666666666666671" height="40"/>
-                                                                                                                <subviews>
-                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ0-OK-EMT">
-                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="40"/>
-                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="13"/>
-                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                    </label>
-                                                                                                                </subviews>
-                                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                                <constraints>
-                                                                                                                    <constraint firstAttribute="trailing" secondItem="xQ0-OK-EMT" secondAttribute="trailing" id="7FX-0f-vyu"/>
-                                                                                                                    <constraint firstAttribute="width" priority="250" id="J8B-ra-KEv"/>
-                                                                                                                    <constraint firstAttribute="bottom" secondItem="xQ0-OK-EMT" secondAttribute="bottom" id="L6n-DM-ycW"/>
-                                                                                                                    <constraint firstItem="xQ0-OK-EMT" firstAttribute="top" secondItem="BJ4-PO-HU2" secondAttribute="top" id="bcZ-Jc-8yp"/>
-                                                                                                                    <constraint firstItem="xQ0-OK-EMT" firstAttribute="leading" secondItem="BJ4-PO-HU2" secondAttribute="leading" id="h53-XL-aGs"/>
-                                                                                                                </constraints>
-                                                                                                            </view>
-                                                                                                        </subviews>
-                                                                                                        <constraints>
-                                                                                                            <constraint firstAttribute="width" priority="250" constant="200" id="Sxg-hi-4lj"/>
-                                                                                                        </constraints>
-                                                                                                    </stackView>
-                                                                                                </subviews>
                                                                                                 <color key="backgroundColor" name="socialBtnBGColor"/>
-                                                                                                <constraints>
-                                                                                                    <constraint firstItem="9ZV-3Y-oNP" firstAttribute="top" secondItem="u9N-h8-xqO" secondAttribute="top" id="LrX-if-YuO"/>
-                                                                                                    <constraint firstItem="9ZV-3Y-oNP" firstAttribute="centerX" secondItem="u9N-h8-xqO" secondAttribute="centerX" id="SVm-Yc-Jeo"/>
-                                                                                                    <constraint firstAttribute="bottom" secondItem="9ZV-3Y-oNP" secondAttribute="bottom" id="eyl-kL-Z5A"/>
-                                                                                                </constraints>
                                                                                                 <userDefinedRuntimeAttributes>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
                                                                                                         <real key="value" value="4"/>
@@ -629,9 +577,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="qVg-xJ-FCu"/>
                     <connections>
+                        <outlet property="appleSigninView" destination="u9N-h8-xqO" id="6Ub-BQ-6xu"/>
                         <outlet property="emailAddress" destination="OVR-5m-gUs" id="5af-t2-kST"/>
                         <outlet property="emailTextField" destination="Gkq-QH-SQv" id="Xz5-kd-Yr0"/>
-                        <outlet property="fbLabel" destination="xQ0-OK-EMT" id="n2R-gP-p2d"/>
                         <outlet property="googleLabel" destination="bSo-c6-AKH" id="fwQ-WQ-YBe"/>
                         <outlet property="noAccountLabel" destination="Wcy-xY-w5U" id="75h-4f-3cW"/>
                         <outlet property="orLabel" destination="Qio-4P-X8g" id="VEy-tG-ypA"/>
@@ -1291,7 +1239,6 @@
     </scenes>
     <resources>
         <image name="Qaaren Logo 1" width="245" height="140"/>
-        <image name="fb" width="22" height="22"/>
         <image name="google" width="21" height="21"/>
         <image name="hide-icon" width="22" height="19"/>
         <namedColor name="backgroundColor">

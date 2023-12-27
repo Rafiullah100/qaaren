@@ -14,6 +14,7 @@ class LoginViewModel {
     var login: LoginModel?
     var isAuthenticationInProgress: Bool = false
     var googleLogin: Observable<SuccessModel> = Observable(nil)
+    var appleLogin: AppleLoginModel?
 
     var parameters: [String: Any]?
     
@@ -48,11 +49,36 @@ class LoginViewModel {
         }
     }
     
-    func googleSignin(email: String) {
-        URLSession.shared.request(route: .googleSignin, method: .post, parameters: ["username": email], model: SuccessModel.self) { result in
+    func googleSignin(email: String, name: String) {
+        URLSession.shared.request(route: .googleSignin, method: .post, parameters: ["username": email, "full_name": name], model: LoginModel.self) { result in
             switch result {
-            case .success(let google):
-                self.googleLogin.value = google
+            case .success(let login):
+                self.isUserExist.value = login.success
+                if login.success == true{
+                    self.login = login
+                    self.saveUserPreference()
+                }
+                else{
+                    self.errorMessage.value = login.message
+                }
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func appleLogin(email: String, name: String) {
+        URLSession.shared.request(route: .appleLogin, method: .post, parameters: ["username": email, "full_name": name], model: AppleLoginModel.self) { result in
+            switch result {
+            case .success(let appleLogin):
+                self.isUserExist.value = appleLogin.success
+                if appleLogin.success == true{
+                    self.appleLogin = appleLogin
+                    self.saveUserPreference()
+                }
+                else{
+                    self.errorMessage.value = appleLogin.message
+                }
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -66,6 +92,16 @@ class LoginViewModel {
         UserDefaults.standard.token = self.login?.user?.token
         UserDefaults.standard.mobile = self.login?.user?.contactNo
         UserDefaults.standard.uuid = self.login?.user?.uuid
+        UserDefaults.standard.isLogin = true
+    }
+    
+    func saveAppleUserPreference(){
+        UserDefaults.standard.name = self.appleLogin?.user?.fullName
+        UserDefaults.standard.email = self.appleLogin?.user?.email
+        UserDefaults.standard.profileImage = self.appleLogin?.user?.profileImage
+        UserDefaults.standard.token = self.appleLogin?.user?.token
+        UserDefaults.standard.mobile = self.appleLogin?.user?.contactNo
+        UserDefaults.standard.uuid = self.appleLogin?.user?.uuid
         UserDefaults.standard.isLogin = true
     }
 }

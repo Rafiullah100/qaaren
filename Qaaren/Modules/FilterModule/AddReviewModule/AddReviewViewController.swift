@@ -35,9 +35,11 @@ class AddReviewViewController: BaseViewController {
             self.stopAnimation()
             showAlert(message: review?.message ?? "")
             if review?.success == true{
-                self.dismiss(animated: true) {
-                    guard let review = review else { return }
-                    self.delegate?.reviewAdded(review: review)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true) {
+                        guard let review = review else { return }
+                        self.delegate?.reviewAdded(review: review)
+                    }
                 }
             }
         }

@@ -26,11 +26,12 @@ class ReviewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var review: ReviewModel? {
+    var review: ReviewModelData? {
         didSet{
             nameLabel.text = review?.users?.fullName
             textView.text = review?.comment
             userImageView.sd_setImage(with: URL(string: Route.baseUrl + (review?.users?.profileImage ?? "")), placeholderImage: UIImage(named: "placeholder"))
+            dateLabel.text = Helper.dateFormate(dateString: review?.createdAt ?? "")
         }
     }
     

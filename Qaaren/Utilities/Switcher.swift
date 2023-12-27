@@ -57,7 +57,7 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoFullScreenMsp(delegate: UIViewController){
+    static func gotoFullScreenMap(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FullScreenMapViewController") as! FullScreenMapViewController
         vc.modalPresentationStyle = .fullScreen
         delegate.navigationController?.pushViewController(vc, animated: true)

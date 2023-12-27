@@ -33,7 +33,8 @@ enum Route {
     case updateProfile
     case watch(Int)
     case search(String)
-    
+    case deleteAccount
+    case appleLogin
     var description: String {
         switch self {
         case .signup:
@@ -84,6 +85,10 @@ enum Route {
             return "mobile/items/get-items/item/\(id)/watch_count"
         case .search(let q):
             return "mobile/search/text?q=\(q)"
+        case .deleteAccount:
+            return "mobile/users/delete-account"
+        case .appleLogin:
+            return "mobile/auth/apple-login"
         } 
     }
 }

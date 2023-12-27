@@ -70,6 +70,35 @@ open class Helper{
         return NSAttributedString("")
     }
 
+    class func dateFormate(dateString: String) -> String {
+        let inputDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let outputDateFormat = "dd MMMM yyyy"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = inputDateFormat
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        if let inputDate = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = outputDateFormat
+            let outputDateString = dateFormatter.string(from: inputDate)
+            print(outputDateString)
+            return outputDateString
+        } else {
+            return ""
+        }
+    }
+    
+    class func showAlertWithButtons(title: String = "", message:String, buttonTitles:[String], completion: @escaping (_ responce: String) -> Void) {
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+
+        for btnTitle in buttonTitles{
+            let action = UIAlertAction(title: btnTitle, style: UIAlertAction.Style.default, handler: { action in
+                completion(btnTitle)
+            })
+           alertController.addAction(action)
+        }
+
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+    }
 }
 
 

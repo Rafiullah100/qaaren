@@ -18,7 +18,8 @@ class FilterViewController: UIViewController {
     
     
     let pickerView = UIPickerView()
-
+    var viewModel = FilterViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class FilterViewController: UIViewController {
         minimumLabel.attributedText = Helper.attributedText(text1: "500 ", text2: LocalizationKeys.sar.rawValue.localizeString())
         maximumLabel.attributedText = Helper.attributedText(text1: "5000 ", text2: LocalizationKeys.sar.rawValue.localizeString())
         filterButtton.setTitle(LocalizationKeys.applyFilter.rawValue.localizeString(), for: .normal)
+        
+        viewModel.sourcesList.bind { [unowned self] _ in
+            self.pickerView.reloadInputViews()
+        }
+        viewModel.getSourcesList()
     }
     
     @IBAction func cancelButtonAction(_ sender: UIButton) {
@@ -44,15 +50,15 @@ extension FilterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Constants.source.count
+        return viewModel.getCount()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Constants.source[row]
+        return viewModel.getTitle(at: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textField.text = Constants.source[row]
+        textField.text = viewModel.getTitle(at: row)
     }
 }
 

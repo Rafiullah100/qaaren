@@ -12,17 +12,19 @@ protocol AddReviewProtocol {
 }
 
 class ReviewViewModel {
-    var reviewList: Observable<[ReviewModel]> = Observable(nil)
+    var reviewList: Observable<[ReviewModelData]> = Observable(nil)
     var errorMessage: Observable<String> = Observable("")
     var addedReview: Observable<AddReviewModel> = Observable(nil)
     var parameters: [String: Any]?
-
+    var reviewData: ReviewModel?
+    
     func getReviewList(productID: Int){
         print(productID)
-        URLSession.shared.request(route: .fetchReview(productID), method: .get, parameters: [:], model: [ReviewModel].self) { result in
+        URLSession.shared.request(route: .fetchReview(productID), method: .get, parameters: [:], model: ReviewModel.self) { result in
             switch result {
             case .success(let reviews):
-                self.reviewList.value = reviews
+                self.reviewData = reviews
+                self.reviewList.value = reviews.reviewData
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -33,7 +35,7 @@ class ReviewViewModel {
         return reviewList.value?.count ?? 0
     }
     
-    func getReview(for index: Int) -> ReviewModel? {
+    func getReview(for index: Int) -> ReviewModelData? {
         return reviewList.value?[index] ?? nil
     }
     
@@ -51,11 +53,18 @@ class ReviewViewModel {
         URLSession.shared.request(route: .addReview, method: .post, parameters: parameters, model: AddReviewModel.self) { result in
             switch result {
             case .success(let review):
+                print(review)
+                //                self.reviewData = review
                 self.addedReview.value = review
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
+            //        }
         }
+    }
+    
+    func getReviewStar(for key: String) -> Int {
+        return self.reviewData?.ratingCount?[key] ?? 0
     }
     
 //    func getRatingValue(rating: Int) -> Int {

@@ -7,7 +7,15 @@
 
 import Foundation
 
+
+
 struct ReviewModel: Codable {
+    let reviewData: [ReviewModelData]?
+    let ratingCount: [String: Int]?
+}
+
+// MARK: - ReviewDatum
+struct ReviewModelData: Codable {
     let id: Int?
     let comment: String?
     let rating: Int?
@@ -18,7 +26,9 @@ struct ReviewModel: Codable {
 // MARK: - Users
 struct ReviewUsers: Codable {
     let id: Int?
-    let fullName, createdAt, profileImage: String?
+    let fullName: String?
+    let createdAt: String?
+    let profileImage: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,8 +40,11 @@ struct ReviewUsers: Codable {
 
 
 
+
+
+
 struct AddReviewModel: Codable {
-    let reviewData: ReviewModel?
+    let reviewData: ReviewModelData?
     let success: Bool?
     let message: String?
 }

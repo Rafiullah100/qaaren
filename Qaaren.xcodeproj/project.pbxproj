@@ -193,6 +193,7 @@
 		528EA8DA2AA1E275009264C2 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		528EA8DD2AA1E78A009264C2 /* RevieweViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevieweViewController.swift; sourceTree = "<group>"; };
 		52956D1F2AA86BE50020384C /* launch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launch.gif; sourceTree = "<group>"; };
+		52A0BC952B3C05EB006B3A0F /* Qaaren.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qaaren.entitlements; sourceTree = "<group>"; };
 		52A7EA7F2AA1BA46008FE6E0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		52AA82562AB0837C006B8BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		52AA82592AB08387006B8BD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Splash.strings; sourceTree = "<group>"; };
@@ -575,6 +576,7 @@
 		527754A12A9C80EF0072222E /* Qaaren */ = {
 			isa = PBXGroup;
 			children = (
+				52A0BC952B3C05EB006B3A0F /* Qaaren.entitlements */,
 				52AD09172B2195B5003AEB53 /* Calsses */,
 				52B6D1652AD6A7F400515F2A /* Networking */,
 				52AA82622AB08490006B8BD3 /* Localization */,
@@ -1534,8 +1536,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Qaaren/Qaaren.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9K786374U5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Qaaren/Info.plist;
@@ -1565,8 +1568,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Qaaren/Qaaren.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9K786374U5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Qaaren/Info.plist;

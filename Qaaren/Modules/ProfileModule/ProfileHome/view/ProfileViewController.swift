@@ -17,12 +17,19 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    let arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.mySources.rawValue.localizeString(), LocalizationKeys.myCategories.rawValue.localizeString(), LocalizationKeys.wishlist.rawValue.localizeString()]
+    let arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.mySources.rawValue.localizeString(), LocalizationKeys.myCategories.rawValue.localizeString(), LocalizationKeys.wishlist.rawValue.localizeString(), "Delete Account"]
     
+    var viewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel.deleteAccount.bind { [unowned self] delete in
+            if delete?.status == 1{
+                Helper.showAlertWithButtons(message: delete?.message ?? "", buttonTitles: ["Ok"]) { response in
+                    self.logoutUser()
+                }
+            }
+        }
     }
     
     private func updateUI(){
@@ -65,9 +72,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
 //        headerView.imageView.layer.cornerRadius = headerView.imageView.frame.height * 0.5
         headerView.imageView.layer.masksToBounds = true
         headerView.logout = {
-            UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue])
-            Switcher.logout(delegate: self)
-        }
+            self.logoutUser()
+                    }
         return headerView
     }
     
@@ -88,5 +94,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         else if indexPath.row == 3{
             Switcher.gotoWishlist(delegate: self)
         }
+        else {
+//            showAlert(message: "Are you sure you want to delete your account?")
+            Helper.showAlertWithButtons(message: "Are you sure you want to delete your account?", buttonTitles: ["cancel", "Yes"]) { response in
+                if response == "Yes"{
+                    self.viewModel.delete()
+                }
+            }
+        }
+    }
+    
+    func logoutUser() {
+        UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue])
+        Switcher.logout(delegate: self)
     }
 }

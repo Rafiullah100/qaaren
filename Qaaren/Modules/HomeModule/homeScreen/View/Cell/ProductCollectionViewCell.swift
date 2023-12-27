@@ -66,11 +66,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     var viewAllProduct: ViewallItem?{
         didSet{
-            thumbnail.sd_setImage(with: URL(string: viewAllProduct?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
-            nameLabel.text = viewAllProduct?.catalogue
+            thumbnail.sd_setImage(with: URL(string: viewAllProduct?.images?[0] ?? ""), placeholderImage: UIImage(named: "placeholder"))
+            nameLabel.text = viewAllProduct?.title
             totalReviewLabel.text = "(\(viewAllProduct?.totalReviews ?? 0))"
-            amountLabel.text = "\(viewAllProduct?.price ?? "") \(LocalizationKeys.sar.rawValue.localizeString())"
-            watchLabel.text = "\(viewAllProduct?.sourceCount ?? 0) Watching"
+            amountLabel.text = "\(viewAllProduct?.minPrice ?? 0) - \(viewAllProduct?.maxPrice ?? 0) \(LocalizationKeys.sar.rawValue.localizeString())"
+            watchLabel.text = "\(viewAllProduct?.watchCount ?? 0) Watching"
             for (index, starImageView) in ratingStar.enumerated() {
                 guard let rating = Double(viewAllProduct?.totalRating ?? "0") else { return }
                 let imageName = index < Int(round(rating)) ? "star" : "star-unfill"

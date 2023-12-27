@@ -7,6 +7,8 @@
 
 import UIKit
 import GoogleSignIn
+import AuthenticationServices
+
 class LoginViewController: BaseViewController {
     
     @IBOutlet weak var secureIcon: UIImageView!
@@ -15,15 +17,17 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var googleLabel: UILabel!
-    @IBOutlet weak var fbLabel: UILabel!
+//    @IBOutlet weak var fbLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var emailAddress: UILabel!
     @IBOutlet weak var skipLabel: UIButton!
+    @IBOutlet weak var appleSigninView: UIView!
     
     private var viewModel: LoginViewModel!
     private var isLoginButtonTapped = false
+    private let appleSignInButton = ASAuthorizationAppleIDButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +46,35 @@ class LoginViewController: BaseViewController {
     }
     
     private func updateUI(){
-        
         skipLabel.setTitle(LocalizationKeys.skipLogin.rawValue.localizeString(), for: .normal)
         emailAddress.text = LocalizationKeys.emailAddress.rawValue.localizeString()
         signupLabel.setTitle(LocalizationKeys.signup.rawValue.localizeString(), for: .normal)
         emailTextField.placeholder = LocalizationKeys.emailAddress.rawValue.localizeString()
         passwordTextField.placeholder = LocalizationKeys.password.rawValue.localizeString()
         passwordLabel.text = LocalizationKeys.password.rawValue.localizeString()
-        fbLabel.text = LocalizationKeys.facebook.rawValue.localizeString()
+//        fbLabel.text = LocalizationKeys.facebook.rawValue.localizeString()
         googleLabel.text = LocalizationKeys.google.rawValue.localizeString()
         orLabel.text = LocalizationKeys.orSignin.rawValue.localizeString()
         noAccountLabel.text = LocalizationKeys.noAccount.rawValue.localizeString()
         signinButton.setTitle(LocalizationKeys.signin.rawValue.localizeString(), for: .normal)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        appleSigninView.addSubview(appleSignInButton)
+        appleSignInButton.frame = CGRect(x: 0, y: 0, width: appleSigninView.frame.width, height: appleSigninView.frame.height)
+//        appleSignInButton.cornerRadius = appleSigninView.frame.height * 0.5
+        appleSignInButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+    
+    @objc func didTapButton(){
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
     }
     
     @IBAction func secureTextButtonAction(_ sender: Any) {
@@ -83,9 +104,10 @@ class LoginViewController: BaseViewController {
             }
             if let result = result,
                let email = result.user.profile?.email,
+               let name = result.user.profile?.name,
                let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString {
                 self?.animateSpinner()
-                   self?.viewModel.googleSignin(email: email)
+                   self?.viewModel.googleSignin(email: email, name: name)
             }
         }
     }
@@ -104,10 +126,15 @@ class LoginViewController: BaseViewController {
             }
         }
         
-        viewModel.googleLogin.bind { [unowned self] response in
-            self.stopAnimation()
-            showAlert(message: response?.message ?? "")
-        }
+//        viewModel.googleLogin.bind { [unowned self] response in
+//            self.stopAnimation()
+//            showAlert(message: response?.message ?? "")
+//        }
+//
+//        viewModel.appleLogin.bind { [unowned self] apple in
+//            self.stopAnimation()
+//            showAlert(message: apple?.message ?? "")
+//        }
     }
     
     @IBAction func skipLoginButton(_ sender: Any) {
@@ -115,4 +142,52 @@ class LoginViewController: BaseViewController {
     }
 }
 
+
+extension  LoginViewController: ASAuthorizationControllerDelegate{
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("failed")
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credential as ASAuthorizationAppleIDCredential:
+            let email = credential.email
+            let name = credential.fullName?.givenName
+            print(email, name)
+            guard (email != nil) else {
+                self.showAlert(message: "Set apple account first!")
+                return
+            }
+            self.animateSpinner()
+            viewModel.appleLogin(email: email ?? "", name: name ?? "")
+//            print(credential.user)
+//            self.animateSpinner()
+//            self.viewModel.appleSignup(email: email ?? "") { result in
+//                self.stopAnimation()
+//                switch result {
+//                case .success(let response):
+//                    if response.success == true{
+//                        UserDefaults.standard.appleSigninIdentifier = credential.user
+//                        self.viewModel.saveUserData(userData: response)
+//                        Switcher.gotoHome(delegate: self)
+//                    }
+//                    else{
+//                        self.showAlert(message: response.message ?? "")
+//                    }
+//                case .failure(let error):
+//                    self.showAlert(message: error.localizedDescription)
+//                }
+//            }
+        default:
+            print("...")
+        }
+    }
+}
+
+extension  LoginViewController: ASAuthorizationControllerPresentationContextProviding{
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    
+}
 

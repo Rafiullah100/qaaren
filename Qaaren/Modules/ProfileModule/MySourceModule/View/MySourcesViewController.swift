@@ -39,7 +39,6 @@ class MySourcesViewController: BaseViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
 }
 
 extension MySourcesViewController: UITableViewDelegate, UITableViewDataSource{

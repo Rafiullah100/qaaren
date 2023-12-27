@@ -1633,10 +1633,15 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                     </view>
                     <connections>
                         <outlet property="addReviewButton" destination="87N-Fu-GWY" id="fvJ-yB-1hM"/>
+                        <outlet property="fiveStarLabel" destination="zMb-zh-K58" id="zAg-QC-xWd"/>
+                        <outlet property="fourStarLabel" destination="gk3-2W-cdN" id="JKM-xO-bks"/>
+                        <outlet property="oneStarLabel" destination="KfH-UJ-u5T" id="l18-E9-8x0"/>
                         <outlet property="ratingLabel" destination="bAY-Y5-1nE" id="utr-kw-x83"/>
                         <outlet property="ratingStarLabel" destination="J61-16-BET" id="oqQ-VP-bFF"/>
                         <outlet property="ratingandReviewLabel" destination="SUu-B0-35g" id="jnT-zb-bxi"/>
                         <outlet property="tableView" destination="XTV-ja-uqm" id="m4R-6L-13D"/>
+                        <outlet property="threeStarLabel" destination="AXO-rX-hOk" id="ET3-EC-OTv"/>
+                        <outlet property="twoStarLabel" destination="Eel-oN-HS7" id="kQn-Ai-TzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffq-Nz-Lee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

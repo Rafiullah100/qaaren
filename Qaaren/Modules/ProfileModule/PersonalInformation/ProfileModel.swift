@@ -105,3 +105,9 @@ struct EditCustomer: Codable {
         case userID = "userId"
     }
 }
+
+
+struct DeleteModel: Codable {
+    let status, deleteCustomer: Int?
+    let message: String?
+}

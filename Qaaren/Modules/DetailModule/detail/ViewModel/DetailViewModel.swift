@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+struct NearestCoordinates{
+    let latidtude: Double?
+    let longitude: Double?
+}
+
 struct Tab {
     let title: String
     let image: String
@@ -92,5 +97,21 @@ class DetailViewModel {
     func isWishlisted() -> Bool {
         return self.productDetail.value?.itemDetail?.isWishlist ?? false
     }
+    
+    func getTotalReviews() -> Int {
+        return self.productDetail.value?.itemDetail?.totalReviewsCount?.first?.totalReviewsCount ?? 0
+    }
 
+    func getTotalStars() -> String {
+        return self.productDetail.value?.itemDetail?.totalReviews?.first?.totalReviews ?? ""
+    }
+    
+    func getNearestCoordinates() -> [NearestCoordinates] {
+        var nearestCoordinated: [NearestCoordinates] = []
+        self.productDetail.value?.comparisons?.forEach({ nearest in
+            guard let lat = Double(nearest.locationLat ?? "0.0"), let lon = Double(nearest.locationLng ?? "0.0") else { return }
+            nearestCoordinated.append(NearestCoordinates(latidtude: lat, longitude: lon))
+        })
+        return nearestCoordinated
+    }
 }
