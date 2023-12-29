@@ -161,14 +161,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRu-Yd-5BJ">
                                                 <rect key="frame" x="0.0" y="140" width="333" height="100"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PhA-o5-TSY">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PhA-o5-TSY">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="100"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ck-MV-klq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="323" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="323" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mio-ca-njP">
-                                                                        <rect key="frame" x="0.0" y="4.6666666666666288" width="140.33333333333334" height="20.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="7.333333333333373" width="140.33333333333334" height="20.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -178,37 +178,51 @@
                                                                 <constraints>
                                                                     <constraint firstItem="Mio-ca-njP" firstAttribute="leading" secondItem="3Ck-MV-klq" secondAttribute="leading" id="CkY-Vw-25b"/>
                                                                     <constraint firstItem="Mio-ca-njP" firstAttribute="centerY" secondItem="3Ck-MV-klq" secondAttribute="centerY" id="GVE-Qf-AQn"/>
+                                                                    <constraint firstAttribute="height" constant="35" id="OUO-Gn-zui"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-UA-eXx">
-                                                                <rect key="frame" x="0.0" y="35" width="323" height="30"/>
-                                                                <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xJ1-nn-GBp">
-                                                                        <rect key="frame" x="-2" y="0.0" width="327" height="31"/>
-                                                                        <color key="minimumTrackTintColor" name="blueishColor"/>
-                                                                        <color key="maximumTrackTintColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <color key="thumbTintColor" name="blueishColor"/>
-                                                                    </slider>
-                                                                </subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-UA-eXx" customClass="RangeSlider" customModule="WARangeSlider">
+                                                                <rect key="frame" x="0.0" y="40" width="323" height="30"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="xJ1-nn-GBp" firstAttribute="top" secondItem="hRh-UA-eXx" secondAttribute="top" id="9gl-cg-rnh"/>
-                                                                    <constraint firstItem="xJ1-nn-GBp" firstAttribute="leading" secondItem="hRh-UA-eXx" secondAttribute="leading" id="NUx-KT-CU2"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="xJ1-nn-GBp" secondAttribute="bottom" id="qkx-bL-s5g"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="xJ1-nn-GBp" secondAttribute="trailing" id="xik-M0-vey"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="tMs-ll-RgL"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColorBetweenHandles">
+                                                                        <color key="value" name="AccentColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                                        <real key="value" value="5000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="lowerValue">
+                                                                        <real key="value" value="500"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="upperValue">
+                                                                        <real key="value" value="5000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
+                                                                        <color key="value" red="0.0" green="0.18039215689999999" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="trackHighlightTintColor">
+                                                                        <color key="value" red="0.0" green="0.18039215689999999" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnh-Is-PjB">
-                                                                <rect key="frame" x="0.0" y="70" width="323" height="30"/>
+                                                                <rect key="frame" x="0.0" y="75" width="323" height="25"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p6G-ts-X6v">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="25"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFc-rJ-uf2">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVe-1f-tWI">
-                                                                                        <rect key="frame" x="0.0" y="4" width="62.666666666666664" height="22.333333333333332"/>
+                                                                                        <rect key="frame" x="0.0" y="1.3333333333333712" width="62.666666666666664" height="22.333333333333332"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="SAR">
                                                                                                 <attributes>
@@ -249,10 +263,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXE-op-bBb">
-                                                                                <rect key="frame" x="161.66666666666663" y="0.0" width="161.33333333333337" height="30"/>
+                                                                                <rect key="frame" x="161.66666666666663" y="0.0" width="161.33333333333337" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-Os-e8k">
-                                                                                        <rect key="frame" x="81.666666666666657" y="4" width="79.666666666666657" height="22.333333333333332"/>
+                                                                                        <rect key="frame" x="81.666666666666657" y="1.3333333333333712" width="79.666666666666657" height="22.333333333333332"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="SAR">
                                                                                                 <attributes>
@@ -369,6 +383,7 @@
                         <outlet property="maximumLabel" destination="sgV-Os-e8k" id="viv-bc-l8q"/>
                         <outlet property="minimumLabel" destination="GVe-1f-tWI" id="UKx-Dq-b26"/>
                         <outlet property="priceRangeLabel" destination="Mio-ca-njP" id="Lya-Nb-fmt"/>
+                        <outlet property="rangeSlider" destination="hRh-UA-eXx" id="qSp-PO-qhL"/>
                         <outlet property="sourcesLabel" destination="RJG-19-3R9" id="auQ-Qa-BUB"/>
                         <outlet property="textField" destination="XRf-e9-iYd" id="SR6-jU-Qre"/>
                     </connections>
@@ -694,6 +709,9 @@
     <resources>
         <image name="dropdown" width="14" height="7"/>
         <image name="star-unfill" width="14" height="14"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="blueishColor">
             <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

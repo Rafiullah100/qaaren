@@ -70,7 +70,9 @@ class SettingsTableViewController: UITableViewController {
         if indexPath.row == 0{
             Switcher.gotoAboutScreen(delegate: self)
         }
-//        else if {}
+        else if indexPath.row == 1 {
+            Switcher.gotoPrivacyScreen(delegate: self)
+        }
         else if indexPath.row == 2{
             Switcher.gotoWishlist(delegate: self)
         }

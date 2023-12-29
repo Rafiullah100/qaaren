@@ -116,6 +116,7 @@ PODS:
   - SearchTextField (1.2.4)
   - SpinKit (1.2.0)
   - SwiftGifOrigin (1.7.0)
+  - WARangeSlider (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - SearchTextField
   - SpinKit
   - SwiftGifOrigin
+  - WARangeSlider
 
 SPEC REPOS:
   trunk:
@@ -155,6 +157,7 @@ SPEC REPOS:
     - SearchTextField
     - SpinKit
     - SwiftGifOrigin
+    - WARangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
@@ -180,7 +183,8 @@ SPEC CHECKSUMS:
   SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  WARangeSlider: 03f195d4dc5419e6b0d9043cc94fdf418dfe804d
 
-PODFILE CHECKSUM: 8521da0442c4d5b659302ea9049fe63ace9b4eb3
+PODFILE CHECKSUM: 2d6254501e47c018c440c73c84d5640fbfb37157
 
 COCOAPODS: 1.11.3

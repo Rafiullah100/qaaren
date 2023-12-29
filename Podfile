@@ -13,10 +13,10 @@ target 'Qaaren' do
   pod 'Alamofire', '~> 5.0.0-rc.2'
   pod 'SpinKit'
   pod 'SDWebImage', '~> 5.0'
-
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod "SearchTextField"
+  pod "WARangeSlider"
 
 end

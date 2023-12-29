@@ -17,7 +17,6 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var googleLabel: UILabel!
-//    @IBOutlet weak var fbLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -52,7 +51,6 @@ class LoginViewController: BaseViewController {
         emailTextField.placeholder = LocalizationKeys.emailAddress.rawValue.localizeString()
         passwordTextField.placeholder = LocalizationKeys.password.rawValue.localizeString()
         passwordLabel.text = LocalizationKeys.password.rawValue.localizeString()
-//        fbLabel.text = LocalizationKeys.facebook.rawValue.localizeString()
         googleLabel.text = LocalizationKeys.google.rawValue.localizeString()
         orLabel.text = LocalizationKeys.orSignin.rawValue.localizeString()
         noAccountLabel.text = LocalizationKeys.noAccount.rawValue.localizeString()
@@ -63,7 +61,6 @@ class LoginViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         appleSigninView.addSubview(appleSignInButton)
         appleSignInButton.frame = CGRect(x: 0, y: 0, width: appleSigninView.frame.width, height: appleSigninView.frame.height)
-//        appleSignInButton.cornerRadius = appleSigninView.frame.height * 0.5
         appleSignInButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
     
@@ -104,8 +101,8 @@ class LoginViewController: BaseViewController {
             }
             if let result = result,
                let email = result.user.profile?.email,
-               let name = result.user.profile?.name,
-               let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString {
+               let name = result.user.profile?.name
+               /*,let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString*/ {
                 self?.animateSpinner()
                    self?.viewModel.googleSignin(email: email, name: name)
             }
@@ -125,16 +122,6 @@ class LoginViewController: BaseViewController {
                 Switcher.gotoHomeVC(delegate: self)
             }
         }
-        
-//        viewModel.googleLogin.bind { [unowned self] response in
-//            self.stopAnimation()
-//            showAlert(message: response?.message ?? "")
-//        }
-//
-//        viewModel.appleLogin.bind { [unowned self] apple in
-//            self.stopAnimation()
-//            showAlert(message: apple?.message ?? "")
-//        }
     }
     
     @IBAction func skipLoginButton(_ sender: Any) {
@@ -151,33 +138,22 @@ extension  LoginViewController: ASAuthorizationControllerDelegate{
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let credential as ASAuthorizationAppleIDCredential:
-            let email = credential.email
-            let name = credential.fullName?.givenName
-            print(email, name)
-            guard (email != nil) else {
-                self.showAlert(message: "Set apple account first!")
-                return
+//            let email = credential.email
+//            let name = credential.fullName?.givenName
+//            guard (email != nil) else {
+//                self.showAlert(message: "Set apple account first!")
+//                return
+//            }
+            if let appleUser = appleUser(credentials: credential) {
+                do {
+                    let appleUserData = try JSONEncoder().encode(appleUser)
+                    UserDefaults.standard.set(appleUserData, forKey: credential.user)
+                } catch {
+                    print("Error encoding AppleUser: \(error)")
+                }
             }
             self.animateSpinner()
-            viewModel.appleLogin(email: email ?? "", name: name ?? "")
-//            print(credential.user)
-//            self.animateSpinner()
-//            self.viewModel.appleSignup(email: email ?? "") { result in
-//                self.stopAnimation()
-//                switch result {
-//                case .success(let response):
-//                    if response.success == true{
-//                        UserDefaults.standard.appleSigninIdentifier = credential.user
-//                        self.viewModel.saveUserData(userData: response)
-//                        Switcher.gotoHome(delegate: self)
-//                    }
-//                    else{
-//                        self.showAlert(message: response.message ?? "")
-//                    }
-//                case .failure(let error):
-//                    self.showAlert(message: error.localizedDescription)
-//                }
-//            }
+//            viewModel.appleLogin(email: email ?? "", name: name ?? "")
         default:
             print("...")
         }

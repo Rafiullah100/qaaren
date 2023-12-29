@@ -63,6 +63,7 @@
 		527754E42A9C91C90072222E /* manrope-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 527754E32A9C91C90072222E /* manrope-semibold.otf */; };
 		527754E72A9CAF1A0072222E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527754E62A9CAF1A0072222E /* SigninViewController.swift */; };
 		527754ED2A9CB9240072222E /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527754EC2A9CB9240072222E /* TabbarViewController.swift */; };
+		528855F42B3EE422008B5130 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528855F32B3EE422008B5130 /* PrivacyViewController.swift */; };
 		528C8F682AA087580056F056 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C8F672AA087580056F056 /* DetailViewModel.swift */; };
 		528C8F712AA0A15D0056F056 /* CompareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C8F6F2AA0A15D0056F056 /* CompareTableViewCell.swift */; };
 		528C8F722AA0A15D0056F056 /* CompareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528C8F702AA0A15D0056F056 /* CompareTableViewCell.xib */; };
@@ -186,6 +187,7 @@
 		527754E32A9C91C90072222E /* manrope-semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-semibold.otf"; sourceTree = "<group>"; };
 		527754E62A9CAF1A0072222E /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		527754EC2A9CB9240072222E /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		528855F32B3EE422008B5130 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		528C8F672AA087580056F056 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		528C8F6F2AA0A15D0056F056 /* CompareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTableViewCell.swift; sourceTree = "<group>"; };
 		528C8F702AA0A15D0056F056 /* CompareTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompareTableViewCell.xib; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			children = (
 				5246487B2AA71E43004360DC /* SettingsTableViewController.swift */,
 				520028EB2B3ABA5F00E28725 /* AboutViewController.swift */,
+				528855F32B3EE422008B5130 /* PrivacyViewController.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -1276,6 +1279,7 @@
 				527754A52A9C80EF0072222E /* SceneDelegate.swift in Sources */,
 				52AD09192B2195EA003AEB53 /* Observable.swift in Sources */,
 				52BD2FF62AA5D7EE0075F39D /* AlertViewController.swift in Sources */,
+				528855F42B3EE422008B5130 /* PrivacyViewController.swift in Sources */,
 				528C8F712AA0A15D0056F056 /* CompareTableViewCell.swift in Sources */,
 				52AD091F2B21D15B003AEB53 /* HomeViewController.swift in Sources */,
 				52C9F2802B3170B200E28A64 /* MyWishlistModel.swift in Sources */,

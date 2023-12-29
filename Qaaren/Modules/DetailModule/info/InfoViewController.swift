@@ -15,7 +15,7 @@ class InfoViewController: UIViewController {
     
     var descriptionText: String?{
         didSet{
-            textView.attributedText = Helper.parseLocalHtml(descriptionText ?? "")
+            textView.attributedText = descriptionText?.htmlToAttributedString
         }
     }
     
