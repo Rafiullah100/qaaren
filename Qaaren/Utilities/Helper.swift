@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 open class Helper{
     
-    
     class func cellSize(noOfCells: Int, space: Int, collectionView: UICollectionView)-> CGSize{
         let cellsAcross: CGFloat = CGFloat(noOfCells)
         let spaceBetweenCells: CGFloat = CGFloat(space)

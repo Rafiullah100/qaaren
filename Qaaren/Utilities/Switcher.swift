@@ -57,8 +57,9 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoFullScreenMap(delegate: UIViewController){
+    static func gotoFullScreenMap(delegate: UIViewController, coordinates: [NearestCoordinates]){
         let vc = UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FullScreenMapViewController") as! FullScreenMapViewController
+        vc.nearestCoordinates = coordinates
         vc.modalPresentationStyle = .fullScreen
         delegate.navigationController?.pushViewController(vc, animated: true)
     }

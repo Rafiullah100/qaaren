@@ -39,6 +39,7 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,6 +70,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         headerView.nameLabell.text = UserDefaults.standard.name
         headerView.usernameLabel.text = UserDefaults.standard.email
         headerView.imageView.sd_setImage(with: URL(string: Route.baseUrl + (UserDefaults.standard.profileImage ?? "")), placeholderImage: UIImage(named: "placeholder"))
+        print(Route.baseUrl + (UserDefaults.standard.profileImage ?? ""))
 //        headerView.imageView.layer.cornerRadius = headerView.imageView.frame.height * 0.5
         headerView.imageView.layer.masksToBounds = true
         headerView.logout = {

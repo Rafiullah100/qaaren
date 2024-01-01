@@ -60,7 +60,9 @@ class ProfileViewModel {
         Networking.shared.updateProfile(route: .updateProfile, imageParameter: "profile", image: image, parameters: parameters ?? [:]) { result in
             switch result {
             case .success(let profile):
+                print(profile)
                 self.editProfile.value = profile
+                self.saveUser()
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -76,5 +78,11 @@ class ProfileViewModel {
                 self.errorMessage.value = error.localizedDescription
             }
         }
+    }
+    
+    private func saveUser(){
+        UserDefaults.standard.profileImage = self.editProfile.value?.customer?.profileImage
+        UserDefaults.standard.email = self.editProfile.value?.customer?.email
+        UserDefaults.standard.name = self.editProfile.value?.customer?.fullName
     }
 }

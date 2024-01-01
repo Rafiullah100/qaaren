@@ -8,8 +8,9 @@
 import UIKit
 import SDWebImage
 class DetailViewController: BaseViewController {
+    @IBOutlet weak var collapsableViewHeight: NSLayoutConstraint!
     
-    
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -17,7 +18,11 @@ class DetailViewController: BaseViewController {
     @IBOutlet var sliderImagesContainer: [UIView]!
     @IBOutlet var imageViews: [UIImageView]!
     @IBOutlet weak var headerImageView: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!{
+        didSet{
+            scrollView.delegate = self
+        }
+    }
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -26,11 +31,13 @@ class DetailViewController: BaseViewController {
         }
     }
     @IBOutlet weak var containerView: UIStackView!
-    
     @IBOutlet weak var favoriteIcon: UIImageView!
     private var selectedIndexPath: IndexPath?
     private var viewModel = DetailViewModel()
     var productID: Int?
+    var headerViewMaxHeight = 300.0
+    var headerViewMinHeight = 0.0
+    var isScrollViewAtBottom = false
     
     lazy var compareVC: CompareeViewController = {
         return UIStoryboard(name: Storyboard.detail.rawValue, bundle: nil).instantiateViewController(withIdentifier: "CompareeViewController") as! CompareeViewController
@@ -54,8 +61,8 @@ class DetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(productID ?? 0)
         type = .detail
+        viewControllerTitle = "Details"
         self.animateSpinner()
         viewModel.getDetail(productID: productID ?? 0)
         bindProductDetail()
@@ -80,6 +87,12 @@ class DetailViewController: BaseViewController {
         sliderImages(index: 0)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bottomView.roundCorners(corners: [.topLeft, .bottomRight], radius: 30.0)
+        scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: self.view.safeAreaLayoutGuide.layoutFrame.height)
+    }
+        
     private func updateUI(){
         addVCToContainer()
         print(viewModel.getTitle())
@@ -95,15 +108,7 @@ class DetailViewController: BaseViewController {
         guard let rat = Float(viewModel.getTotalStars()) else { return  }
         ratingLabel.text = String(format: "%.1f", rat)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        viewModel.viewControllers.forEach { vc in
-//            if let childViewController = segue.destination as? UIViewController {
-//                childViewController.view.translatesAutoresizingMaskIntoConstraints = false
-//            }
-//        }
-    }
+
     
     @IBAction func sliderButtonsAction(_ sender: UIButton) {
         let index = sender.tag
@@ -116,6 +121,7 @@ class DetailViewController: BaseViewController {
             addChild(compareVC)
             self.add(compareVC, in: containerView)
             compareVC.compareProductList = viewModel.getComparisonItems()
+            compareVC.tableView.isScrollEnabled = isScrollViewAtBottom
             compareVC.view.frame = containerView.bounds
             containerView.addSubview(compareVC.view)
             compareVC.didMove(toParent: self)
@@ -123,6 +129,7 @@ class DetailViewController: BaseViewController {
             addChild(infoVC)
             self.add(infoVC, in: containerView)
             infoVC.descriptionText = viewModel.getDescription()
+            infoVC.textView.isScrollEnabled = isScrollViewAtBottom
             infoVC.view.frame = containerView.bounds
             containerView.addSubview(infoVC.view)
             infoVC.didMove(toParent: self)
@@ -131,6 +138,7 @@ class DetailViewController: BaseViewController {
             self.add(ratingVC, in: containerView)
             ratingVC.productID = productID
             ratingVC.totalReview = viewModel.getTotalReviews()
+            ratingVC.tableView.isScrollEnabled = isScrollViewAtBottom
             ratingVC.stars = viewModel.getTotalStars()
             ratingVC.view.frame = containerView.bounds
             containerView.addSubview(ratingVC.view)
@@ -138,7 +146,6 @@ class DetailViewController: BaseViewController {
         case 3:
             addChild(mapVC)
             self.add(mapVC, in: containerView)
-            print(viewModel.getNearestCoordinates())
             mapVC.nearestCoordinates = viewModel.getNearestCoordinates()
             mapVC.view.frame = containerView.bounds
             containerView.addSubview(mapVC.view)
@@ -182,7 +189,6 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.nameLabel.isHidden = true
         cell.iconView.isHidden = false
         cell.nameLabel.textColor = .white
-//        cell.cardView.layer.cornerRadius = 0
         cell.nameLabel.font = UIFont(name: Constants.fontNameMedium, size: 19.0)
         cell.cardView.backgroundColor = CustomColor.tabBGColor.color
         if indexPath == selectedIndexPath {
@@ -215,3 +221,39 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         collectionView.reloadData()
     }
 }
+
+extension DetailViewController : UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y: CGFloat = scrollView.contentOffset.y
+        let scrollViewHeight = scrollView.frame.height
+        guard let headerViewHeightConstraint = collapsableViewHeight else {return}
+        let newHeaderViewHeight: CGFloat =
+        headerViewHeightConstraint.constant - y
+        if newHeaderViewHeight > headerViewMaxHeight {
+            headerViewHeightConstraint.constant = headerViewMaxHeight
+        } else if newHeaderViewHeight <= headerViewMinHeight {
+            headerViewHeightConstraint.constant = headerViewMinHeight
+        } else {
+            headerViewHeightConstraint.constant = newHeaderViewHeight
+        }
+        if y + scrollViewHeight >= scrollView.contentSize.height {
+            isScrollViewAtBottom = true
+            enableScrolling()
+        }
+    }
+    
+    func enableScrolling() {
+        switch selectedIndexPath?.row {
+        case 0:
+            compareVC.tableView.isScrollEnabled = true
+        case 1:
+            infoVC.textView.isScrollEnabled = true
+        case 2:
+            ratingVC.tableView.isScrollEnabled = true
+        default:
+            break
+        }
+    }
+}
+

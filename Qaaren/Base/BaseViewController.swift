@@ -148,6 +148,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
            appearance.backgroundColor = type == .backWithTitle ? CustomColor.navigationColor.color : .clear
+           appearance.backgroundColor = type == .detail ? UIColor.white : .clear
+
             navigationController?.navigationBar.standardAppearance = appearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
            navigationController?.navigationBar.frame = CGRect(x: navigationController?.navigationBar.frame.origin.x ?? 0, y: navigationController?.navigationBar.frame.origin.y ?? 0, width: navigationController?.navigationBar.frame.width ?? 0, height: (navigationController?.navigationBar.frame.height ?? 0) )
