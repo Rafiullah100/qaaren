@@ -254,22 +254,22 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="489"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDY-To-I3v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="160"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="190"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WrE-zc-kbK">
-                                                                <rect key="frame" x="20" y="20" width="353" height="140"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WrE-zc-kbK">
+                                                                <rect key="frame" x="20" y="20" width="353" height="170"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-qy-Wnv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-x3-UII">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-qD-eMm">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="50"/>
                                                                                         <subviews>
-                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhL-nF-SAF">
-                                                                                                <rect key="frame" x="0.0" y="6.3333333333333162" width="133.33333333333334" height="27.666666666666671"/>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhL-nF-SAF">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="303" height="50"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -277,15 +277,17 @@
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
-                                                                                            <constraint firstItem="ZhL-nF-SAF" firstAttribute="centerY" secondItem="I1c-qD-eMm" secondAttribute="centerY" id="F21-fC-77G"/>
+                                                                                            <constraint firstItem="ZhL-nF-SAF" firstAttribute="top" secondItem="I1c-qD-eMm" secondAttribute="top" id="6Fn-KJ-ffp"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="ZhL-nF-SAF" secondAttribute="bottom" id="Cg6-iq-yPO"/>
                                                                                             <constraint firstItem="ZhL-nF-SAF" firstAttribute="leading" secondItem="I1c-qD-eMm" secondAttribute="leading" id="N75-z9-JP1"/>
+                                                                                            <constraint firstAttribute="trailing" secondItem="ZhL-nF-SAF" secondAttribute="trailing" id="U27-2k-fPq"/>
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSc-Ub-EU9">
-                                                                                        <rect key="frame" x="303" y="0.0" width="50" height="40"/>
+                                                                                        <rect key="frame" x="303" y="0.0" width="50" height="50"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAH-UV-XzB">
-                                                                                                <rect key="frame" x="5" y="0.0" width="40" height="40"/>
+                                                                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
                                                                                                 <subviews>
                                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail-favorite" translatesAutoresizingMaskIntoConstraints="NO" id="CuX-US-Mv7">
                                                                                                         <rect key="frame" x="10" y="10" width="20" height="20"/>
@@ -325,7 +327,7 @@
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="40" id="HtS-Vz-LKS"/>
+                                                                            <constraint firstAttribute="height" priority="250" constant="40" id="HtS-Vz-LKS"/>
                                                                             <constraint firstItem="IgE-x3-UII" firstAttribute="top" secondItem="bDq-qy-Wnv" secondAttribute="top" id="PyS-rc-QIa"/>
                                                                             <constraint firstItem="IgE-x3-UII" firstAttribute="leading" secondItem="bDq-qy-Wnv" secondAttribute="leading" id="SXT-7e-Gue"/>
                                                                             <constraint firstAttribute="bottom" secondItem="IgE-x3-UII" secondAttribute="bottom" id="w3W-Be-CmT"/>
@@ -333,22 +335,22 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-Sh-NVb">
-                                                                        <rect key="frame" x="0.0" y="40" width="353" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="55" width="353" height="50"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T9a-CT-JWs">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DiN-a6-abu">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
                                                                                         <subviews>
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Tp-yL-pDA">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
                                                                                                 <subviews>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxk-VM-zSj">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="40"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="50"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Mpb-qR-obn">
-                                                                                                                <rect key="frame" x="0.0" y="7.6666666666666856" width="25" height="25"/>
+                                                                                                                <rect key="frame" x="0.0" y="12.666666666666686" width="25" height="25"/>
                                                                                                                 <constraints>
                                                                                                                     <constraint firstAttribute="width" constant="25" id="0xH-wS-NLb"/>
                                                                                                                     <constraint firstAttribute="height" constant="25" id="usB-KQ-B6g"/>
@@ -363,10 +365,10 @@
                                                                                                         </constraints>
                                                                                                     </view>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEk-3g-cAi">
-                                                                                                        <rect key="frame" x="30" y="0.0" width="30" height="40"/>
+                                                                                                        <rect key="frame" x="30" y="0.0" width="30" height="50"/>
                                                                                                         <subviews>
-                                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h2-Qh-okL">
-                                                                                                                <rect key="frame" x="0.0" y="7.6666666666666856" width="30" height="25"/>
+                                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h2-Qh-okL">
+                                                                                                                <rect key="frame" x="0.0" y="12.666666666666686" width="30" height="25"/>
                                                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="18"/>
                                                                                                                 <nil key="textColor"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -397,10 +399,10 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PG-cu-BQg">
-                                                                                        <rect key="frame" x="75" y="0.0" width="1.6666666666666714" height="40"/>
+                                                                                        <rect key="frame" x="75" y="0.0" width="1.6666666666666714" height="50"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-Ob-1fC">
-                                                                                                <rect key="frame" x="0.0" y="5" width="1.6666666666666667" height="30"/>
+                                                                                                <rect key="frame" x="0.0" y="5" width="1.6666666666666667" height="40"/>
                                                                                                 <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             </view>
                                                                                         </subviews>
@@ -414,13 +416,13 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY7-7o-0AN">
-                                                                                        <rect key="frame" x="91.666666666666657" y="0.0" width="261.33333333333337" height="40"/>
+                                                                                        <rect key="frame" x="91.666666666666657" y="0.0" width="261.33333333333337" height="50"/>
                                                                                         <subviews>
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1B5-UB-ABz">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="245.33333333333334" height="40"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="215.33333333333334" height="50"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF9-uW-5Q1">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="40"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" priority="250" constant="91.670000000000002" id="QOH-Uw-rCf"/>
                                                                                                         </constraints>
@@ -429,12 +431,12 @@
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwJ-nk-PZT">
-                                                                                                        <rect key="frame" x="96.666666666666671" y="0.0" width="148.66666666666663" height="40"/>
+                                                                                                        <rect key="frame" x="96.666666666666657" y="0.0" width="118.66666666666666" height="50"/>
                                                                                                         <attributedString key="attributedText">
-                                                                                                            <fragment content="80 SAR - 120 SAR">
+                                                                                                            <fragment content="0 SAR - 0 SAR">
                                                                                                                 <attributes>
                                                                                                                     <color key="NSColor" systemColor="labelColor"/>
-                                                                                                                    <font key="NSFont" size="18" name="Poppins-SemiBold"/>
+                                                                                                                    <font key="NSFont" size="18" name="Poppins-Bold"/>
                                                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                                                 </attributes>
                                                                                                             </fragment>
@@ -466,7 +468,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U16-UR-b9N">
-                                                                        <rect key="frame" x="0.0" y="80" width="353" height="60"/>
+                                                                        <rect key="frame" x="0.0" y="110" width="353" height="60"/>
                                                                         <subviews>
                                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-Nr-ZRH">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
@@ -505,7 +507,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="WrE-zc-kbK" secondAttribute="trailing" constant="20" id="9OJ-bb-roO"/>
-                                                            <constraint firstAttribute="height" constant="160" id="khu-fD-Fy5"/>
+                                                            <constraint firstAttribute="height" priority="250" constant="160" id="khu-fD-Fy5"/>
                                                             <constraint firstItem="WrE-zc-kbK" firstAttribute="leading" secondItem="uDY-To-I3v" secondAttribute="leading" constant="20" id="lqE-tg-wvx"/>
                                                             <constraint firstItem="WrE-zc-kbK" firstAttribute="top" secondItem="uDY-To-I3v" secondAttribute="top" constant="20" id="mCh-mk-mOy"/>
                                                             <constraint firstAttribute="bottom" secondItem="WrE-zc-kbK" secondAttribute="bottom" id="pxe-51-1sj"/>
@@ -517,7 +519,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Pq-jI8">
-                                                        <rect key="frame" x="20" y="180" width="353" height="309"/>
+                                                        <rect key="frame" x="20" y="210" width="353" height="279"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </stackView>
                                                 </subviews>
@@ -765,7 +767,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="lXy-cu-lPP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="105" height="83"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J61-16-BET">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J61-16-BET">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" priority="250" constant="66" id="C1F-7y-x2G"/>
@@ -774,7 +776,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAY-Y5-1nE">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAY-Y5-1nE">
                                                                                 <rect key="frame" x="0.0" y="61" width="105" height="22"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
                                                                                 <color key="textColor" name="grayWhiteColor"/>
@@ -943,7 +945,7 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgA-57-ibj">
                                                                                                 <rect key="frame" x="267.66666666666669" y="0.0" width="15.333333333333314" height="24"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-zh-K58">
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-zh-K58">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="15.333333333333334" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
@@ -1076,10 +1078,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SL2-Y2-hbe">
-                                                                                                <rect key="frame" x="104.99999999999999" y="0.0" width="153.66666666666663" height="24"/>
+                                                                                                <rect key="frame" x="105.00000000000001" y="0.0" width="153.33333333333337" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="87P-vM-9zK">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="153.66666666666666" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.33333333333334" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="x0p-aa-9TQ"/>
                                                                                                         </constraints>
@@ -1100,10 +1102,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-ih-cJn">
-                                                                                                <rect key="frame" x="273.66666666666669" y="0.0" width="9.3333333333333144" height="24"/>
+                                                                                                <rect key="frame" x="273.33333333333331" y="0.0" width="9.6666666666666856" height="24"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-2W-cdN">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="24"/>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-2W-cdN">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1224,10 +1226,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-kZ-gJn">
-                                                                                                <rect key="frame" x="104.99999999999999" y="0.0" width="153.66666666666663" height="24"/>
+                                                                                                <rect key="frame" x="105.00000000000001" y="0.0" width="153.33333333333337" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-nb-WWj">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="153.66666666666666" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.33333333333334" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="IB3-kD-gjK"/>
                                                                                                         </constraints>
@@ -1248,10 +1250,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-mM-sSI">
-                                                                                                <rect key="frame" x="273.66666666666669" y="0.0" width="9.3333333333333144" height="24"/>
+                                                                                                <rect key="frame" x="273.33333333333331" y="0.0" width="9.6666666666666856" height="24"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXO-rX-hOk">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="24"/>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXO-rX-hOk">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1361,10 +1363,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-b6-mS7">
-                                                                                                <rect key="frame" x="105" y="0.0" width="154" height="24"/>
+                                                                                                <rect key="frame" x="105.00000000000001" y="0.0" width="153.33333333333337" height="24"/>
                                                                                                 <subviews>
                                                                                                     <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-AN-TLl">
-                                                                                                        <rect key="frame" x="0.0" y="7" width="154" height="10"/>
+                                                                                                        <rect key="frame" x="0.0" y="7" width="153.33333333333334" height="10"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="10" id="mMP-go-QmE"/>
                                                                                                         </constraints>
@@ -1385,10 +1387,10 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                                                                 </constraints>
                                                                                             </view>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-id-74f">
-                                                                                                <rect key="frame" x="274" y="0.0" width="9" height="24"/>
+                                                                                                <rect key="frame" x="273.33333333333331" y="0.0" width="9.6666666666666856" height="24"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eel-oN-HS7">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9" height="24"/>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eel-oN-HS7">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="24"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                                                                                         <color key="textColor" name="grayWhiteColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -1563,47 +1565,11 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                                     <constraint firstAttribute="trailing" secondItem="Jmj-dK-Rcl" secondAttribute="trailing" id="yuq-Bn-d2d"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YW-bx-cfc">
-                                                <rect key="frame" x="0.0" y="150" width="393" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87N-Fu-GWY">
-                                                        <rect key="frame" x="263" y="10" width="130" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="BDZ-Sz-TQ2"/>
-                                                            <constraint firstAttribute="width" constant="130" id="YyT-4n-70o"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="+ Add a review">
-                                                            <color key="titleColor" name="blueishColor"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" name="blueishColor"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                <real key="value" value="20"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="addReviewBtn:" destination="z7c-Sp-gWr" eventType="touchUpInside" id="840-jo-dcO"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" name="backgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="VjM-tw-636"/>
-                                                    <constraint firstAttribute="trailing" secondItem="87N-Fu-GWY" secondAttribute="trailing" id="k3n-cq-89X"/>
-                                                    <constraint firstItem="87N-Fu-GWY" firstAttribute="centerY" secondItem="4YW-bx-cfc" secondAttribute="centerY" id="uST-pn-EXS"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-Ld-9pP">
-                                                <rect key="frame" x="0.0" y="210" width="393" height="583"/>
+                                                <rect key="frame" x="0.0" y="150" width="393" height="643"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-ja-uqm" customClass="AutoSizingUiTableView" customModule="Qaaren" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="583"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="643"/>
                                                         <color key="backgroundColor" name="backgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -1617,12 +1583,49 @@ As you can see, iPhone 14 Pro Max has a ton of things going for it. The current 
                                             </view>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YW-bx-cfc">
+                                        <rect key="frame" x="263" y="743" width="130" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87N-Fu-GWY">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+ Add a review">
+                                                    <color key="titleColor" name="blueishColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="blueishColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addReviewBtn:" destination="z7c-Sp-gWr" eventType="touchUpInside" id="840-jo-dcO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="87N-Fu-GWY" firstAttribute="leading" secondItem="4YW-bx-cfc" secondAttribute="leading" id="3Q4-Js-S3H"/>
+                                            <constraint firstAttribute="bottom" secondItem="87N-Fu-GWY" secondAttribute="bottom" id="Cj1-CG-ouJ"/>
+                                            <constraint firstItem="87N-Fu-GWY" firstAttribute="top" secondItem="4YW-bx-cfc" secondAttribute="top" id="EEW-MD-qk2"/>
+                                            <constraint firstAttribute="height" constant="40" id="VjM-tw-636"/>
+                                            <constraint firstAttribute="trailing" secondItem="87N-Fu-GWY" secondAttribute="trailing" id="k3n-cq-89X"/>
+                                            <constraint firstAttribute="width" constant="130" id="xAV-2B-wux"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="nCg-9w-zsU" firstAttribute="leading" secondItem="EWQ-6o-EP7" secondAttribute="leading" id="EW4-si-9hI"/>
                                     <constraint firstItem="nCg-9w-zsU" firstAttribute="top" secondItem="EWQ-6o-EP7" secondAttribute="top" id="FpT-1i-hbL"/>
                                     <constraint firstAttribute="bottom" secondItem="nCg-9w-zsU" secondAttribute="bottom" id="M6Q-K8-Xje"/>
+                                    <constraint firstAttribute="trailing" secondItem="4YW-bx-cfc" secondAttribute="trailing" id="OWq-tk-UpW"/>
+                                    <constraint firstAttribute="bottom" secondItem="4YW-bx-cfc" secondAttribute="bottom" constant="10" id="R14-xo-HA4"/>
                                     <constraint firstAttribute="trailing" secondItem="nCg-9w-zsU" secondAttribute="trailing" id="VVm-Ej-hjf"/>
                                 </constraints>
                             </view>

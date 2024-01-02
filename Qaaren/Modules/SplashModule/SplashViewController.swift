@@ -8,75 +8,59 @@
 import UIKit
 import SwiftGifOrigin
 class SplashViewController: UIViewController {
-    var centerView: UIView?
-    var centerIcon: UIView?
-    let halfwayPoint = 120
-    var isFlipped = false
-    var isAnimating = false
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if Helper.isLogin() == true{
-                Switcher.gotoHomeVC(delegate: self)
-            }
-            else{
-                Switcher.gotoLoginVC(delegate: self)
-            }
-        }
-    }
-    
+    var centerIconView: UIView?
+    var label: UILabel?
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIWindow.key.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
-
-        let imageView: UIImageView = view.viewWithTag(101) as! UIImageView
-        imageView.image = UIImage.gif(name: "launch")
-    }
-
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//            Switcher.gotoLoginVC(delegate: self)
-//        }
-//    }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        centerView = view.viewWithTag(1)
-//        centerIcon = view.viewWithTag(2)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-//            self.centerView?.isHidden = true
-//            self.moveIcon()
-//        }
-//    }
-    
-    func moveIcon() {
-        UIView.animate(withDuration: 0.8, delay: 0.0, options: .curveEaseOut, animations: {
-            self.centerIcon?.center.y -= CGFloat(self.halfwayPoint)
-        }) { _ in
-            self.makeBiggerAndRotate()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            Helper.isLogin() == true ? Switcher.gotoHomeVC(delegate: self) : Switcher.gotoLoginVC(delegate: self)
         }
+        
+        centerIconView = view.viewWithTag(1)
+        label = view.viewWithTag(2) as? UILabel
+        self.startAnimatingIcon()
     }
     
-    func makeBiggerAndRotate() {
+    func startAnimatingIcon() {
+        centerIconView?.isHidden = false
+        let halfwayPoint = 200
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
-            self.centerIcon?.transform = CGAffineTransform(scaleX: 4.0, y: 4.0)
-            self.centerIcon?.transform = CGAffineTransform(rotationAngle: -(90)) // -135 degrees in radians
+            self.centerIconView?.center.y -= CGFloat(halfwayPoint)
         }) { _ in
-            self.makeCircle()
+            self.scaleupAndrotateIcon()
         }
     }
     
-    func makeCircle() {
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
-            self.centerIcon?.frame.size = CGSize(width: 5, height: 5)
-            self.centerIcon?.layer.cornerRadius = (self.centerIcon?.frame.height ?? 0) * 0.5
-        }) { _ in
-//            self.makeBiggerAndRotate()
-        }
+    func scaleupAndrotateIcon() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.centerIconView?.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.centerIconView?.transform = self.centerIconView?.transform.rotated(by: -.pi * 3 / 4) ?? CGAffineTransform()
+        }, completion: { _ in
+            self.againScaleUpWithRoundedCorner()
+        })
+    }
+    
+    func againScaleUpWithRoundedCorner() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.centerIconView?.transform = CGAffineTransform(rotationAngle:  -.pi * 3 / 4).scaledBy(x: 0.4, y: 0.4)
+
+        }, completion: { _ in
+            self.centerIconView?.layer.cornerRadius = 0
+            self.spreadImage()
+        })
+    }
+    
+    
+    func spreadImage() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.centerIconView?.transform = CGAffineTransform(rotationAngle: .pi).scaledBy(x: 5, y: 10)
+        }, completion: { _ in
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
+//                self.label?.isHidden = false
+            })
+        })
     }
 }

@@ -28,7 +28,7 @@ class WishlisViewController: BaseViewController {
         viewModel.myWishlist.bind { _ in
             DispatchQueue.main.async {
                 self.stopAnimation()
-                self.tableView.reloadData()
+                self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
             }
         }
         viewModel.getWishlist()

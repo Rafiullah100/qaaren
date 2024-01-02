@@ -49,6 +49,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 41" translatesAutoresizingMaskIntoConstraints="NO" id="MDp-nu-hD1">
                                                     <rect key="frame" x="70" y="12" width="181" height="181"/>
+                                                    <color key="backgroundColor" name="backgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="MDp-nu-hD1" secondAttribute="height" multiplier="1:1" id="hb1-Uv-plS"/>
                                                     </constraints>
@@ -161,7 +162,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="backgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="z1B-mk-HlO" firstAttribute="leading" secondItem="h8f-xj-p1g" secondAttribute="leading" id="2P9-6n-MKJ"/>
                                         <constraint firstAttribute="trailing" secondItem="z1B-mk-HlO" secondAttribute="trailing" id="OHJ-Ib-wdr"/>
@@ -250,7 +251,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="backgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="EFN-l2-XjO" firstAttribute="centerX" secondItem="PNx-1w-x8V" secondAttribute="centerX" id="4jo-V8-NoH"/>
                                         <constraint firstItem="EFN-l2-XjO" firstAttribute="top" secondItem="PNx-1w-x8V" secondAttribute="top" constant="15" id="Nif-NK-Inp"/>

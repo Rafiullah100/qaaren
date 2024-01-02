@@ -281,19 +281,30 @@
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p7x-by-9Ia">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="16.333333333333332"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-re-x5r">
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-a3-Srk">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="16.333333333333332"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-re-x5r">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="16.333333333333332"/>
+                                                                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
+                                                                                                <color key="textColor" red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" name="backgroundColor"/>
                                                                                         <constraints>
-                                                                                            <constraint firstAttribute="width" priority="250" constant="60.329999999999998" id="bsn-Da-9SR"/>
+                                                                                            <constraint firstAttribute="width" priority="250" constant="40" id="LtZ-vK-Ysc"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="2am-re-x5r" secondAttribute="bottom" id="QVA-ZM-1Ed"/>
+                                                                                            <constraint firstItem="2am-re-x5r" firstAttribute="top" secondItem="X0v-a3-Srk" secondAttribute="top" id="d8Q-p5-eQR"/>
+                                                                                            <constraint firstAttribute="trailing" secondItem="2am-re-x5r" secondAttribute="trailing" id="r8r-Zl-ieb"/>
+                                                                                            <constraint firstItem="2am-re-x5r" firstAttribute="leading" secondItem="X0v-a3-Srk" secondAttribute="leading" id="tHE-Od-fAT"/>
                                                                                         </constraints>
-                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
-                                                                                        <color key="textColor" red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
+                                                                                    </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg1-hc-YyF">
                                                                                         <rect key="frame" x="60.333333333333321" y="0.0" width="81.666666666666686" height="16.333333333333332"/>
                                                                                         <subviews>
-                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="590-882 SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8e-Rh-tzs">
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="590-882 SAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8e-Rh-tzs">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="16.333333333333332"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
                                                                                                 <color key="textColor" name="grayWhiteColor"/>
@@ -394,6 +405,9 @@
         <image name="star" width="15" height="15"/>
         <namedColor name="appColor">
             <color red="0.95294117647058818" green="0.61176470588235299" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="cellBGColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

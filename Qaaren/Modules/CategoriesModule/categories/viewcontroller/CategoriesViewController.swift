@@ -75,6 +75,7 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard Helper.isLogin() == true else {return self.view.makeToast("You're not login", position: .center)}
         selectedIndex = indexPath
     }
 }

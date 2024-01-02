@@ -332,7 +332,7 @@
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9N-h8-xqO">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="40"/>
-                                                                                                <color key="backgroundColor" name="socialBtnBGColor"/>
+                                                                                                <color key="backgroundColor" name="backgroundColor"/>
                                                                                                 <userDefinedRuntimeAttributes>
                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
                                                                                                         <real key="value" value="4"/>

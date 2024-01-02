@@ -38,6 +38,9 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if Helper.isLogin() == false {
+            Switcher.logout(delegate: self)
+        }
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tableView.reloadData()
     }

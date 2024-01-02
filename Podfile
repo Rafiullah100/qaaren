@@ -18,5 +18,6 @@ target 'Qaaren' do
   pod 'GoogleSignIn'
   pod "SearchTextField"
   pod "WARangeSlider"
+  pod 'Toast-Swift', '~> 5.0.1'
 
 end

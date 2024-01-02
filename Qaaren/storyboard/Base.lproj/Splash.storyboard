@@ -8,14 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
-        <array key="manrope-semibold.otf">
-            <string>Manrope-Semibold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -25,121 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aye-C3-Myv">
+                            <view clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="koP-gE-83J">
                                 <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="yms-x4-148">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient-rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="yms-x4-148">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="yms-x4-148" firstAttribute="top" secondItem="aye-C3-Myv" secondAttribute="top" id="0EK-aA-9Gv"/>
-                                    <constraint firstAttribute="trailing" secondItem="yms-x4-148" secondAttribute="trailing" id="NBR-IL-N0V"/>
-                                    <constraint firstItem="yms-x4-148" firstAttribute="leading" secondItem="aye-C3-Myv" secondAttribute="leading" id="eaT-UM-vB7"/>
-                                    <constraint firstAttribute="bottom" secondItem="yms-x4-148" secondAttribute="bottom" id="hYO-tY-5w2"/>
-                                    <constraint firstAttribute="width" constant="100" id="trl-9J-Bfq"/>
-                                    <constraint firstAttribute="height" constant="100" id="utC-Gs-UEj"/>
+                                    <constraint firstAttribute="height" constant="100" id="gNZ-f0-FLh"/>
+                                    <constraint firstAttribute="width" constant="100" id="q4I-xI-TVI"/>
                                 </constraints>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQ8-W2-k4y">
-                                <rect key="frame" x="0.0" y="236" width="393" height="380"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VwE-wI-Mla">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="380"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHH-XE-SqI">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-7p-eGt">
-                                                        <rect key="frame" x="20" y="20" width="389" height="260"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="270" id="qHI-kg-bgL"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSV-N3-lPo">
-                                                <rect key="frame" x="0.0" y="300" width="393" height="80"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NRC-6B-BHa">
-                                                        <rect key="frame" x="30" y="0.0" width="333" height="80"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search and Compare Prices  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyB-ve-X36">
-                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="t4o-aG-13G"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="18"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT4-ef-jd5">
-                                                                <rect key="frame" x="0.0" y="20" width="333" height="60"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qw-KP-DCt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
-                                                                        <string key="text">Find the right,  better and cheaper products 
-and save money by comparing prices for a 
-particular product.</string>
-                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="4qw-KP-DCt" firstAttribute="leading" secondItem="qT4-ef-jd5" secondAttribute="leading" id="97p-pu-ns6"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="4qw-KP-DCt" secondAttribute="bottom" id="L4r-HT-6Ba"/>
-                                                                    <constraint firstItem="4qw-KP-DCt" firstAttribute="top" secondItem="qT4-ef-jd5" secondAttribute="top" id="Mxj-mh-8Fz"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="4qw-KP-DCt" secondAttribute="trailing" id="TPw-rR-kaE"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="NRC-6B-BHa" firstAttribute="top" secondItem="WSV-N3-lPo" secondAttribute="top" id="Dp2-6y-9q9"/>
-                                                    <constraint firstItem="NRC-6B-BHa" firstAttribute="leading" secondItem="WSV-N3-lPo" secondAttribute="leading" constant="30" id="GuS-N1-cm8"/>
-                                                    <constraint firstAttribute="bottom" secondItem="NRC-6B-BHa" secondAttribute="bottom" id="Xft-sI-Hkr"/>
-                                                    <constraint firstAttribute="trailing" secondItem="NRC-6B-BHa" secondAttribute="trailing" constant="30" id="wy9-yi-Vkj"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="VwE-wI-Mla" secondAttribute="trailing" id="NZS-dF-6Di"/>
-                                    <constraint firstAttribute="bottom" secondItem="VwE-wI-Mla" secondAttribute="bottom" id="YM2-hL-3WY"/>
-                                    <constraint firstItem="VwE-wI-Mla" firstAttribute="top" secondItem="PQ8-W2-k4y" secondAttribute="top" id="ZqX-fT-WPJ"/>
-                                    <constraint firstItem="VwE-wI-Mla" firstAttribute="leading" secondItem="PQ8-W2-k4y" secondAttribute="leading" id="dKm-eS-bgd"/>
-                                    <constraint firstAttribute="height" constant="380" id="tIb-gF-3w9"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.gif" translatesAutoresizingMaskIntoConstraints="NO" id="iCh-oG-WBA">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iCh-oG-WBA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BbY-cR-uqt"/>
-                            <constraint firstItem="aye-C3-Myv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Cpd-4Q-b8n"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iCh-oG-WBA" secondAttribute="bottom" id="GZ0-GI-Wc2"/>
-                            <constraint firstItem="PQ8-W2-k4y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="J12-4f-8wW"/>
-                            <constraint firstItem="PQ8-W2-k4y" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="U2p-pu-yb6"/>
-                            <constraint firstItem="iCh-oG-WBA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c4B-0c-F4r"/>
-                            <constraint firstItem="aye-C3-Myv" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ivt-3d-WR1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iCh-oG-WBA" secondAttribute="trailing" id="mJ1-Tq-w7U"/>
-                            <constraint firstAttribute="trailing" secondItem="PQ8-W2-k4y" secondAttribute="trailing" id="mgI-xI-37Q"/>
-                            <constraint firstItem="PQ8-W2-k4y" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wi5-Qq-ZYB"/>
+                            <constraint firstItem="koP-gE-83J" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6SQ-VJ-Y3y"/>
+                            <constraint firstItem="koP-gE-83J" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="zDj-cg-ebE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="37S-zJ-Jqh"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,8 +67,6 @@ particular product.</string>
     </scenes>
     <resources>
         <image name="gradient-rectangle" width="117" height="115"/>
-        <image name="launch.gif" width="492" height="874"/>
-        <image name="splash" width="413" height="390"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

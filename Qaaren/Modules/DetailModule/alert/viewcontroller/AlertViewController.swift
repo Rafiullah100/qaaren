@@ -33,8 +33,9 @@ class AlertViewController: UIViewController {
     }
     
     @IBAction func radioButtonAction(_ sender: Any) {
+        guard Helper.isLogin() == true else {return self.view.makeToast("You're not login")}
         if emailTextField.text == "" {
-            showAlert(message: "Please select event type!")
+            self.view.makeToast("Please select event type!")
         }
         else{
             viewModel.callAlert(eventType: emailTextField.text ?? "", productID: productID ?? 0)

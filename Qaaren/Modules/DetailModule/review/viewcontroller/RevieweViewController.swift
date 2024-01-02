@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class RevieweViewController: UIViewController {
 
     @IBOutlet weak var oneStarLabel: UILabel!
@@ -32,8 +32,6 @@ class RevieweViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.numberOfRows = 5
-//        tableView.cellHeight = 200.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
     }
@@ -41,7 +39,7 @@ class RevieweViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.reviewList.bind { [unowned self] _ in
-            self.tableView.reloadData()
+            self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
             self.updateUI()
         }
         viewModel.getReviewList(productID: productID ?? 0)
@@ -62,10 +60,14 @@ class RevieweViewController: UIViewController {
     }
     
     @IBAction func addReviewBtn(_ sender: Any) {
-        Switcher.gotoAddReviewVC(delegate: self, productID: productID ?? 0)
+        if Helper.isLogin() == true {
+            Switcher.gotoAddReviewVC(delegate: self, productID: productID ?? 0)
+        }
+        else{
+            self.view.makeToast("Login to comment")
+        }
     }
 }
-
 
 extension RevieweViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

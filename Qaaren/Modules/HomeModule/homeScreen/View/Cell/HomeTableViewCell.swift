@@ -68,6 +68,10 @@ class HomeTableViewCell: UITableViewCell {
     @IBAction func viewAllBtnAction(_ sender: Any) {
         didTappedViewAll?()
     }
+    
+    private func showMessage(){
+        guard Helper.isLogin() == true else {return self.makeToast("You're not login", position: .center)}
+    }
 }
 
 
@@ -87,6 +91,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         }
         
         cell.didTappedFavorite = {
+            self.showMessage()
             let productID = self.type == .home ? self.subCategory?.catalogue?[indexPath.row].id : self.wishlistCategory?.products?[indexPath.row].catalogues?.id
             self.indexPath = indexPath
             self.viewModel.makeFavorite(productID: productID ?? 0)

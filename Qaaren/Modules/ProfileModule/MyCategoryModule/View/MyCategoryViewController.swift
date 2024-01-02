@@ -30,7 +30,7 @@ class MyCategoryViewController: BaseViewController {
         self.animateSpinner()
         viewModel.myCategories.bind { _ in
             self.stopAnimation()
-            self.tableView.reloadData()
+            self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
         }
         viewModel.getMyCategories()
     }
