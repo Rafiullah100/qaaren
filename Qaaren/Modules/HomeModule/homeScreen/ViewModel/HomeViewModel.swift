@@ -57,7 +57,7 @@ class HomeViewModel {
     }
     
     func categoryTitle(at index: Int) -> String {
-        return self.categories.value?[index].category ?? ""
+        return Helper.isRTL() == true ? self.categories.value?[index].category_ar ?? "" : self.categories.value?[index].category ?? ""
     }
     
     func getSubCategory(atIndex index: Int) -> SubCategoryModel? {

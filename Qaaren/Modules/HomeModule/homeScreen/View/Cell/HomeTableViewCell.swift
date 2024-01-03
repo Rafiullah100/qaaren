@@ -25,7 +25,7 @@ class HomeTableViewCell: UITableViewCell {
     var subCategory: SubCategoryModel?{
         didSet{
             collectionView.reloadData()
-            headerLabel.text = subCategory?.title
+            headerLabel.text = Helper.isRTL() == true ? subCategory?.titleAr : subCategory?.title
         }
     }
     
@@ -48,6 +48,7 @@ class HomeTableViewCell: UITableViewCell {
         super.awakeFromNib()
 //        headerLabel.text = LocalizationKeys.google.rawValue.localizeString()
         viewAllButton.setTitle(LocalizationKeys.viewAll.rawValue.localizeString(), for: .normal)
+        collectionView.semanticContentAttribute = Helper.isRTL() == true ? .forceRightToLeft : .forceLeftToRight
         viewModel.success.bind { response in
             guard response?.success == true else {return}
             guard let indexPath = self.indexPath else{return}

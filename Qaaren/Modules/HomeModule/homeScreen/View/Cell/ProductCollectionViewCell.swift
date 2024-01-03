@@ -38,8 +38,8 @@ class ProductCollectionViewCell: UICollectionViewCell {
             thumbnail.sd_setImage(with: URL(string: product?.items?.first?.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = product?.title
             totalReviewLabel.text = "(\(product?.totalReviews ?? 0))"
-            watchLabel.text = "\(product?.watchCount ?? 0) Watching"
-            amountLabel.text = "\(product?.minPrice ?? "134")-\(product?.maxPrice ?? "0") \(LocalizationKeys.sar.rawValue.localizeString())"
+            watchLabel.text = "\(product?.watchCount ?? 0) \(LocalizationKeys.watching.rawValue.localizeString())"
+            amountLabel.text = "\(product?.minPrice ?? "0")-\(product?.maxPrice ?? "0") \(LocalizationKeys.sar.rawValue.localizeString())"
             for (index, starImageView) in ratingStar.enumerated() {
                 guard let rating = Double(product?.totalRating ?? "0") else { return }
                 let imageName = index < Int(round(rating)) ? "star" : "star-unfill"

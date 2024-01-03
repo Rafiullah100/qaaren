@@ -25,7 +25,7 @@ class CategoriesTableViewCell: UITableViewCell {
     
     var category: AllCategory? {
         didSet{
-            titleLabel.text = category?.category
+            titleLabel.text = Helper.isRTL() == true ? category?.categoryAr : category?.category
             radioButtonView.layer.borderWidth = category?.checked == true ? 5 : 1
             radioButtonView.layer.borderColor = category?.checked == true ? CustomColor.uiColor(.blueishColor).cgColor : CustomColor.borderColor.color.cgColor
         }

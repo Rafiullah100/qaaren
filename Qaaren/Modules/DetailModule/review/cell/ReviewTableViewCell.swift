@@ -8,6 +8,7 @@
 import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
+    @IBOutlet var imageViewCollection: [UIImageView]!
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -29,10 +30,16 @@ class ReviewTableViewCell: UITableViewCell {
     var review: ReviewModelData? {
         didSet{
             nameLabel.text = review?.users?.fullName
+            textView.textAlignment = Helper.isRTL() == true ? .right : .left
             textView.text = review?.comment
             userImageView.sd_setImage(with: URL(string: Route.baseUrl + (review?.users?.profileImage ?? "")), placeholderImage: UIImage(named: "placeholder"))
             dateLabel.text = Helper.dateFormate(dateString: review?.createdAt ?? "")
+            
+            for (index, starImageView) in imageViewCollection.enumerated() {
+                guard let rating = review?.rating else { return }
+                let imageName = index < rating ? "star" : "star-unfill"
+                starImageView.image = UIImage(named: imageName)
+            }
         }
     }
-    
 }

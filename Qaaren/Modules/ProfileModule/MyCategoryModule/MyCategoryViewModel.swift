@@ -29,6 +29,7 @@ class MyCategoryViewModel {
     }
     
     func getMyCategory(at index: Int) -> String? {
-        return myCategories.value?[index].category ?? nil
+        return Helper.isRTL() == true ? myCategories.value?[index].categoryAr ?? nil :
+        myCategories.value?[index].category ?? nil
     }
 }

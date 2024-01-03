@@ -95,7 +95,6 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             self.navigationItem.titleView = titleLabel
         }
         
-        
 //        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 50, y: 0), size: CGSize(width: 50, height: 50)))
 //        imageView.backgroundColor = .red
 ////        imageView.image = UIImage(named: "Search-blue")

@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    let arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.mySources.rawValue.localizeString(), LocalizationKeys.myCategories.rawValue.localizeString(), LocalizationKeys.wishlist.rawValue.localizeString(), "Delete Account"]
+    let arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.mySources.rawValue.localizeString(), LocalizationKeys.myCategories.rawValue.localizeString(), LocalizationKeys.wishlist.rawValue.localizeString(), LocalizationKeys.delete.rawValue.localizeString()]
     
     var viewModel = ProfileViewModel()
     
@@ -101,8 +101,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         }
         else {
 //            showAlert(message: "Are you sure you want to delete your account?")
-            Helper.showAlertWithButtons(message: "Are you sure you want to delete your account?", buttonTitles: ["cancel", "Yes"]) { response in
-                if response == "Yes"{
+            Helper.showAlertWithButtons(message: LocalizationKeys.deleteAccountMessage.rawValue.localizeString(), buttonTitles: [LocalizationKeys.cancel.rawValue.localizeString(), LocalizationKeys.yes.rawValue.localizeString()]) { response in
+                if response == LocalizationKeys.yes.rawValue.localizeString(){
                     self.viewModel.delete()
                 }
             }

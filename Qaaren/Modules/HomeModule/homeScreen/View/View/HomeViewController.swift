@@ -78,6 +78,8 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        searchTextField.placeholder = LocalizationKeys.search.rawValue.localizeString()
+        searchTextField.textAlignment = Helper.isRTL() == true ? .right : .left
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

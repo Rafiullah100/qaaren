@@ -54,7 +54,7 @@ class RevieweViewController: UIViewController {
         ratingLabel.text = LocalizationKeys.rating.rawValue.localizeString()
         ratingandReviewLabel.text = LocalizationKeys.ratingsAndReviews.rawValue.localizeString()
         addReviewButton.setTitle("+ \(LocalizationKeys.addReview.rawValue.localizeString())", for: .normal)
-        ratingLabel.text = "\(totalReview ?? 0) Ratings"
+        ratingLabel.text = "\(totalReview ?? 0) \(LocalizationKeys.rating.rawValue.localizeString())"
         guard let rat = Float(stars ?? "0.0") else { return  }
         ratingStarLabel.text = String(format: "%.1f", rat)
     }

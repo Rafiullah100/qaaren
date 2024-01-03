@@ -26,11 +26,15 @@ class InformationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
+        nameTextField.textAlignment = Helper.isRTL() == true ? .right : .left
+        emailTextField.textAlignment = Helper.isRTL() == true ? .right : .left
+        mobileTextField.textAlignment = Helper.isRTL() == true ? .right : .left
         viewControllerTitle = LocalizationKeys.personalInformation.rawValue.localizeString()
         editButtons.forEach { button in
             button.setTitle(LocalizationKeys.edit.rawValue.localizeString(), for: .normal)
         }
         saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
+        updateButton.setTitle(LocalizationKeys.updatePassword.rawValue.localizeString(), for: .normal)
         updateUI()
         self.animateSpinner()
         viewModel.myProfile.bind { _ in

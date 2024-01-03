@@ -74,3 +74,11 @@
 "applyFilter" = "تطبيق الفلتر";
 "addaReview" = "إضافة إلى استعراض";
 "submitReview" = "إرسال المراجعة";
+
+"watching" = "مشاهدة";
+"logout" = "تسجيل خروج";
+"delete" = "حذف الحساب";
+"deleteAccountMessage" = "هل انت متأكد انك تريد حذف حسابك؟";
+"cancel" = "يلغي";
+"yes" = "نعم";
+"updatePassword" = "تطوير كلمة السر؟";

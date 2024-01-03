@@ -32,7 +32,8 @@ class FilterViewController: UIViewController {
         sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
         priceRangeLabel.text = LocalizationKeys.selectPriceRange.rawValue.localizeString()
         filterButtton.setTitle(LocalizationKeys.applyFilter.rawValue.localizeString(), for: .normal)
-        
+        textField.textAlignment = Helper.isRTL() == true ? .right : .left
+        textField.placeholder = LocalizationKeys.allSources.rawValue.localizeString()
         viewModel.sourcesList.bind { [unowned self] _ in
             self.pickerView.reloadInputViews()
         }

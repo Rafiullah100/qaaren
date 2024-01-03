@@ -12,6 +12,7 @@ enum ImageSource {
 }
 class HeaderView: UIView {
 
+    @IBOutlet weak var logoutLabel: UILabel!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var logoutButtonView: UIView!
     @IBOutlet weak var cameraView: UIView!
@@ -38,6 +39,7 @@ class HeaderView: UIView {
         let headerView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)![0] as! UIView
         headerView.frame = self.bounds
         headerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        logoutLabel.text = LocalizationKeys.logout.rawValue.localizeString()
         addSubview(headerView)
     }
 

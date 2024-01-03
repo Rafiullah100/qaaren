@@ -82,5 +82,11 @@ enum LocalizationKeys: String {
     case applyFilter = "applyFilter";
     case addaReview = "addaReview";
     case submitReview = "submitReview";
-
+    case watching = "watching"
+    case logout = "logout"
+    case delete = "delete"
+    case deleteAccountMessage = "deleteAccountMessage"
+    case cancel = "cancel"
+    case yes = "yes"
+    case updatePassword = "updatePassword"
 }

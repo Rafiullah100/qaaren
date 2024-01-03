@@ -25,6 +25,7 @@
                 <outlet property="imageView" destination="MDp-nu-hD1" id="JQ7-4D-dfC"/>
                 <outlet property="infoView" destination="h8f-xj-p1g" id="5vH-9o-8X2"/>
                 <outlet property="logoutButtonView" destination="PNx-1w-x8V" id="3na-iz-OYK"/>
+                <outlet property="logoutLabel" destination="hZB-q2-5Ta" id="MfS-47-1IU"/>
                 <outlet property="nameLabell" destination="Au3-ah-DHL" id="4ti-nf-qiO"/>
                 <outlet property="nameView" destination="YaX-cC-JB6" id="Xw6-MA-rAN"/>
                 <outlet property="usernameLabel" destination="Cjx-ec-Cer" id="rle-B4-fZR"/>

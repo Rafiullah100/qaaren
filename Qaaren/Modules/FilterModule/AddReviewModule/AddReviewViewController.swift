@@ -30,6 +30,7 @@ class AddReviewViewController: BaseViewController {
         textView.textColor = UIColor.lightGray
         reviewLabel.text = LocalizationKeys.addReview.rawValue.localizeString()
         submitButton.setTitle(LocalizationKeys.submitReview.rawValue.localizeString(), for: .normal)
+        textView.textAlignment = Helper.isRTL() == true ? .right : .left
         
         viewModel.addedReview.bind { [unowned self] review in
             self.stopAnimation()
