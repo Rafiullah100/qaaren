@@ -45,6 +45,17 @@ class HomeViewController: BaseViewController {
             print(productID)
             Switcher.gotoDetailVC(delegate: self, productID: productID)
         }
+        viewModel.getCategories()
+        NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(loadData),
+                name: Notification.Name(Constants.notificationName),
+                object: nil
+            )
+    }
+    
+    @objc private func loadData(){
+        viewModel.getCategories()
     }
     
     private func bindCategoryResult(){

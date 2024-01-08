@@ -116,6 +116,7 @@
                                                             <constraint firstItem="TlU-Fs-DND" firstAttribute="leading" secondItem="aDw-tN-nay" secondAttribute="leading" id="ThW-xe-f4G"/>
                                                             <constraint firstItem="TlU-Fs-DND" firstAttribute="top" secondItem="aDw-tN-nay" secondAttribute="top" id="fWu-iJ-C5S"/>
                                                             <constraint firstItem="DoH-oN-xrI" firstAttribute="centerX" secondItem="aDw-tN-nay" secondAttribute="centerX" id="prZ-fP-17u"/>
+                                                            <constraint firstAttribute="height" constant="36" id="qEx-KN-EHP"/>
                                                             <constraint firstItem="DoH-oN-xrI" firstAttribute="centerY" secondItem="aDw-tN-nay" secondAttribute="centerY" id="tVr-z1-RC2"/>
                                                             <constraint firstAttribute="bottom" secondItem="TlU-Fs-DND" secondAttribute="bottom" id="uIn-2G-ABM"/>
                                                         </constraints>
@@ -134,6 +135,13 @@
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-15-kng">
                                                         <rect key="frame" x="0.0" y="85.999999999999986" width="36" height="36"/>
                                                         <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-nu-l74">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="36" id="DLX-iC-g6i"/>
+                                                                    <constraint firstAttribute="width" constant="36" id="glh-7H-nCU"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7o3-cH-Nds">
                                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                                 <constraints>
@@ -145,13 +153,6 @@
                                                                     <action selector="sliderButtonsAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rgG-nf-a4y"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-nu-l74">
-                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="36" id="DLX-iC-g6i"/>
-                                                                    <constraint firstAttribute="width" constant="36" id="glh-7H-nCU"/>
-                                                                </constraints>
-                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -159,6 +160,7 @@
                                                             <constraint firstItem="GKO-nu-l74" firstAttribute="centerY" secondItem="Gpx-15-kng" secondAttribute="centerY" id="DR2-nA-Ito"/>
                                                             <constraint firstItem="7o3-cH-Nds" firstAttribute="centerY" secondItem="Gpx-15-kng" secondAttribute="centerY" id="Fjj-ze-syd"/>
                                                             <constraint firstItem="GKO-nu-l74" firstAttribute="centerX" secondItem="Gpx-15-kng" secondAttribute="centerX" id="n9y-uQ-fjK"/>
+                                                            <constraint firstAttribute="height" constant="36" id="zdR-NN-FiF"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
@@ -197,6 +199,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="8O8-Xu-MwH"/>
                                                             <constraint firstItem="NdK-NE-Bnt" firstAttribute="centerX" secondItem="dgH-wH-f2s" secondAttribute="centerX" id="bUS-eX-TVV"/>
                                                             <constraint firstItem="e8j-25-Jhp" firstAttribute="centerY" secondItem="dgH-wH-f2s" secondAttribute="centerY" id="cgb-i1-qo7"/>
                                                             <constraint firstItem="e8j-25-Jhp" firstAttribute="centerX" secondItem="dgH-wH-f2s" secondAttribute="centerX" id="hGu-ew-70S"/>
@@ -512,11 +515,6 @@
                                                             <constraint firstItem="WrE-zc-kbK" firstAttribute="top" secondItem="uDY-To-I3v" secondAttribute="top" constant="20" id="mCh-mk-mOy"/>
                                                             <constraint firstAttribute="bottom" secondItem="WrE-zc-kbK" secondAttribute="bottom" id="pxe-51-1sj"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="topMaskedCornerRadius">
-                                                                <real key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Pq-jI8">
                                                         <rect key="frame" x="20" y="210" width="353" height="279"/>
@@ -581,14 +579,14 @@
                         <outlet property="priceRangeLabel" destination="zF9-uW-5Q1" id="fxf-aE-Ufa"/>
                         <outlet property="ratingLabel" destination="0h2-Qh-okL" id="tL3-Mh-xcM"/>
                         <outlet property="scrollView" destination="agX-jo-zB1" id="s7j-af-qn3"/>
-                        <outletCollection property="imageViews" destination="3MB-FB-ueV" collectionClass="NSMutableArray" id="e3t-jF-rzk"/>
-                        <outletCollection property="sliderImagesContainer" destination="dgH-wH-f2s" collectionClass="NSMutableArray" id="12d-qJ-Bv7"/>
-                        <outletCollection property="sliderImagesContainer" destination="Gpx-15-kng" collectionClass="NSMutableArray" id="g8D-0I-RC9"/>
-                        <outletCollection property="imageViews" destination="DoH-oN-xrI" collectionClass="NSMutableArray" id="OYd-qx-vja"/>
-                        <outletCollection property="sliderImagesContainer" destination="Iu4-rN-foN" collectionClass="NSMutableArray" id="ZRh-cF-xFi"/>
-                        <outletCollection property="imageViews" destination="NdK-NE-Bnt" collectionClass="NSMutableArray" id="TPr-hM-TOR"/>
-                        <outletCollection property="imageViews" destination="GKO-nu-l74" collectionClass="NSMutableArray" id="BtR-Ja-tWB"/>
-                        <outletCollection property="sliderImagesContainer" destination="aDw-tN-nay" collectionClass="NSMutableArray" id="FPA-yk-4hY"/>
+                        <outletCollection property="imageViews" destination="3MB-FB-ueV" collectionClass="NSMutableArray" id="gEo-A7-i4U"/>
+                        <outletCollection property="imageViews" destination="DoH-oN-xrI" collectionClass="NSMutableArray" id="POX-0A-eRa"/>
+                        <outletCollection property="imageViews" destination="GKO-nu-l74" collectionClass="NSMutableArray" id="rPn-AM-ZNi"/>
+                        <outletCollection property="imageViews" destination="NdK-NE-Bnt" collectionClass="NSMutableArray" id="iVF-b1-R0e"/>
+                        <outletCollection property="sliderImagesContainer" destination="Iu4-rN-foN" collectionClass="NSMutableArray" id="IHe-6h-rzu"/>
+                        <outletCollection property="sliderImagesContainer" destination="aDw-tN-nay" collectionClass="NSMutableArray" id="ZOS-Si-58b"/>
+                        <outletCollection property="sliderImagesContainer" destination="Gpx-15-kng" collectionClass="NSMutableArray" id="zte-xu-z5w"/>
+                        <outletCollection property="sliderImagesContainer" destination="dgH-wH-f2s" collectionClass="NSMutableArray" id="pa0-ZB-sbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

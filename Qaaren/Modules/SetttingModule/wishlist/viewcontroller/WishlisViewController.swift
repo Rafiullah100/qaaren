@@ -51,7 +51,6 @@ extension WishlisViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cat = viewModel.getSingleCategory(at: indexPath.row) else { return cell }
         cell.wishlistCategory = cat
         cell.didTappedProduct = { productID in
-            print(productID)
             Switcher.gotoDetailVC(delegate: self, productID: productID)
         }
         return cell

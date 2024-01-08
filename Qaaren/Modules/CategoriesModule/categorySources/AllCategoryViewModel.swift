@@ -60,6 +60,7 @@ class AllCategoryViewModel {
             switch result {
             case .success(let success):
                 self.success.value = success
+                self.postNotification()
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -71,6 +72,7 @@ class AllCategoryViewModel {
             switch result {
             case .success(let success):
                 self.success.value = success
+                self.postNotification()
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -105,5 +107,13 @@ class AllCategoryViewModel {
 
     func getSourceID(for index: Int) -> Int? {
         return sources.value?[index].id ?? 0
+    }
+    
+    func postNotification() {
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.post(
+            name: Notification.Name(Constants.notificationName),
+            object: nil
+        )
     }
 }

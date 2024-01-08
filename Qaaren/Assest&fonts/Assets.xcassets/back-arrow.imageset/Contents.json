@@ -3,6 +3,16 @@
     {
       "filename" : "back_arrow.svg",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Vector (1) (1).svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

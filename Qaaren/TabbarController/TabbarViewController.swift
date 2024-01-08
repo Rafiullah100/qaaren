@@ -12,7 +12,7 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        tabBarController?.tabBar.items?[2].title = ""
+        tabBarController?.tabBar.items?[Constants.selectedTabbarIndex].title = ""
 //        
 //        if let tabBar = self.tabBarController?.tabBar {
 //            let normalTextAttributes: [NSAttributedString.Key: Any] = [
@@ -30,8 +30,7 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
 //            }
 //            
 //        }
-        updateTabBarItemsTitles(selectedIndex: 2)
-
+        updateTabBarItemsTitles(selectedIndex: Constants.selectedTabbarIndex)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,29 +39,34 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let selectedIndex = tabBarController.viewControllers?.firstIndex(of: viewController) {
+            print(selectedIndex)
             updateTabBarItemsTitles(selectedIndex: selectedIndex)
         }
     }
     
     func updateTabBarItemsTitles(selectedIndex: Int) {
-        for (index, viewController) in viewControllers?.enumerated() ?? [].enumerated() {
-            if index == selectedIndex {
-                viewController.tabBarItem.title = ""
-            } else if index == 0 {
-                viewController.tabBarItem.title = LocalizationKeys.profile.rawValue.localizeString()
-            }
-            else if index == 1 {
-                viewController.tabBarItem.title = LocalizationKeys.category.rawValue.localizeString()
-            }
-            else if index == 2 {
-                viewController.tabBarItem.title = LocalizationKeys.home.rawValue.localizeString()
-            }
-            else if index == 3 {
-                viewController.tabBarItem.title = LocalizationKeys.settings.rawValue.localizeString()
-            }
-            else if index == 4 {
-                viewController.tabBarItem.title = LocalizationKeys.notifications.rawValue.localizeString()
+            guard let viewControllers = viewControllers else { return }
+            for (index, viewController) in viewControllers.enumerated() {
+                if let tabBarItem = viewController.tabBarItem {
+                    if index == selectedIndex {
+                        tabBarItem.title = ""
+                    } else {
+                        switch index {
+                        case 0:
+                            tabBarItem.title = LocalizationKeys.profile.rawValue.localizeString()
+                        case 1:
+                            tabBarItem.title = LocalizationKeys.category.rawValue.localizeString()
+                        case 2:
+                            tabBarItem.title = LocalizationKeys.home.rawValue.localizeString()
+                        case 3:
+                            tabBarItem.title = LocalizationKeys.settings.rawValue.localizeString()
+                        case 4:
+                            tabBarItem.title = LocalizationKeys.notifications.rawValue.localizeString()
+                        default:
+                            break
+                        }
+                    }
+                }
             }
         }
-    }
 }

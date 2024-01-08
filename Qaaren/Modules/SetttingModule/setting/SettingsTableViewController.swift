@@ -37,6 +37,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.title = ""
         switchView.isOn = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? true : false
         UIWindow.key?.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
     }

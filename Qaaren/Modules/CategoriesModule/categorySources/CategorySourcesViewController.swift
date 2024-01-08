@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategorySourcesViewController: UIViewController {
+class CategorySourcesViewController: BaseViewController {
 
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var buttonsView: ButtonsView!
@@ -22,6 +22,7 @@ class CategorySourcesViewController: UIViewController {
         buttonsView.delegate = self
         add(categoryVC, in: containerView)
     }
+
 }
 
 extension CategorySourcesViewController: ButtonViewDelegate{

@@ -141,13 +141,13 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
-    func solidNavigationBar() {
+    func solidNavigationBar(color: UIColor = .clear) {
         navigationController?.navigationBar.isTranslucent = true
        if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
-           appearance.backgroundColor = type == .backWithTitle ? CustomColor.navigationColor.color : .clear
-           appearance.backgroundColor = type == .detail ? UIColor.white : .clear
+//           appearance.backgroundColor = type == .backWithTitle ? CustomColor.navigationColor.color : .clear
+           appearance.backgroundColor = .systemBackground
 
             navigationController?.navigationBar.standardAppearance = appearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
@@ -186,7 +186,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         addDetailButtons()
     }
     
-    func addDetailButtons() {
+    func addDetailButtons(isWhite: Bool = true) {
         let leftButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backButtonAction))
         leftButton.image = UIImage(named: "back-arrow")
         self.navigationController?.navigationItem.hidesBackButton = true

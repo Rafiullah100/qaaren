@@ -17,10 +17,6 @@ class HomeViewModel {
     var subCategories: Observable<[SubCategoryModel]> = Observable(nil)
     var search: Observable<[SearchCatalogue]> = Observable(nil)
 
-    init() {
-        self.getCategories()
-    }
-
     func getCategories(){
         URLSession.shared.request(route: .categoryList, method: .get, parameters: [:], model: [CategoryModel].self) { result in
             switch result {

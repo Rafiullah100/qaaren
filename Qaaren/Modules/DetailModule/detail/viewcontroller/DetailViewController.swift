@@ -89,7 +89,7 @@ class DetailViewController: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bottomView.roundCorners(corners: [.topLeft, .bottomRight], radius: 30.0)
+        bottomView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
         scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: self.view.safeAreaLayoutGuide.layoutFrame.height)
     }
         
@@ -108,7 +108,6 @@ class DetailViewController: BaseViewController {
         guard let rat = Float(viewModel.getTotalStars()) else { return  }
         ratingLabel.text = String(format: "%.1f", rat)
     }
-
     
     @IBAction func sliderButtonsAction(_ sender: UIButton) {
         let index = sender.tag
@@ -164,6 +163,7 @@ class DetailViewController: BaseViewController {
     }
     
     func sliderImages(index: Int) {
+        print(index)
         headerImageView.image = imageViews[index].image
         for (i, view) in sliderImagesContainer.enumerated(){
             view.layer.borderColor = i == index ? UIColor.green.cgColor : UIColor.clear.cgColor
@@ -240,6 +240,16 @@ extension DetailViewController : UIScrollViewDelegate {
         if y + scrollViewHeight >= scrollView.contentSize.height {
             isScrollViewAtBottom = true
             enableScrolling()
+        }
+        
+        guard let navigationBarHeight = navigationController?.navigationBar.frame.height else { return }
+        if newHeaderViewHeight < navigationBarHeight{
+            solidNavigationBar(color: .white)
+            addDetailButtons(isWhite: false)
+        }
+        else{
+            solidNavigationBar(color: .clear)
+            addDetailButtons(isWhite: true)
         }
     }
     

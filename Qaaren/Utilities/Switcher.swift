@@ -26,7 +26,7 @@ class Switcher {
     
     static func gotoHomeVC(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TabbarViewController") as! TabbarViewController
-        vc.selectedIndex = 2
+        vc.selectedIndex = Constants.selectedTabbarIndex
         UIWindow.key.rootViewController = vc
         UIWindow.key.makeKeyAndVisible()
     }
