@@ -33,9 +33,12 @@ class Switcher {
     
     static func gotoFilterVC(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
-        vc.modalPresentationStyle = .overFullScreen
+//        vc.modalPresentationStyle = .overFullScreen
+        vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
-        delegate.present(vc, animated: true, completion: nil)
+        delegate.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+
+//        delegate.present(vc, animated: true, completion: nil)
     }
     
     static func gotoAddReviewVC(delegate: UIViewController, productID: Int){
@@ -122,6 +125,17 @@ class Switcher {
         print(productID)
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ViewAllViewController") as! ViewAllViewController
         vc.productID = productID
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        vc.tabBarController?.tabBar.isHidden = false
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoFilterListScreen(delegate: UIViewController, sourceId: Int, maxPrice: Int, minPrice: Int){
+        let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterListViewController") as! FilterListViewController
+        vc.sourceId = sourceId
+        vc.minPrice = minPrice
+        vc.maxPrice = maxPrice
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
         vc.tabBarController?.tabBar.isHidden = false

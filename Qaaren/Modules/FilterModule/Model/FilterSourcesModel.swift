@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct FilterModel: Codable {
+struct FilterSourcesModel: Codable {
     let status: Int?
-    let sources: [FilterSource]?
+    let sources: [FilterSourceData]?
 }
 
 // MARK: - Source
-struct FilterSource: Codable {
+struct FilterSourceData: Codable {
     let id: Int?
     let source: String?
     let slug: String?

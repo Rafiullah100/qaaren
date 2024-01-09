@@ -35,6 +35,8 @@ enum Route {
     case search(String)
     case deleteAccount
     case appleLogin
+    case filter(Int, Int, Int)
+    
     var description: String {
         switch self {
         case .signup:
@@ -89,6 +91,8 @@ enum Route {
             return "mobile/users/delete-account"
         case .appleLogin:
             return "mobile/auth/apple-login"
+        case .filter(let max, let min, let sourceId):
+            return "mobile/home/filter?maxPrice=\(String(max))&source_id=\(String(sourceId))&minPirce=\(String(min))"
         } 
     }
 }

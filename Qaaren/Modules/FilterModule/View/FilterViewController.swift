@@ -21,6 +21,10 @@ class FilterViewController: UIViewController {
     let pickerView = UIPickerView()
     var viewModel = FilterViewModel()
     
+    var maxPrice: Int!
+    var minPrice: Int!
+    var sourceId: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,8 @@ class FilterViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         minimumLabel.attributedText = Helper.attributedText(text1: "50 ", text2: LocalizationKeys.sar.rawValue.localizeString())
+        minPrice = 50
+        maxPrice = 5000
         maximumLabel.attributedText = Helper.attributedText(text1: "5000 ", text2: LocalizationKeys.sar.rawValue.localizeString())
         sourcesLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
         priceRangeLabel.text = LocalizationKeys.selectPriceRange.rawValue.localizeString()
@@ -41,6 +47,11 @@ class FilterViewController: UIViewController {
         rangeSlider.addTarget(self, action: #selector(FilterViewController.rangeSliderValueChanged(_:)), for: .valueChanged)
     }
     
+    @IBAction func applyFilterBtn(_ sender: Any) {
+        guard let sourceId = sourceId else { return }
+        Switcher.gotoFilterListScreen(delegate: self, sourceId: sourceId, maxPrice: maxPrice, minPrice: minPrice)
+    }
+    
     @IBAction func cancelButtonAction(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
@@ -48,6 +59,8 @@ class FilterViewController: UIViewController {
     @objc func rangeSliderValueChanged(_ rangeSlider: RangeSlider) {
         let lowerValue = Int(rangeSlider.lowerValue)
         let upperValue = Int(rangeSlider.upperValue)
+        minPrice = lowerValue
+        maxPrice = upperValue
         minimumLabel.attributedText = Helper.attributedText(text1: "\(lowerValue) ", text2: LocalizationKeys.sar.rawValue.localizeString())
         maximumLabel.attributedText = Helper.attributedText(text1: "\(upperValue) ", text2: LocalizationKeys.sar.rawValue.localizeString())
     }
@@ -67,6 +80,7 @@ extension FilterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        sourceId = viewModel.getSourceId(for: row)
         textField.text = viewModel.getTitle(at: row)
     }
 }
