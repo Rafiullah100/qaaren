@@ -282,6 +282,44 @@ extension UITableView{
     }
 }
 
+extension UICollectionView{
+    func setEmptyView(_ message: String? = nil) {
+        let image = UIImage(named: "")
+        let emptyImageView = UIImageView(image: image)
+        emptyImageView.contentMode = .scaleAspectFit
+        if let _ = image {
+            emptyImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        } else {
+            emptyImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        }
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        
+        titleLabel.textColor = .label
+        titleLabel.font = UIFont(name: "Poppins-regular", size: 16)
+        messageLabel.textColor = .label
+        messageLabel.font = UIFont(name: "Poppins-regular", size: 14)
+        titleLabel.text = message ?? "No Data Found!"
+        messageLabel.text = ""
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        
+        let containerStack = UIStackView(arrangedSubviews: [emptyImageView, titleLabel, messageLabel])
+        containerStack.alignment = .center
+        containerStack.axis = .vertical
+        containerStack.distribution = .fill
+        containerStack.spacing = 10
+        
+        let containerView = UIView()
+        containerView.addSubview(containerStack)
+        containerStack.translatesAutoresizingMaskIntoConstraints = false
+        containerStack.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.7, constant: 0).isActive = true
+        containerStack.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: -20).isActive = true
+        containerStack.centerXAnchor.constraint(equalTo: containerView.centerXAnchor, constant: 0).isActive = true
+        self.backgroundView = containerView
+    }
+}
+
 extension Array {
     func at(_ index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil

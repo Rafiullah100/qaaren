@@ -36,7 +36,8 @@ class FilterViewModel {
     }
     
     func getFilteredData(from max: Int, to min: Int, for sourceId: Int) {
-        URLSession.shared.request(route: .filter(max, min, sourceId), method: .get, parameters: [:], model: [FilterModel].self) { result in
+        
+        URLSession.shared.request(route: .filter, method: .get, parameters: ["maxPrice": max, "source_id": sourceId, "minPirce": min], model: [FilterModel].self) { result in
             switch result {
             case .success(let filter):
                 self.filteredData.value = filter.first?.catalogue

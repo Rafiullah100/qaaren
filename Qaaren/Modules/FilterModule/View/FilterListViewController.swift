@@ -26,9 +26,11 @@ class FilterListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
+        viewControllerTitle = "Filter"
         self.animateSpinner()
         viewModel.filteredData.bind { [unowned self] _ in
             self.stopAnimation()
+            viewModel.getFilterCount() == 0 ? self.collectionView.setEmptyView() : self.collectionView.setEmptyView("")
             self.collectionView.reloadData()
         }
         viewModel.getFilteredData(from: maxPrice, to: minPrice, for: sourceId)
@@ -44,12 +46,6 @@ extension FilterListViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! FilterCollectionViewCell
         cell.product = viewModel.getFilterProduct(for: indexPath.row)
-//        cell.didTappedFavorite = {
-//            self.showMessage()
-//            let productID = self.type == .home ? self.subCategory?.catalogue?[indexPath.row].id : self.wishlistCategory?.products?[indexPath.row].catalogues?.id
-//            self.indexPath = indexPath
-//            self.viewModel.makeFavorite(productID: productID ?? 0)
-//        }
         return cell
     }
     
