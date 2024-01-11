@@ -8,7 +8,7 @@
 import Foundation
 import AuthenticationServices
 
-struct appleUser: Codable {
+struct AppleUserData: Codable {
     let userID: String
     let firstName: String
     let lastName: String
@@ -16,8 +16,8 @@ struct appleUser: Codable {
     
     init?(credentials: ASAuthorizationAppleIDCredential) {
         guard let firstName = credentials.fullName?.givenName,
-        let lastName = credentials.fullName?.familyName,
-        let email = credentials.email
+              let lastName = credentials.fullName?.familyName,
+              let email = credentials.email
         else { return nil }
         self.userID = credentials.user
         self.firstName = firstName
@@ -86,13 +86,14 @@ class LoginViewModel {
     }
     
     func appleLogin(email: String, name: String) {
+        print(email, name)
         URLSession.shared.request(route: .appleLogin, method: .post, parameters: ["username": email, "full_name": name], model: AppleLoginModel.self) { result in
             switch result {
             case .success(let appleLogin):
                 self.isUserExist.value = appleLogin.success
                 if appleLogin.success == true{
                     self.appleLogin = appleLogin
-                    self.saveUserPreference()
+                    self.saveAppleUserPreference()
                 }
                 else{
                     self.errorMessage.value = appleLogin.message

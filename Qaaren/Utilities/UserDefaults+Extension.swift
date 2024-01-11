@@ -29,6 +29,8 @@ extension UserDefaults{
         case token
         case isLogin
         case isRTL
+        case appleUserData
+        case appleUserID
     }
     
     var selectedLanguage: String?  {
@@ -118,6 +120,24 @@ extension UserDefaults{
         }
         set{
             set(newValue, forKey: userdefaultsKey.isRTL.rawValue)
+        }
+    }
+    
+    var appleUserID: String?{
+        get {
+            value(forKey: userdefaultsKey.appleUserID.rawValue) as? String
+        }
+        set{
+            set(newValue, forKey: userdefaultsKey.appleUserID.rawValue)
+        }
+    }
+    
+    var appleUserData: Data?{
+        get {
+            data(forKey: userdefaultsKey.appleUserData.rawValue)
+        }
+        set{
+            set(newValue, forKey: userdefaultsKey.appleUserData.rawValue)
         }
     }
 }

@@ -104,7 +104,7 @@ class LoginViewController: BaseViewController {
                let name = result.user.profile?.name
                /*,let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString*/ {
                 self?.animateSpinner()
-                   self?.viewModel.googleSignin(email: email, name: name)
+                self?.viewModel.googleSignin(email: email, name: name)
             }
         }
     }
@@ -138,26 +138,50 @@ extension  LoginViewController: ASAuthorizationControllerDelegate{
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let credential as ASAuthorizationAppleIDCredential:
-//            let email = credential.email
-//            let name = credential.fullName?.givenName
-//            guard (email != nil) else {
-//                self.showAlert(message: "Set apple account first!")
-//                return
-//            }
-            if let appleUser = appleUser(credentials: credential) {
+            if let appleUser = AppleUserData(credentials: credential),
+               let data = try? JSONEncoder().encode(appleUser) {
                 do {
-                    let appleUserData = try JSONEncoder().encode(appleUser)
-                    UserDefaults.standard.set(appleUserData, forKey: credential.user)
-                } catch {
-                    print("Error encoding AppleUser: \(error)")
+                    UserDefaults.standard.appleUserData = data
+                    let email = credential.email ?? ""
+                    let name = (credential.fullName?.givenName ?? "") + (credential.fullName?.familyName ?? "")
+                    self.viewModel.appleLogin(email: email, name: name)
                 }
+            } else {
+                print(credential.user)
+                guard let data = UserDefaults.standard.appleUserData,
+                      let appleUser = try? JSONDecoder().decode(AppleUserData.self, from: data)
+                else { return }
+                self.animateSpinner()
+                self.viewModel.appleLogin(email: appleUser.email, name: "\(appleUser.firstName) \(appleUser.lastName)")
             }
-            self.animateSpinner()
-//            viewModel.appleLogin(email: email ?? "", name: name ?? "")
         default:
             print("...")
         }
     }
+
+    
+//    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+//        switch authorization.credential {
+//        case let credential as ASAuthorizationAppleIDCredential:
+//            if let appleUser = appleUser(credentials: credential),
+//               let appleUserData = try? JSONEncoder().encode(appleUser){
+//                do {
+//                    UserDefaults.standard.set(appleUserData, forKey: credential.user)
+//                    self.viewModel.appleLogin(email: credential.email ?? "", name: (credential.fullName?.givenName ?? "") + (credential.fullName?.familyName ?? ""))
+//                }
+//            }
+//            else{
+//                print(UserDefaults.standard.data(forKey: credential.user))
+//                guard let appleUserData = UserDefaults.standard.data(forKey: credential.user),
+//                      let appleUser = try? JSONDecoder().decode(appleUser.self, from: appleUserData)
+//                 else { return }
+//                self.animateSpinner()
+//                self.viewModel.appleLogin(email: appleUser.email, name: appleUser.firstName + appleUser.lastName)
+//            }
+//        default:
+//            print("...")
+//        }
+//    }
 }
 
 extension  LoginViewController: ASAuthorizationControllerPresentationContextProviding{

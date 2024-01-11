@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class AddReviewViewController: BaseViewController {
 
     @IBOutlet var ratingImageView: [UIImageView]!
@@ -34,7 +34,8 @@ class AddReviewViewController: BaseViewController {
         
         viewModel.addedReview.bind { [unowned self] review in
             self.stopAnimation()
-            showAlert(message: review?.message ?? "")
+//            showAlert(message: review?.message ?? "")
+            view.makeToast(review?.message ?? "")
             if review?.success == true{
                 DispatchQueue.main.async {
                     self.dismiss(animated: true) {

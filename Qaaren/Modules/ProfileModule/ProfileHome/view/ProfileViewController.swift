@@ -110,7 +110,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func logoutUser() {
-        UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue])
+        UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue, UserDefaults.userdefaultsKey.appleUserData.rawValue])
         Switcher.logout(delegate: self)
     }
 }
