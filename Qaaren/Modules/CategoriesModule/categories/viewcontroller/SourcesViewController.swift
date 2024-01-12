@@ -31,9 +31,12 @@ class SourcesViewController: BaseViewController {
         label.text = LocalizationKeys.allSources.rawValue.localizeString()
         self.animateSpinner()
         viewModel.getAllSources()
-        viewModel.sources.bind { _ in
-            self.stopAnimation()
-            self.viewModel.getSourcesCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+        viewModel.sources.bind { [unowned self] allsources in
+            guard let _ = allsources else {return}
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.viewModel.getSourcesCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+            }
         }
         
         viewModel.success.bind { success in
@@ -55,7 +58,7 @@ class SourcesViewController: BaseViewController {
 
 extension SourcesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getSourcesCount()
+        return viewModel.getSourcesCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

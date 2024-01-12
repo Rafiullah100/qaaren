@@ -23,8 +23,8 @@ class MyWishlistViewModel {
         }
     }
     
-    func getCount() -> Int {
-        return self.myWishlist.value?.count ?? 0
+    func getCount() -> Int? {
+        return self.myWishlist.value?.count
     }
     
     func getSingleCategory(at index: Int) -> Wishlist? {

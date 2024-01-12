@@ -28,9 +28,12 @@ class MyCategoryViewController: BaseViewController {
         browseLabel.text = LocalizationKeys.selectedSources.rawValue.localizeString()
 
         self.animateSpinner()
-        viewModel.myCategories.bind { _ in
-            self.stopAnimation()
-            self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+        viewModel.myCategories.bind { [unowned self] categories in
+            guard let _ = categories else{return}
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+            }
         }
         viewModel.getMyCategories()
     }
@@ -44,7 +47,7 @@ class MyCategoryViewController: BaseViewController {
 
 extension MyCategoryViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCount()
+        return viewModel.getCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -26,27 +26,41 @@ class CategoriesViewController: BaseViewController {
     
     var viewModel = AllCategoryViewModel()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindView()
         label.text = LocalizationKeys.allCategories.rawValue.localizeString()
+        
         self.animateSpinner()
-        viewModel.getAllCategories()
-    }
-    
-    private func bindView(){
-        viewModel.categories.bind { allCategories in
-            self.stopAnimation()
-            self.tableView.reloadData()
+        viewModel.categories.bind { [unowned self] allCategories in
+            guard let _ = allCategories else{return}
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+            }
         }
         
         viewModel.success.bind { success in
-            guard success?.status == 1 else{return}
+            guard success?.status == 1 else{ return }
             self.viewModel.ChangeCategoyStatus(for: self.selectedIndex?.row ?? 0)
             self.tableView.reloadRows(at: [self.selectedIndex ?? IndexPath()], with: .automatic)
         }
+        viewModel.getAllCategories()
     }
+    
+//
+//    private func bindView(){
+//        self.animateSpinner()
+//        viewModel.categories.bind { allCategories in
+//            self.stopAnimation()
+//            self.tableView.reloadData()
+//        }
+//
+//        viewModel.success.bind { success in
+//            guard success?.status == 1 else{return}
+//            self.viewModel.ChangeCategoyStatus(for: self.selectedIndex?.row ?? 0)
+//            self.tableView.reloadRows(at: [self.selectedIndex ?? IndexPath()], with: .automatic)
+//        }
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -60,7 +74,7 @@ class CategoriesViewController: BaseViewController {
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCount()
+        return viewModel.getCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

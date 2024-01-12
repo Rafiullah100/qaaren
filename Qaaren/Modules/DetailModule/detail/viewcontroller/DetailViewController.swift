@@ -74,9 +74,12 @@ class DetailViewController: BaseViewController {
     }
     
     private func bindProductDetail(){
-        viewModel.productDetail.bind { [unowned self] _ in
-            self.stopAnimation()
-            updateUI()
+        viewModel.productDetail.bind { [unowned self] details in
+            guard let _ = details else{return}
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.updateUI()
+            }
         }
     }
     

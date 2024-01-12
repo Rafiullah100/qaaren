@@ -24,8 +24,8 @@ class MySourcesViewModel {
         }
     }
     
-    func getCount() -> Int {
-        return mySources.value?.count ?? 0
+    func getCount() -> Int? {
+        return mySources.value?.count
     }
     
     func getMySource(at index: Int) -> String? {

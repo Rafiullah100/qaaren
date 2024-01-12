@@ -29,9 +29,12 @@ class MySourcesViewController: BaseViewController {
         
         viewModel.getMyCategories()
         self.animateSpinner()
-        viewModel.mySources.bind { _ in
-            self.stopAnimation()
-            self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+        viewModel.mySources.bind { [unowned self] sources in
+            guard let _ = sources else{return}
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
+            }
         }
     }
     
@@ -43,7 +46,7 @@ class MySourcesViewController: BaseViewController {
 
 extension MySourcesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCount()
+        return viewModel.getCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

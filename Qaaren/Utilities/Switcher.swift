@@ -33,10 +33,10 @@ class Switcher {
     
     static func gotoFilterVC(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.popUp.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
-//        vc.modalPresentationStyle = .overFullScreen
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overFullScreen
+//        vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
-        delegate.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        delegate.present(vc, animated: true, completion: nil)
 
 //        delegate.present(vc, animated: true, completion: nil)
     }
@@ -136,10 +136,11 @@ class Switcher {
         vc.sourceId = sourceId
         vc.minPrice = minPrice
         vc.maxPrice = maxPrice
-        vc.modalPresentationStyle = .fullScreen
-        vc.hidesBottomBarWhenPushed = false
         vc.tabBarController?.tabBar.isHidden = false
-        delegate.navigationController?.pushViewController(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        nav.hidesBottomBarWhenPushed = false
+        delegate.present(nav, animated: true, completion: nil)
     }
 }
     

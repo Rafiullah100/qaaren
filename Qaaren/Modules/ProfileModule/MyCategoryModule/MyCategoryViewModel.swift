@@ -24,8 +24,8 @@ class MyCategoryViewModel {
         }
     }
     
-    func getCount() -> Int {
-        return myCategories.value?.count ?? 0
+    func getCount() -> Int? {
+        return myCategories.value?.count
     }
     
     func getMyCategory(at index: Int) -> String? {

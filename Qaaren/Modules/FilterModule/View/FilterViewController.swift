@@ -25,7 +25,6 @@ class FilterViewController: UIViewController {
     var minPrice: Int!
     var sourceId: Int?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.inputView = pickerView

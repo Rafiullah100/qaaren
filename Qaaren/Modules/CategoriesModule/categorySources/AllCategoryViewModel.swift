@@ -27,8 +27,8 @@ class AllCategoryViewModel {
         }
     }
     
-    func getCount() -> Int {
-        return categories.value?.count ?? 0
+    func getCount() -> Int? {
+        return categories.value?.count
     }
     
     func getCategory(for index: Int) -> AllCategory? {
@@ -47,8 +47,8 @@ class AllCategoryViewModel {
         }
     }
     
-    func getSourcesCount() -> Int {
-        return sources.value?.count ?? 0
+    func getSourcesCount() -> Int? {
+        return sources.value?.count
     }
     
     func getSources(for index: Int) -> sources? {

@@ -72,10 +72,13 @@ class HomeViewController: BaseViewController {
     }
     
     private func bindSubCategoryResult(){
-        viewModel.subCategories.bind({ [unowned self] _ in
-            self.stopAnimation()
-            viewModel.getSubCategoriesCount() == 0 ? self.tableView.setEmptyView() : self.tableView.setEmptyView("")
-            self.tableView.reloadData()
+        viewModel.subCategories.bind({ [unowned self] subCat in
+            guard let _ = subCat else { return }
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.viewModel.getSubCategoriesCount() == 0 ? self.tableView.setEmptyView() : self.tableView.setEmptyView("")
+                self.tableView.reloadData()
+            }
         })
     }
     
@@ -104,7 +107,7 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.getCategoriesCount()
+        return viewModel.getCategoriesCount() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -139,7 +142,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getSubCategoriesCount()
+        return viewModel.getSubCategoriesCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

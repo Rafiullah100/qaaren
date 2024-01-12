@@ -40,12 +40,12 @@ class HomeViewModel {
     }
     
     
-    func getCategoriesCount() -> Int {
-        return self.categories.value?.count ?? 0
+    func getCategoriesCount() -> Int? {
+        return self.categories.value?.count
     }
     
-    func getSubCategoriesCount() -> Int {
-        return self.subCategories.value?.count ?? 0
+    func getSubCategoriesCount() -> Int? {
+        return self.subCategories.value?.count
     }
     
     func getCategoryID(_ index: Int) -> Int {

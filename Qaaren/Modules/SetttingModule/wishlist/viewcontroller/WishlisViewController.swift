@@ -25,7 +25,8 @@ class WishlisViewController: BaseViewController {
         type = .detail
         viewControllerTitle = LocalizationKeys.wishlist.rawValue.localizeString()
         self.animateSpinner()
-        viewModel.myWishlist.bind { _ in
+        viewModel.myWishlist.bind { [unowned self] wishlist in
+            guard let _ = wishlist else { return }
             DispatchQueue.main.async {
                 self.stopAnimation()
                 self.viewModel.getCount() == 0 ? self.tableView.setEmptyView() : self.tableView.reloadData()
@@ -42,7 +43,7 @@ class WishlisViewController: BaseViewController {
 
 extension WishlisViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCount()
+        return viewModel.getCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
